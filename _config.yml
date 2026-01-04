@@ -1,9 +1,10 @@
 title: "UNLIMITED BANGSUWAN"
 description: "Ruang pribadi tanpa batas"
 url: "https://Sulbae.github.io"
-markdown: kramdown
 
+markdown: kramdown
 permalink: pretty
+timezone: Asia/Jakarta
 
 collections:
   projects:
@@ -13,5 +14,23 @@ collections:
     output: true
     permalink: /articles/:name/
 
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: tabloid
+
+  - scope:
+      path: ""
+      type: articles
+    values:
+      layout: tabloid
+
+author:
+  name: "Anggun Sulis Setyawan"
+  alias: "Bang Suwan"
+  role: "Entry-level Machine Learning Engineer"
+      
 readme_index:
   enabled: false
