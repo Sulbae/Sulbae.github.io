@@ -5,7 +5,7 @@ title: Home
 
 # About
 Hi, People! 
-Yang teman-teman lihat saat ini adalah ruang pameran pribadi tanpa batas yang menampung berbagai ekspresi seniman dalam menyalurkan ide-ide kreatif. Perjuangan melawan overthinking dalam kehidupan sehari-hari telah menginspirasi seniman untuk menciptakan ruang ini. Lebih dari itu, melalui platform ini, seniman juga berharap mampu memberikan inspirasi tanpa batas kepada siapapun yang mampir. 
+Yang teman-teman lihat saat ini adalah ruang pameran pribadi tanpa batas yang menampung berbagai ekspresi seniman dalam menyalurkan ide-ide kreatif. Perjuangan melawan overthinking dalam kehidupan sehari-hari telah menginspirasi seniman untuk menciptakan ruang ini. Lebih dari itu, melalui platform ini, seniman juga berharap mampu memberikan inspirasi tanpa batas kepada siapapun yang mengunjunginya. 
 
 Ayo scroll ke bawah dan eksplorasi berbagai koleksi karya di ruang ini! 
 
