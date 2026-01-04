@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="/assets/css/home.css">
+</head>
+<body>
+
+<main class="home-tabloid">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <h1 class="site-name">{{ site.title }}</h1>
+    <p class="site">{{ site.description }}</p>
+  </header>
+
+  <!-- OPENING -->
+  <section class="opening">
+    {{ content | markdownify }}
+  </section>
+
+  <!-- NAVIGATION KOLEKSI -->
+  <section class="collections">
+    <h2>Ruang Koleksi</h2>
+
+    <div class="collection-grid">
+      <div class="collection-card">
+        <h3>Proyek</h3>
+        <p>Eksperimen, proyek end-to-end, dan catatan teknis</p>
+        <a href="/projects/">Lihat →</a>
+      </div>
+
+      <div class="collection-card">
+        <h3>Full Report</h3>
+        <p>Detail proses dan refleksi belajar</p>
+        <a href="/articles/">Lihat →</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>© {{ site.time | date: "%Y" }} {{ site.title }}</p>
+</footer>
+
+</body>
+</html>
