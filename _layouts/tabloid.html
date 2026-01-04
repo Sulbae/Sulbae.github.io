@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<article class="tabloid-article">
+
+  <!-- JUDUL -->
+  <header class="tabloid-header">
+    <h1>{{ page.title }}</h1>
+
+    {% if page.summary %}
+    <p class="tabloid-summary">
+      {{ page.summary }}
+    </p>
+    {% endif %}
+  </header>
+
+  <!-- KONTEN UTAMA -->
+  <section class="tabloid-content">
+    {{ content }}
+  </section>
+
+  <!-- ARTEFAK PROYEK -->
+  {% if page.pdf or page.article or page.repo %}
+  <footer class="tabloid-resources">
+    <hr />
+    <ul>
+      {% if page.pdf %}
+      <li><a href="{{ page.pdf }}">Presentation Deck (PDF)</a></li>
+      {% endif %}
+
+      {% if page.article %}
+      <li><a href="{{ page.article }}">Full Report</a></li>
+      {% endif %}
+
+      {% if page.repo %}
+      <li><a href="{{ page.repo }}">GitHub Repository</a></li>
+      {% endif %}
+    </ul>
+  </footer>
+  {% endif %}
+
+</article>
