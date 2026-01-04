@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pameran Pribadi
+title: Home
 ---
 
 # Salam kenal, I'm Suwan
