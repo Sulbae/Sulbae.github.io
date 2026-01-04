@@ -39,6 +39,14 @@ a:hover {
   margin-bottom: 4rem;
 }
 
+/* header / logo */
+.site-logo {
+  height: 40px;      /* tinggi logo */
+  width: auto;       /* lebar otomatis sesuai aspek rasio */
+  display: inline-block;
+  vertical-align: middle;
+}
+
 .site-name {
   font-size: 3rem;
   font-weight: 600;
@@ -146,6 +154,9 @@ a:hover {
   .home-tabloid {
     padding: 3.5rem 2rem;
   }
+  .site-logo {
+    height: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -160,6 +171,10 @@ a:hover {
   .home-tabloid {
     padding: 3rem 1.6rem;
   }
+
+  .site-logo {
+    height: 40px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -169,5 +184,9 @@ a:hover {
 
   .opening p {
     font-size: 1rem;
+  }
+
+  .site-logo {
+    height: 40px;
   }
 }
