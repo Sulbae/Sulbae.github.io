@@ -1,0 +1,11 @@
+title: "Bang Suwan"
+description: "Entry-level Machine Learning Engineer"
+url: "https://Sulbae.github.io"
+markdown: kramdown
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+  articles:
+    output: true
+    permalink: /articles/:name/
