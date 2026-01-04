@@ -1,0 +1,163 @@
+/* BASE */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 3rem 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;
+  background: #fafafa;
+  color: #111;
+  line-height: 1.8;
+}
+
+/* LINKS */
+a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+/* ARTICLE CONTAINER */
+.tabloid-article {
+  max-width: 740px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 4rem 3rem;
+}
+
+/* HEADER */
+.tabloid-header h1 {
+  font-size: 2.6rem;
+  line-height: 1.25;
+  margin: 0 0 1.2rem 0;
+}
+
+.tabloid-summary {
+  font-size: 1.2rem;
+  color: #444;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+}
+
+/* CONTENT TYPOGRAPHY */
+.tabloid-content p {
+  margin-bottom: 1.6rem;
+}
+
+.tabloid-content h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 4rem;
+  margin-bottom: 1.2rem;
+  border-top: 1px solid #ddd;
+  padding-top: 1.2rem;
+}
+
+.tabloid-content ul,
+.tabloid-content ol {
+  margin: 1.5rem 0 1.5rem 1.2rem;
+}
+
+.tabloid-content li {
+  margin-bottom: 0.6rem;
+}
+
+/* Inline code (hashtags, istilah) */
+.tabloid-content code {
+  background: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: #555;
+  padding: 0;
+}
+
+/* RESOURCES / FOOTER */
+.tabloid-resources {
+  margin-top: 5rem;
+  font-size: 0.9rem;
+}
+
+.tabloid-resources hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin-bottom: 1.5rem;
+}
+
+.tabloid-resources ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tabloid-resources li {
+  margin-bottom: 0.6rem;
+}
+
+/* TABLET (≤ 1024px) */
+@media (max-width: 1024px) {
+  body {
+    padding: 2.5rem 1.2rem;
+  }
+
+  .tabloid-article {
+    padding: 3rem 2.2rem;
+  }
+
+  .tabloid-header h1 {
+    font-size: 2.3rem;
+  }
+
+  .tabloid-summary {
+    font-size: 1.1rem;
+  }
+}
+
+/* MOBILE (≤ 768px) */
+@media (max-width: 768px) {
+  body {
+    padding: 1.8rem 0.8rem;
+  }
+
+  .tabloid-article {
+    padding: 2.2rem 1.4rem;
+  }
+
+  .tabloid-header h1 {
+    font-size: 2rem;
+  }
+
+  .tabloid-summary {
+    font-size: 1.05rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .tabloid-content h2 {
+    margin-top: 3rem;
+  }
+}
+
+/* SMALL MOBILE (≤ 480px) */
+@media (max-width: 480px) {
+  body {
+    padding: 1.2rem 0.5rem;
+  }
+
+  .tabloid-article {
+    padding: 1.8rem 1.1rem;
+  }
+
+  .tabloid-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .tabloid-summary {
+    font-size: 1rem;
+  }
+}
