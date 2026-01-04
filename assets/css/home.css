@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  padding: 2.5rem 1.2rem;
+  padding: 0;
   font-family: Georgia, "Times New Roman", serif;
   background: #fafafa;
   color: #111;
@@ -15,98 +15,89 @@ body {
 /* link */
 a {
   color: #111;
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  border-bottom: 1px solid #bbb;
 }
 
 a:hover {
-  opacity: 0.75;
+  border-bottom-color: #111;
 }
 
 /* container */
 .home-tabloid {
   max-width: 860px;
   margin: 0 auto;
-  padding: 3.5rem 2.5rem;
-  background: #fff;
+  padding: 4.5rem 2.5rem 3.5rem;
 }
 
 /* masthead */
 .masthead {
   margin-bottom: 4rem;
-  border-bottom: 3px solid #111;
-  padding-bottom: 1.5rem;
 }
 
 .site-name {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-  margin: 0;
+  font-weight: 600;
+  margin: 0 0 0.4rem 0;
 }
 
 .site-desc {
-  margin-top: 0.5rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  color: #555;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 1.05rem;
+  color: #666;
 }
 
 /* opening */
 .opening h1 {
-  font-size: 2.2rem;
-  margin-top: 0;
-  margin-bottom: 1.5rem;
+  font-size: 1.9rem;
+  font-weight: 500;
+  margin: 3.5rem 0 1.6rem;
 }
 
-.opening p:first-of-type {
-  font-size: 1.25rem;
-  line-height: 1.8;
-  max-width: 720px;
-}
-
-/* section headlines */
 .opening h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  margin-top: 4rem;
-  margin-bottom: 1.2rem;
-  color: #444;
-  border-top: 1px solid #ddd;
-  padding-top: 1.2rem;
+  font-size: 1.35rem;
+  font-weight: 400;
+  margin: 4rem 0 1.4rem;
 }
 
-/* paragraphs */
 .opening p {
+  font-size: 1.05rem;
   max-width: 720px;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.9rem;
+}
+
+/* profile */
+.profile {
+  background: #ffffff;
+  padding: 2.8rem;
+  margin: 4rem 0;
+  border-left: 4px solid #e0e0e0;
 }
 
 /* inline hashtags */
 .opening code {
   background: none;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.85rem;
-  color: #555;
   padding: 0;
-  margin-right: 0.4rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.opening code + code {
+  margin-left: 0.6rem;
 }
 
 /* collections */
 .collections {
   margin-top: 5rem;
-  border-top: 3px solid #111;
-  padding-top: 2.5rem;
 }
 
 .collections h2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 0.8rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
+  color: #666;
   margin-bottom: 2rem;
 }
 
@@ -117,45 +108,62 @@ a:hover {
 }
 
 .collection-card {
-  padding-top: 1rem;
+  background: #ffffff;
+  padding: 2.2rem;
+  border: 1px solid #eee;
+  transition: transform 0.25s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-4px);
 }
 
 .collection-card h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.1rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0;
+  font-size: 1.2rem;
 }
 
 .collection-card p {
-  font-size: 0.95rem;
-  color: #444;
-  margin-bottom: 0.6rem;
+  color: #555;
+  margin-bottom: 1.4rem;
 }
 
 /* footer */
 .footer {
-  margin-top: 5rem;
   text-align: center;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.8rem;
   color: #777;
-  padding-bottom: 2rem;
+  padding: 3rem 0 2rem;
 }
 
 /* responsive */
-@media (max-width: 768px) {
-  body {
-    padding: 1.5rem 0.8rem;
-  }
-
+@media (max-width: 900px) {
   .home-tabloid {
-    padding: 2.5rem 1.5rem;
+    padding: 3.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .collection-grid {
+    grid-template-columns: 1fr;
   }
 
   .site-name {
-    font-size: 2.3rem;
+    font-size: 2.4rem;
   }
 
-  .collection-grid {
-    grid-template-columns: 1fr;
+  .home-tabloid {
+    padding: 3rem 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-tabloid {
+    padding: 2.4rem 1.2rem;
+  }
+
+  .opening p {
+    font-size: 1rem;
   }
 }
