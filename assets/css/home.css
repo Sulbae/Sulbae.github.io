@@ -1,114 +1,161 @@
-/* Base */
+/* base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
+  padding: 2.5rem 1.2rem;
   font-family: Georgia, "Times New Roman", serif;
   background: #fafafa;
   color: #111;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
+/* link */
 a {
-  color: #000;
+  color: #111;
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-/* Container */
+a:hover {
+  opacity: 0.75;
+}
+
+/* container */
 .home-tabloid {
-  max-width: 1000px;
+  max-width: 860px;
   margin: 0 auto;
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 2.5rem;
+  background: #fff;
 }
 
-/* Masthead */
+/* masthead */
 .masthead {
-  border-bottom: 4px solid #000;
+  margin-bottom: 4rem;
+  border-bottom: 3px solid #111;
   padding-bottom: 1.5rem;
-  margin-bottom: 3rem;
 }
 
 .site-name {
-  font-size: 3.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   margin: 0;
 }
 
 .site-desc {
-  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
   color: #555;
 }
 
-/* Opening */
+/* opening */
 .opening h1 {
-  font-size: 2rem;
-  margin-top: 2.5rem;
+  font-size: 2.2rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
+.opening p:first-of-type {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  max-width: 720px;
+}
+
+/* section headlines */
 .opening h2 {
-  font-size: 1.4rem;
-  margin-top: 2.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-top: 4rem;
+  margin-bottom: 1.2rem;
+  color: #444;
   border-top: 1px solid #ddd;
   padding-top: 1.2rem;
 }
 
+/* paragraphs */
 .opening p {
   max-width: 720px;
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.4rem;
 }
 
-/* Inline hashtags */
+/* inline hashtags */
 .opening code {
   background: none;
-  font-family: Arial, sans-serif;
-  font-size: 0.9rem;
-  color: #444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.85rem;
+  color: #555;
   padding: 0;
   margin-right: 0.4rem;
 }
 
-/* Collections */
+/* collections */
 .collections {
-  margin-top: 4rem;
-  border-top: 3px solid #000;
-  padding-top: 2rem;
+  margin-top: 5rem;
+  border-top: 3px solid #111;
+  padding-top: 2.5rem;
 }
 
 .collections h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
   text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
+  letter-spacing: 0.14em;
+  margin-bottom: 2rem;
 }
 
 .collection-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .collection-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-top: 3px solid #000;
+  padding-top: 1rem;
 }
 
 .collection-card h3 {
-  margin-top: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
 }
 
-/* Footer */
+.collection-card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 0.6rem;
+}
+
+/* footer */
 .footer {
+  margin-top: 5rem;
   text-align: center;
   font-size: 0.8rem;
   color: #777;
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
 
-/* Responsive */
+/* responsive */
 @media (max-width: 768px) {
-  .collection-grid {
-    grid-template-columns: 1fr;
+  body {
+    padding: 1.5rem 0.8rem;
+  }
+
+  .home-tabloid {
+    padding: 2.5rem 1.5rem;
   }
 
   .site-name {
-    font-size: 2.4rem;
+    font-size: 2.3rem;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
   }
 }
