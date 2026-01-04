@@ -1,3 +1,8 @@
+/* layout home */
+body.layout-home {
+  background-color: #f5f5f5;
+}
+
 /* base */
 * {
   box-sizing: border-box;
