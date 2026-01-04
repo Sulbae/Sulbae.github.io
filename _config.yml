@@ -31,6 +31,9 @@ author:
   name: "Anggun Sulis Setyawan"
   alias: "Bang Suwan"
   role: "Entry-level Machine Learning Engineer"
-      
+
 readme_index:
+  enabled: false
+
+titles_from_headings:
   enabled: false
