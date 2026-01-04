@@ -1,6 +1,22 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>{{ page.title | default: site.title }}</title>
+<title>
+  {% if page.layout == "home" %}
+    {{ site.title }}
+  {% elsif page.layout == "tabloid" %}
+    {{ page.title }} | {{ site.title }}
+  {% else %}
+    {{ page.title | default: site.title }}
+  {% endif %}
+</title>
 
-<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% if page.layout == "home" %}
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+
+{% elsif page.layout == "tabloid" %}
+  <link rel="stylesheet" href="{{ '/assets/css/tabloid.css' | relative_url }}">
+
+{% else %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+{% endif %}
