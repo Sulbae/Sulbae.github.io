@@ -17,7 +17,7 @@ Dalam proses berkarya, seniman tidak sekadar memandang setiap proyek sebagai imp
 
 Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya merepresentasikan hasil akhir, tetapi juga menampilkan proses berpikir di baliknya. Melalui ruang ini, seniman ingin berbagi wawasan, membuka ruang diskusi, serta mendorong pembelajaran yang berkelanjutan.
 
-\#masihbelajar \#terusbelajar \#salingbelajar
+`#masihbelajar` `#terusbelajar` `#salingbelajar`
 ---
 
 # Ruang Ide-ide Aja
