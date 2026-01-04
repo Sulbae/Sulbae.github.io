@@ -3,13 +3,14 @@ layout: default
 title: Home
 ---
 
-# Salam kenal, I'm Suwan
+# Profil Seniman
 
-Entry-level Machine Learning Engineer with a background in Environmental Science.
+Anggun Sulis Setyawan a.k.a Bang Suwan merupakan Entry-level Machine Learning Engineer.
 
 ---
 
-## Koleksi
+# Koleksi
+## Karya 1
 
 {% for project in site.projects %}
 - **[{{ project.title }}]({{ project.url }})**
