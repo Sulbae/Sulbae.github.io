@@ -6,8 +6,6 @@
     {{ site.title }}
   {% elsif page.layout == "tabloid" %}
     {{ page.title }} | {{ site.title }}
-  {% else %}
-    {{ page.title | default: site.title }}
   {% endif %}
 </title>
 
@@ -17,6 +15,4 @@
 {% elsif page.layout == "tabloid" %}
   <link rel="stylesheet" href="{{ '/assets/css/tabloid.css' | relative_url }}">
 
-{% else %}
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 {% endif %}
