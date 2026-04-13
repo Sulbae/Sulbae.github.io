@@ -24,6 +24,6 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 ## Ruang Ide-ide Aja
 ### Koleksi 1
 {% for project in site.projects %}
-- **[{{ project.title }}]({{ project.url }})**
+- **[{{ Water Potability Assessment }}]({{ project.url }})**
   {{ project.summary }}
 {% endfor %}
