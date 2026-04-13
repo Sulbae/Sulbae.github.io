@@ -24,6 +24,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 ## Ruang Ide-ide Aja
 ### Koleksi 1
 {% for project in site.projects %}
-- **[{{ project.title }}]({{ project.url }})**
-  {{ project.summary }}
+- **[{{ wpa_project.title }}]({{ wpa_project.url }})**
+
+  {{ wpa_project.summary }}
 {% endfor %}
