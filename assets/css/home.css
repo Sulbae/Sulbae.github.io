@@ -26,12 +26,7 @@ html {
 
 body.layout-home {
   background-color: var(--color-bg);
-  background-image:
-     linear-gradient(
-        rgba(212, 197, 181, 0.85),
-        rgba(212, 197, 181, 0.85)
-     ),
-     url('/assets/images/homepage/homepage-beige.png');
+  background-image: url('/assets/images/homepage/homepage-beige.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
