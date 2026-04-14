@@ -25,8 +25,11 @@ title: Home
   <p>
     Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya merepresentasikan hasil akhir, tetapi juga menampilkan proses berpikir di baliknya. Melalui ruang ini, seniman ingin berbagi wawasan, membuka ruang diskusi, serta mendorong pembelajaran yang berkelanjutan.
   </p>
-  
-  <code>#masihbelajar #terusbelajar #salingbelajar</code>
+  <div>
+    <code>#masihbelajar</code>
+    <code>#terusbelajar</code> 
+    <code>#salingbelajar</code>
+  </div>
 </div>
 
 ## Ruang Ide-ide Aja
