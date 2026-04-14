@@ -331,54 +331,99 @@ details.project-summary {
   padding-top: 1rem;
 }
 
-/* 1. Default State (Tertutup) */
-/* Sembunyikan tombol "Tutup" saat awal */
-.action-close {
+/* Summary Toggle tanpa icon */
+summary.summary-toggle {
+  cursor: pointer;
+  list-style: none;              /* Hilangkan marker default */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 0.5rem 0;
+  transition: color 0.2s;
+}
+
+/* Hapus marker untuk semua browser */
+summary.summary-toggle::-webkit-details-marker {
   display: none;
 }
 
-/* Style umum tombol action */
-.action-btn {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.85rem;
+summary.summary-toggle {
+  marker: none;
+}
+
+/* Hover effect */
+summary.summary-toggle:hover {
+  color: #111;
+}
+
+/* Style untuk "Baca Selengkapnya" */
+.action-read {
   font-weight: 600;
   color: #111;
-  margin-left: 0.8rem;
   border-bottom: 1px solid #bbb;
-  transition: border-color 0.2s;
   white-space: nowrap;
 }
 
-.action-btn:hover {
+.action-read:hover {
   border-bottom-color: #111;
 }
 
-/* 2. Expanded State (Terbuka / [open]) */
-/* Saat details terbuka: */
+/* Posisi "Tutup" di KANAN BAWAH */
+/* Wrapper untuk memposisikan tombol Tutup */
+.close-wrapper {
+  display: none;                    /* Sembunyikan default */
+  justify-content: flex-end;        /* Kanan */
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+}
 
-/* a. Hilangkan teks preview summary agar tidak double */
+/* Style tombol "Tutup" */
+.action-close {
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #666;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f9f9f9;
+  transition: all 0.2s;
+}
+
+.action-close:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Saat EXPANDED ([open]) atau details terbuka: */
+/* a. Hilangkan teks preview summary */
 details[open] .summary-toggle .summary-text {
   display: none;
 }
 
-/* b. Hilangkan teks "Baca Selengkapnya" */
+/* b. Hilangkan "Baca Selengkapnya" */
 details[open] .action-read {
   display: none;
 }
 
-/* c. Munculkan teks "Tutup" */
-details[open] .action-close {
-  display: inline-block;
-}
-
-/* Opsional: Mengubah posisi summary agar rapi saat terbuka */
+/* c. Hilangkan summary toggle (agar tidak ada klik ganda) */
 details[open] .summary-toggle {
-  padding-bottom: 0.5rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid #eee;
+  display: none;
+} 
+
+/* d. Munculkan wrapper "Tutup" */
+details[open] .close-wrapper {
+  display: flex;
 }
 
-/* Smooth animation */
+/* Summary Content */
 .summary-content {
   padding-top: 1rem;
   font-size: 0.95rem;
