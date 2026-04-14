@@ -48,7 +48,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
         </h3>
         {% if project.tags %}
         <div class="project-tags-inline">
-          {% for tag in project.tags limit 3 %}
+          {% for tag in project.tags limit 2 %}
           <span class="tag-badge">{{ tag }}</span>
           {% endfor %}
         </div>
