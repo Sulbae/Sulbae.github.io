@@ -99,7 +99,8 @@ a:hover {
 }
 
 .site-name {
-  font-size: 3rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 3.5rem;
   font-weight: 600;
   margin: 0 0 0.4rem 0;
   text-align: left;
@@ -107,7 +108,8 @@ a:hover {
 
 .site-desc {
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 1.05rem;
+  font-size: 1.5rem;
+  font-weight: 300;
   color: #666;
   text-align: left;
 }
@@ -136,6 +138,7 @@ a:hover {
 }
 
 .opening p {
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 1.05rem;
   max-width: 800px;
   margin-bottom: 1.2rem;
@@ -149,6 +152,7 @@ a:hover {
 }
 
 .profile p {
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1.6rem;
@@ -340,6 +344,7 @@ a:hover {
 
 .project-title {
   margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
   flex: 1 1 auto;
