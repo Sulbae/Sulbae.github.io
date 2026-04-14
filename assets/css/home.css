@@ -3,17 +3,18 @@
    ========================================= */
 :root {
    /* Font Families */
-   --font-serif: 'IBM Plex Serif', Georgia, serif;
-   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+   --font-display: 'Cinzel', serif               /* untuk judul besar */
+   --font-heading: 'Cormorant Garamond', serif;  /* untuk heading section */
+   --font-body: 'Noto Serif', serif;             /* untuk body text */
+   --font-ui: 'Inter', sans-serif;               /* untuk navigasi dan UI */
   
    /* Colors */
-   --color-bg: #E0D5C5;            /* paper rotan untuk background utama*/
+   --color-bg: #E0D5C5;            /* paper rotan untuk background utama */
    --color-nav: #F5F0E8            /* warm white untuk nav */
-   --color-nav-bar: #111            /* black untuk nav bar */
-   --color-text: #2A2420;          /* warm black */
-   --color-text-secondary: #5A5048;/* warm gray */
-   --color-text-muted: #8B7D70;    /* gray */
+   --color-nav-bar: #1A1614        /* black untuk nav bar */
+   --color-text: #1A1614;          /* black */
+   --color-text-secondary: #4A4038;/* dark gray */
+   --color-text-muted: #7B6D60;    /* gray */
    --color-white: #F5F0E8;         /* warm white untuk card */
    --color-black: #2A2420;         /* warm black untuk accent */
 }
@@ -46,8 +47,8 @@ body.layout-home {
 body {
   margin: 0;
   padding: 0;
-  font-family: var(--font-serif);
-  color: #1A1614;
+  font-family: var(--font-body);
+  color: var(--color-text);
   line-height: 1.75;
 }
 
@@ -79,14 +80,15 @@ a:hover {
    3. NAVIGATION
    ========================================= */
 .site-navigation {
-  background-color: var(--color-nav-bar);
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  padding: 1rem 0;
-  border-bottom: 1px solid #333;
+   background-color: var(--color-nav-bar);
+   opacity: 1;
+   width: 100%;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+   padding: 1rem 0;
+   border-bottom: 1px solid #333;
 }
 
 .nav-container {
@@ -101,10 +103,10 @@ a:hover {
 }
 
 .nav-link {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.08em;
   color: var(--color-nav);
   text-decoration: none;
   border-bottom: none !important;
@@ -127,16 +129,17 @@ a:hover {
 }
 
 .site-name {
-  font-family: var(--font-serif);
-  font-size: 3rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem 0;
-  text-align: left;
-  letter-spacing: -0.02em;
+   font-family: var(--font-display);
+   font-size: 3rem;
+   font-weight: 700;
+   margin: 0 0 0.4rem 0;
+   text-align: left;
+   letter-spacing: 0.05em;
+   text-transform: uppercase;
 }
 
 .site-desc {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 1.1rem;
   font-weight: 400;
   color: var(--color-text-secondary);
@@ -157,21 +160,21 @@ a:hover {
 }
 
 .opening h1 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 600;
   margin: 0 0 1rem 0;
 }
 
 .opening h2 {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 1.35rem;
   font-weight: 500;
   margin: 2.5rem 0 1rem;
 }
 
 .opening p {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 1.05rem;
   max-width: 800px;
   margin-bottom: 1.2rem;
@@ -188,7 +191,7 @@ a:hover {
 }
 
 .profile p {
-   font-family: var(--font-sans);
+   font-family: var(--font-body);
    font-size: 1.05rem;
    line-height: 1.8;
    margin-bottom: 1.6rem;
@@ -198,7 +201,7 @@ a:hover {
 }
 
 .profile h2 {
-   font-family: var(--font-serif);
+   font-family: var(--font-heading);
    font-size: 1.5rem;
    font-weight: 600;
    margin: 0 0 1.5rem 0;
@@ -398,8 +401,8 @@ a:hover {
 
 .project-title {
   margin: 0;
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   font-weight: 600;
   flex: 1 1 auto;
   min-width: 0;
@@ -430,7 +433,7 @@ a:hover {
 
 .tag-badge {
   display: inline-block;
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -480,7 +483,7 @@ summary.summary-toggle {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.85rem;
   color: var(--color-text-secondary);
   padding: 0.5rem 0;
@@ -515,7 +518,7 @@ summary.summary-toggle:hover {
 }
 
 .action-close {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--color-text-secondary);
@@ -587,7 +590,7 @@ details[open] .close-wrapper {
   align-items: center;
   gap: 0.4rem;
   padding: 0.5rem 1rem;
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.8rem;
   font-weight: 500;
   text-decoration: none;
