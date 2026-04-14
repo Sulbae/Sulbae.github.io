@@ -59,6 +59,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
         {% endif %}
       </div>
       <!--Project Summary-->
+      <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
       <details class="project-summary">
         <summary class="summary-toggle">
           <!--Teks Preview-->
@@ -80,7 +81,6 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
             </a>
             {% endif %}
           </div>
-          <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
           <div class="close-wrapper">
             <span class="action-close">Tutup</span>
           </div>
