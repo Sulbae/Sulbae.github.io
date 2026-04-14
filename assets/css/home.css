@@ -146,12 +146,13 @@ a:hover {
    5. OPENING & PROFILE
    ========================================= */
 .opening {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(4px);
-  padding: 2rem;
-  border-radius: 8px;
-  margin-top: 0;
-  margin-bottom: 3rem;
+   background: #F5F0E8;
+   opacity: 0.5;
+   backdrop-filter: blur(4px);
+   padding: 2rem;
+   border-radius: 8px;
+   margin-top: 0;
+   margin-bottom: 3rem;
 }
 
 .opening h1 {
@@ -178,6 +179,8 @@ a:hover {
 
 .profile {
    background: #F5F0E8;
+   opacity: 0.5;
+   backdrop-filter: blur(4px);
    padding: 2rem;
    margin: 0 0 4rem 0;
    border-left: 4px solid #B5A595;
