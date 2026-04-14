@@ -267,6 +267,7 @@ details.project-summary {
   padding-top: 1rem;
 }
 
+/* Hide default marker */
 summary.summary-toggle {
   cursor: pointer;
   list-style: none;
@@ -277,38 +278,39 @@ summary.summary-toggle {
   font-size: 0.85rem;
   color: #666;
   padding: 0.5rem 0;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
 
 summary.summary-toggle::-webkit-details-marker {
   display: none;
 }
 
-summary.summary-toggle:hover {
+/* Hide summary text saat expanded */
+details.project-summary[open] .summary-toggle {
+  display: none;
+}
+
+/* Read more button style */
+.read-more {
+  font-weight: 500;
   color: #111;
+  border-bottom: 1px solid #bbb;
 }
 
-summary.summary-toggle::after {
-  content: "+";
-  font-size: 1.1rem;
-  line-height: 1;
-  font-weight: 300;
+.read-more:hover {
+  border-bottom-color: #111;
 }
 
-details.project-summary[open] summary.summary-toggle::after {
-  content: "−";
-}
-
-/* Expanded Content Animation */
+/* Smooth animation */
 .summary-content {
   padding-top: 1rem;
   font-size: 0.95rem;
   color: #444;
   line-height: 1.6;
-  animation: slideDown 0.25s ease-out;
+  animation: fadeIn 0.3s ease-out;
 }
 
-@keyframes slideDown {
+@keyframes fadeIn {
   from { opacity: 0; transform: translateY(-8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
