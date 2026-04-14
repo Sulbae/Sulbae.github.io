@@ -75,7 +75,7 @@ a:hover {
    3. NAVIGATION
    ========================================= */
 .site-navigation {
-   background-color: var(--color-nav-bar);
+   background-color: var(--color-nav-bar) !important;
    opacity: 1;
    width: 100%;
    position: sticky;
