@@ -31,6 +31,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 <div class="projects-grid">
 {% for project in featured_projects limit: 10 %}
   <article class="project-card">
+    <!--Thumbnail-->
     {% if project.image %}
     <div class="project-tumbhnail">
       <img src="{{ project.image | relative_url }}" 
@@ -38,7 +39,9 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
            loading="lazy">
     </div>
     {% endif %}
+    <!--Project Content-->
     <div class="project-content">
+      <!--Project Header-->
       <div class="project-header">
         <h3 class="project-title">
           <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
@@ -46,6 +49,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
             {{ project.title }} 
           </a>
         </h3>
+        <!--Tags-->
         {% if project.tags %}
         <div class="project-tags-inline">
           {% for tag in project.tags limit 2 %}
@@ -54,11 +58,18 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
         </div>
         {% endif %}
       </div>
+      <!--Project Summary-->
       <details class="project-summary">
         <summary class="summary-toggle">
+          <!--Teks Preview-->
           <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
-          <span class="read-more">Baca Selengkapnya</span>
+          <!--Toggle Button-->
+          <span class="action-btn"></span>  
+            <span class="action-read">Baca Selengkapnya</span>
+            <span class="action-close">Tutup</span>
+          </span>
         </summary>
+        <!--Full Summary-->
         <div class="summary-content">
           <p>{{ project.summary }}</p>
           <div class="project-links">
