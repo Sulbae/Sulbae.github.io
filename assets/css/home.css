@@ -79,7 +79,7 @@ a:hover {
 
 .opening p {
   font-size: 1.05rem;
-  max-width: 800px;
+  max-width: 100%;
   margin-bottom: 1.9rem;
 }
 
@@ -92,19 +92,33 @@ a:hover {
 
 .profile p {
   font-size: 1.05rem;
-  margin-bottom: 1.9rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+  text-align: justify;
 }
 
-.opening code {
-  background: none;
-  padding: 0;
+profile code {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #111;
+  color: #fff;
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.85rem;
-  color: #777;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: lowercase;
+  box-shadow: 0 2px 6px rgba(17, 17, 17, 0.25);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.opening code + code {
-  margin-left: 0.6rem;
+.profile code:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(17, 17, 17, 0.35);
 }
 
 
