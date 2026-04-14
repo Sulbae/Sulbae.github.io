@@ -14,7 +14,7 @@ title: Home
   <p>Ayo scroll ke bawah dan eksplorasi berbagai koleksi karya di ruang ini! 👇</p>
 </div>
 
-## Profil Seniman
+<h2 id="profile">Profil Seniman</h2>
 <div class="profile">
   <p>
     Anggun Sulis Setyawan a.k.a Bang Suwan merupakan entry-level Machine Learning Engineer dengan latar belakang keilmuan Environmental Engineering. Ketertarikannya berada pada persimpangan antara data, sistem, dan cara manusia memahami serta memanfaatkan informasi dalam konteks nyata.
@@ -32,7 +32,7 @@ title: Home
   </div>
 </div>
 
-## Ruang Ide-ide Aja
+<h2 id="projects">Ruang Ide-ide Aja</h2>
 {% assign featured_projects = site.projects
   | where_exp: "project", "project.published != false"
   | sort: "date"
