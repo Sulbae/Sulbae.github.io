@@ -9,7 +9,7 @@ Sebagai respon terhadap tantangan tersebut, seniman memutuskan untuk mengembangk
 pdf: /asssets/pdfs/sample-deck.pdf
 article: /articles/sample-article/
 repo: https://github.com/Sulbae/Water-Potability-Assessment
-tags: [Machine Learning]
+tags: [Monitoring System, Machine Learning]
 published: true 
 ---
 
