@@ -22,12 +22,14 @@ defaults:
       type: projects
     values:
       layout: tabloid # Layout default
+      published: true # Default published
 
   - scope:
       path: ""
       type: articles
     values:
       layout: tabloid # Layout default
+      published: true # Default published
 
 author:
   name: "Anggun Sulis Setyawan"
