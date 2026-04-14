@@ -2,18 +2,20 @@
    1. RESET & BASE
    ========================================= */
 :root {
-  /* Font Families */
-  --font-serif: 'IBM Plex Serif', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+   /* Font Families */
+   --font-serif: 'IBM Plex Serif', Georgia, serif;
+   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
-  /* Colors */
-  --color-text: #2A2420;          /* warm black */
-  --color-text-secondary: #5A5048;/* warm gray */
-  --color-text-muted: #8B7D70;    /* gray */
-  --color-bg: #E0D5C5;            /* paper rotan untuk background utama*/
-  --color-white: #F5F0E8;         /* warm white untuk card */
-  --color-black: #2A2420;         /* warm black untuk accent */
+   /* Colors */
+   --color-bg: #E0D5C5;            /* paper rotan untuk background utama*/
+   --color-nav: #F5F0E8            /* warm white untuk nav */
+   --color-nav-bar: #111            /* black untuk nav bar */
+   --color-text: #2A2420;          /* warm black */
+   --color-text-secondary: #5A5048;/* warm gray */
+   --color-text-muted: #8B7D70;    /* gray */
+   --color-white: #F5F0E8;         /* warm white untuk card */
+   --color-black: #2A2420;         /* warm black untuk accent */
 }
 
 html {
@@ -77,7 +79,7 @@ a:hover {
    3. NAVIGATION
    ========================================= */
 .site-navigation {
-  background-color: var(--color-black);
+  background-color: var(--color-nav-bar);
   width: 100%;
   position: sticky;
   top: 0;
@@ -103,14 +105,14 @@ a:hover {
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.02em;
-  color: #aaa;
+  color: var(--color-nav);
   text-decoration: none;
   border-bottom: none !important;
   transition: color 0.2s, transform 0.2s;
 }
 
 .nav-link:hover {
-  color: var(--color-white);
+  color: #FFFFFF;
   transform: translateY(-1px);
 }
 
