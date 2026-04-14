@@ -1,9 +1,12 @@
-/* layout home */
+/* 1. RESET & BASE */
+html {
+  scroll-behavior: smooth;
+}
+
 body.layout-home {
   background-color: #f5f5f5;
 }
 
-/* base */
 * {
   box-sizing: border-box;
 }
@@ -16,7 +19,6 @@ body {
   line-height: 1.75;
 }
 
-/* link */
 a {
   color: #111;
   text-decoration: none;
@@ -27,22 +29,24 @@ a:hover {
   border-bottom-color: #111;
 }
 
-/* container */
+
+/* 2. LAYOUT & CONTAINER */
 .home-tabloid {
-  max-width: 860px;
+  width: 100%;
+  max-width: 1120px;
   margin: 0 auto;
   padding: 4.5rem 2.5rem 3.5rem;
 }
 
-/* masthead */
 .masthead {
   margin-bottom: 4rem;
 }
 
-/* header / logo */
+
+/* 3. HEADER & LOGO */
 .site-logo {
-  height: 40px;      /* tinggi logo */
-  width: auto;       /* lebar otomatis sesuai aspek rasio */
+  height: 40px;
+  width: auto;
   display: inline-block;
   vertical-align: middle;
 }
@@ -59,7 +63,8 @@ a:hover {
   color: #666;
 }
 
-/* opening */
+
+/* 4. OPENING & PROFILE */
 .opening h1 {
   font-size: 1.9rem;
   font-weight: 500;
@@ -78,7 +83,6 @@ a:hover {
   margin-bottom: 1.9rem;
 }
 
-/* profile */
 .profile {
   background: #ffffff;
   padding: 2.8rem;
@@ -86,7 +90,6 @@ a:hover {
   border-left: 4px solid #e0e0e0;
 }
 
-/* inline hashtags */
 .opening code {
   background: none;
   padding: 0;
@@ -99,7 +102,8 @@ a:hover {
   margin-left: 0.6rem;
 }
 
-/* collections */
+
+/* 5. COLLECTIONS & FOOTER */
 .collections {
   margin-top: 5rem;
 }
@@ -140,7 +144,6 @@ a:hover {
   margin-bottom: 1.4rem;
 }
 
-/* footer */
 .footer {
   text-align: center;
   font-family: system-ui, -apple-system, sans-serif;
@@ -149,57 +152,15 @@ a:hover {
   padding: 3rem 0 2rem;
 }
 
-/* responsive */
-@media (max-width: 900px) {
-  .home-tabloid {
-    padding: 3.5rem 2rem;
-  }
-  .site-logo {
-    height: 40px;
-  }
-}
 
-@media (max-width: 768px) {
-  .collection-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .site-name {
-    font-size: 2.4rem;
-  }
-
-  .home-tabloid {
-    padding: 3rem 1.6rem;
-  }
-
-  .site-logo {
-    height: 40px;
-  }
-}
-
-@media (max-width: 480px) {
-  .home-tabloid {
-    padding: 2.4rem 1.2rem;
-  }
-
-  .opening p {
-    font-size: 1rem;
-  }
-
-  .site-logo {
-    height: 40px;
-  }
-}
-
-/* Grid Container */
+/* 6. PROJECTS GRID & CARDS */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
-  margin-top:2rem;
+  margin-top: 2rem;
 }
 
-/* Project Card */
 .project-card {
   background: #ffffff;
   border: 1px solid #eee;
@@ -212,7 +173,6 @@ a:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }
 
-/* Thumbnail Wrapper */
 .project-thumbnail {
   width: 100%;
   height: 220px;
@@ -231,12 +191,11 @@ a:hover {
   transform: scale(1.03);
 }
 
-/* Card content */
 .project-content {
   padding: 2rem;
 }
 
-/* Project Header - Title + Tags inline */
+/* Project Header */
 .project-header {
   display: flex;
   align-items: flex-start;
@@ -251,7 +210,7 @@ a:hover {
   font-size: 1.25rem;
   font-weight: 600;
   flex: 1 1 auto;
-  min-width: 0; /* Mencegah flex overflow */
+  min-width: 0;
   word-break: break-word;
 }
 
@@ -296,7 +255,6 @@ a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
 }
 
-/* Warna Tag 1 */
 .tag-badge:nth-child(1) {
   background: linear-gradient(135deg, #FF9A00 0%, #FF5E00 100%);
   box-shadow: 0 2px 8px rgba(255, 94, 0, 0.25);
@@ -305,45 +263,24 @@ a:hover {
   box-shadow: 0 5px 14px rgba(255, 94, 0, 0.35);
 }
 
-/* Warna Tag 2 */
 .tag-badge:nth-child(2) {
   background: linear-gradient(135deg, #00D2C0 0%, #008B8B 100%);
   box-shadow: 0 2px 8px rgba(0, 139, 139, 0.25);
 }
 .tag-badge:nth-child(2):hover {
-  box-shadow: 0 5px 14px rgba(0, 139, 139, 0.25);
+  box-shadow: 0 5px 14px rgba(0, 139, 139, 0.35); /* ✅ Disamakan konsistensinya */
 }
 
 
-/* Responsive - Stack pada mobile */
-@media (max-width: 640px) {
-  .project-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.75rem;
-  }
-  
-  .project-tags-inline {
-    margin-left: 0;
-    margin-top: 0.5rem;
-  }
-  
-  .project-title {
-    width: 100%
-  }
-}
-
-/* Native <details> Toggle */
+/* 7. DETAILS / SUMMARY TOGGLE */
 details.project-summary {
   margin-top: 1rem;
   border-top: 1px solid #eee;
   padding-top: 1rem;
 }
 
-/* Summary Toggle tanpa icon */
 summary.summary-toggle {
   cursor: pointer;
-  list-style: none;              /* Hilangkan marker default */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -355,21 +292,14 @@ summary.summary-toggle {
   transition: color 0.2s;
 }
 
-/* Hapus marker untuk semua browser */
 summary.summary-toggle::-webkit-details-marker {
   display: none;
 }
 
-summary.summary-toggle {
-  marker: none;
-}
-
-/* Hover effect */
 summary.summary-toggle:hover {
   color: #111;
 }
 
-/* Style untuk "Baca Selengkapnya" */
 .action-read {
   font-weight: 600;
   color: #111;
@@ -381,17 +311,14 @@ summary.summary-toggle:hover {
   border-bottom-color: #111;
 }
 
-/* Posisi "Tutup" di KANAN BAWAH */
-/* Wrapper untuk memposisikan tombol Tutup */
 .close-wrapper {
-  display: none;                    /* Sembunyikan default */
-  justify-content: flex-end;        /* Kanan */
+  display: none;
+  justify-content: flex-end;
   margin-top: 1.5rem;
   padding-top: 1rem;
   border-top: 1px solid #eee;
 }
 
-/* Style tombol "Tutup" */
 .action-close {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.85rem;
@@ -411,28 +338,23 @@ summary.summary-toggle:hover {
   border-color: #111;
 }
 
-/* Saat EXPANDED ([open]) atau details terbuka: */
-/* a. Hilangkan teks preview summary */
+/* Expanded States */
 details[open] .summary-toggle .summary-text {
   display: none;
 }
 
-/* b. Hilangkan "Baca Selengkapnya" */
 details[open] .action-read {
   display: none;
 }
 
-/* c. Hilangkan summary toggle (agar tidak ada klik ganda) */
 details[open] .summary-toggle {
   display: none;
-} 
+}
 
-/* d. Munculkan wrapper "Tutup" */
 details[open] .close-wrapper {
   display: flex;
 }
 
-/* Summary Content */
 .summary-content {
   padding-top: 1rem;
   font-size: 0.95rem;
@@ -446,7 +368,8 @@ details[open] .close-wrapper {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* Action Buttons */
+
+/* 8. BUTTONS & UTILITIES */
 .project-links {
   display: flex;
   gap: 1rem;
@@ -483,7 +406,6 @@ details[open] .close-wrapper {
   background: #333;
 }
 
-/* Date Footer */
 .project-date {
   display: block;
   font-family: system-ui, -apple-system, sans-serif;
@@ -494,7 +416,6 @@ details[open] .close-wrapper {
   border-top: 1px solid #eee;
 }
 
-/* View All CTA */
 .view-all {
   text-align: center;
   margin-top: 3rem;
@@ -507,14 +428,60 @@ details[open] .close-wrapper {
   letter-spacing: 0.05em;
 }
 
-/* Responsive for Projects */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
+
+/* 9. RESPONSIVE (Desktop-First Cascade) */
+@media (min-width: 1200px) {
+  .home-tabloid {
+    max-width: 1280px;
+    padding: 5rem 3rem 4rem;
   }
-  .project-metrics {
+  .projects-grid {
+    gap: 3rem;
+  }
+  .project-content {
+    padding: 2.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-tabloid {
+    padding: 3.5rem 2rem;
+  }
+  .collection-grid,
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 768px) {
+  .site-name {
+    font-size: 2.4rem;
+  }
+  .home-tabloid {
+    padding: 3rem 1.6rem;
+  }
+}
 
+@media (max-width: 640px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  .project-tags-inline {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  .project-title {
+    width: 100%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .home-tabloid {
+    padding: 2.4rem 1.2rem;
+  }
+  .opening p {
+    font-size: 1rem;
+  }
+}
