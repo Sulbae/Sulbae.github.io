@@ -33,7 +33,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
   <article class="project-card">
     <!--Thumbnail-->
     {% if project.image %}
-    <div class="project-tumbhnail">
+    <div class="project-thumbnail">
       <img src="{{ project.image | relative_url }}" 
            alt="{{ project.image_alt | default: project.title | escape }}" 
            loading="lazy">
@@ -52,7 +52,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
         <!--Tags-->
         {% if project.tags %}
         <div class="project-tags-inline">
-          {% for tag in project.tags limit 2 %}
+          {% for tag in project.tags limit: 2 %}
           <span class="tag-badge">{{ tag }}</span>
           {% endfor %}
         </div>
@@ -83,7 +83,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
           </div>
           <!--Tutup details saat tombol "Tutup" diklik-->
           <div class="close-wrapper">
-            <span class="action-close" onclicl="this.closest('details').removeAttribute('open')">
+            <span class="action-close" onclick="this.closest('details').removeAttribute('open')">
               Tutup
             </span>
           </div>
@@ -94,7 +94,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 {% endfor %}
 </div>  
 
-{% if fetured_projects.size > 10 %}
+{% if featured_projects.size > 10 %}
 <div class="view-all">
   <a href="/projects" class="btn btn-outline">→ Lihat Semua</a>
 </div>
