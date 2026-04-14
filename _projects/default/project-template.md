@@ -2,9 +2,9 @@
 layout: project
 # Meta Dasar
 title: "Project Title"
-date: 2024-03
+date: 2024-03-01
 summary: "Isi dengan ringkasan"
-draft: false # true jika masih WIP
+published: true # false jika masih draft
 
 # Links
 pdf_url: https:// # Link ke google drive sebagai alternatif
