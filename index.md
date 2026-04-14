@@ -22,7 +22,6 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 `#masihbelajar` `#terusbelajar` `#salingbelajar`
 
 ## Ruang Ide-ide Aja
-### Koleksi 1
 {% assign featured_projects = site.projects
   | where_exp: "project", "project.published != false"
   | sort: "date"
