@@ -195,7 +195,7 @@ a:hover {
 /* 6. PROJECTS GRID & CARDS */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 2.5rem;
   margin-top: 2rem;
 }
