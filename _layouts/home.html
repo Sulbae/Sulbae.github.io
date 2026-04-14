@@ -9,17 +9,25 @@
 <body class="layout-home">
   <!-- Kontainer Induk -->
   <div class="site-wrapper">
-    <!-- Header -->
-    {% inlcude header.html %}
+    <!-- Navigation -->
+    {% inlcude navigation.html %}
 
     <!-- Main Content -->
     <main class="home-tabloid">
+      <!-- Masthead (Judul site) -->
+      <header class="masthead">
+        <h1 class="site-name">{{ site.title }}</h1>
+        <p class="site-desc">{{ site.description }}</p>
+      </header>
+      <!-- Konten dari index.md -->
       {{ content }}
+      
     </main>
 
     <!-- Footer -->
     {% include footer.html %}
     
   </div>
+  
 </body>
 </html>
