@@ -57,7 +57,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
       <details class="project-summary">
         <summary class="summary-toggle">
           <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
-          <span class="toggle-icon" aria-hidden="true">▼ Baca Selengkapnya</span>
+          <span class="read-more">Baca Selengkapnya</span>
         </summary>
         <div class="summary-content">
           <p>{{ project.summary }}</p>
