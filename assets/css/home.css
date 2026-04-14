@@ -90,6 +90,11 @@ a:hover {
   border-left: 4px solid #e0e0e0;
 }
 
+.profile p {
+  font-size: 1.05rem;
+  margin-bottom: 1.9rem;
+}
+
 .opening code {
   background: none;
   padding: 0;
