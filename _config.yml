@@ -9,23 +9,25 @@ timezone: Asia/Jakarta
 collections:
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projects/:slug/ # URL pattern: /projects/water-potability-assessment/
+    sort_by: date
+    order: descending
   articles:
     output: true
-    permalink: /articles/:name/
+    permalink: /articles/:slug/
 
 defaults:
   - scope:
       path: ""
       type: projects
     values:
-      layout: tabloid
+      layout: tabloid # Layout default
 
   - scope:
       path: ""
       type: articles
     values:
-      layout: tabloid
+      layout: tabloid # Layout default
 
 author:
   name: "Anggun Sulis Setyawan"
