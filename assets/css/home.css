@@ -192,7 +192,7 @@ a:hover {
 }
 
 /* Grid Container */
-.project-grid {
+.projects-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2.5rem;
@@ -299,7 +299,7 @@ a:hover {
   box-shadow: 0 2px 8px rgba(255, 94, 0, 0.25);
 }
 .tag-badge:nth-child(1):hover {
-  box-shadow: 0 5px 14px rgba(255, 94, 0, 0.35)
+  box-shadow: 0 5px 14px rgba(255, 94, 0, 0.35);
 }
 
 /* Warna Tag 2 */
@@ -308,7 +308,7 @@ a:hover {
   box-shadow: 0 2px 8px rgba(0, 139, 139, 0.25);
 }
 .tag-badge:nth-child(2):hover {
-  box-shadow: 0 5px 14px rgba(0, 139, 139, 0.25)
+  box-shadow: 0 5px 14px rgba(0, 139, 139, 0.25);
 }
 
 
@@ -331,38 +331,51 @@ details.project-summary {
   padding-top: 1rem;
 }
 
-/* Hide default marker */
-summary.summary-toggle {
-  cursor: pointer;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* 1. Default State (Tertutup) */
+/* Sembunyikan tombol "Tutup" saat awal */
+.action-close {
+  display: none;
+}
+
+/* Style umum tombol action */
+.action-btn {
   font-family: system-ui, -apple-system, sans-serif;
   font-size: 0.85rem;
-  color: #666;
-  padding: 0.5rem 0;
-  transition: opacity 0.2s;
-}
-
-summary.summary-toggle::-webkit-details-marker {
-  display: none;
-}
-
-/* Hide summary text saat expanded */
-details.project-summary[open] .summary-toggle {
-  display: none;
-}
-
-/* Read more button style */
-.read-more {
-  font-weight: 500;
+  font-weight: 600;
   color: #111;
+  margin-left: 0.8rem;
   border-bottom: 1px solid #bbb;
+  transition: border-color 0.2s;
+  white-space: nowrap;
 }
 
-.read-more:hover {
+.action-btn:hover {
   border-bottom-color: #111;
+}
+
+/* 2. Expanded State (Terbuka / [open]) */
+/* Saat details terbuka: */
+
+/* a. Hilangkan teks preview summary agar tidak double */
+details[open] .summary-toggle .summary-text {
+  display: none;
+}
+
+/* b. Hilangkan teks "Baca Selengkapnya" */
+details[open] .action-read {
+  display: none;
+}
+
+/* c. Munculkan teks "Tutup" */
+details[open] .action-close {
+  display: inline-block;
+}
+
+/* Opsional: Mengubah posisi summary agar rapi saat terbuka */
+details[open] .summary-toggle {
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
 }
 
 /* Smooth animation */
