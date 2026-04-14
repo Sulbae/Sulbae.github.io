@@ -60,6 +60,7 @@ title: Home
             {{ project.title }} 
           </a>
         </h3>
+        <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
         <!--Tags-->
         {% if project.tags %}
         <div class="project-tags-inline">
@@ -70,7 +71,6 @@ title: Home
         {% endif %}
       </div>
       <!--Project Summary-->
-      <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
       <details class="project-summary">
         <summary class="summary-toggle">
           <!--Teks Preview-->
