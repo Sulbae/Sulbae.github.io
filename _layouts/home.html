@@ -1,39 +1,25 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }} | {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
+</head>
+<body class="layout-home">
+  <!-- Kontainer Induk -->
+  <div class="site-wrapper">
+    <!-- Header -->
+    {% inlcude header.html %}
 
-<link rel="stylesheet" href="/assets/css/home.css">
+    <!-- Main Content -->
+    <main class="home-tabloid">
+      {{ content }}
+    </main>
 
-<main class="home-tabloid">
-
-  <!-- MASTHEAD -->
-  <header class="masthead">
-    <h1 class="site-name">{{ site.title }}</h1>
-    <p class="site-desc">{{ site.description }}</p>
-  </header>
-
-  <!-- OPENING -->
-  <section class="opening">
-    {{ content | markdownify }}
-  </section>
-
-  <!-- NAVIGATION KOLEKSI -->
-  <section class="collections">
-    <h2>Atribut Koleksi</h2>
-
-    <div class="collection-grid">
-      <div class="collection-card">
-        <h3>Proyek</h3>
-        <p>Eksperimen, proyek end-to-end, dan catatan teknis</p>
-        <a href="/projects/">Lihat →</a>
-      </div>
-
-      <div class="collection-card">
-        <h3>Full Report</h3>
-        <p>Detail proses dan refleksi belajar</p>
-        <a href="/articles/">Lihat →</a>
-      </div>
-    </div>
-  </section>
-
-</main>
+    <!-- Footer -->
+    {% include footer.html %}
+    
+  </div>
+</body>
+</html>
