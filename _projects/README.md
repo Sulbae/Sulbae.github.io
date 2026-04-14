@@ -1,5 +1,5 @@
 ## 1. Copy template
-cp _projects/_default/project-template.md _projects/nama-proyek-baru.md
+`cp _projects/_default/project-template.md _projects/nama-proyek-baru.md`
 
 ## 2. Edit front matter & konten
 - Ganti title, date, summary, tags
