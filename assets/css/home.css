@@ -3,15 +3,15 @@
    ========================================= */
 :root {
    /* Font Families */
-   --font-display: 'Cinzel', serif               /* untuk judul besar */
+   --font-display: 'Cinzel', serif;              /* untuk judul besar */
    --font-heading: 'Cormorant Garamond', serif;  /* untuk heading section */
    --font-body: 'Noto Serif', serif;             /* untuk body text */
    --font-ui: 'Inter', sans-serif;               /* untuk navigasi dan UI */
   
    /* Colors */
    --color-bg: #e7e7e7;            /* paper rotan untuk background utama #E0D5C5*/
-   --color-nav: #F5F0E8            /* warm white untuk nav */
-   --color-nav-bar: #1A1614        /* black untuk nav bar */
+   --color-nav: #F5F0E8;           /* warm white untuk nav */
+   --color-nav-bar: #1A1614;       /* black untuk nav bar */
    --color-text: #1A1614;          /* black */
    --color-text-secondary: #4A4038;/* dark gray */
    --color-text-muted: #7B6D60;    /* gray */
@@ -76,7 +76,8 @@ a:hover {
    ========================================= */
 .site-navigation {
    background-color: var(--color-nav-bar) !important;
-   opacity: 1;
+   background: #1A1614 !important;
+   opacity: 1 !important;
    width: 100%;
    position: sticky;
    top: 0;
@@ -216,7 +217,7 @@ a:hover {
 .profile .hashtags code {
    background: #2A2420 !important;
    color: #FFFFFF !important;
-   font-family: var(--font-sans) !important;
+   font-family: var(--font-ui) !important;
    font-size: 0.85rem !important;
    font-weight: 700 !important;
    text-transform: lowercase !important;
@@ -241,7 +242,7 @@ a:hover {
 .opening code {
    background: none;
    padding: 0;
-   font-family: var(--font-sans);
+   font-family: var(--font-ui);
    font-size: 0.85rem;
    color: var(--color-text-muted);
 }
@@ -259,7 +260,7 @@ a:hover {
 }
 
 .collections h2 {
-   font-family: var(--font-sans);
+   font-family: var(--font-ui);
    font-size: 0.85rem;
    font-weight: 600;
    letter-spacing: 0.12em;
@@ -288,13 +289,13 @@ a:hover {
 .collection-card h3 {
    margin-top: 0;
    font-size: 1.2rem;
-   font-family: var(--font-serif);
+   font-family: var(--font-body);
 }
 
 .collection-card p {
    color: var(--color-text-secondary);
    margin-bottom: 1.4rem;
-   font-family: var(--font-sans);
+   font-family: var(--font-ui);
 }
 
 /* FOOTER */
@@ -321,7 +322,7 @@ a:hover {
 }
 
 .footer-link {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--color-text-secondary);
@@ -335,7 +336,7 @@ a:hover {
 }
 
 .footer-copyright {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.8rem;
   color: var(--color-text-muted);
   margin: 0;
@@ -563,7 +564,7 @@ details[open] .close-wrapper {
    width: 100% !important;
    max-width: none !important;
    margin-bottom: 1rem;
-   font-family: var(--font-sans);
+   font-family: var(--font-ui);
    color: #2A2420;
 }
 
@@ -614,7 +615,7 @@ details[open] .close-wrapper {
 
 .project-date {
   display: block;
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.8rem;
   color: var(--color-text-muted);
   margin-top: 1.5rem;
@@ -628,7 +629,7 @@ details[open] .close-wrapper {
 }
 
 .view-all a {
-  font-family: var(--font-sans);
+  font-family: var(--font-ui);
   font-size: 0.9rem;
   font-weight: 500;
   letter-spacing: 0.05em;
