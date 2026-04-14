@@ -8,12 +8,13 @@
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   
   /* Colors */
-  --color-text: #1a1a1a;
-  --color-text-secondary: #555;
-  --color-text-muted: #888;
-  --color-bg: #f5f5f5;
-  --color-white: #ffffff;
-  --color-black: #111;
+  --color-text: #2A2420;          /* warm black */
+  --color-text-secondary: #5A5048;/* warm gray */
+  --color-text-muted: #8B7D70;    /* gray */
+  --color-bg: #D4C5B5;            /* paper rotan untuk background utama*/
+  --color-bg-light: #E0D5C5       /* paper rotan light untuk card/overlay */
+  --color-white: #F5F0E8;         /* warm white untuk card */
+  --color-black: #2A2420;         /* warm black untuk accent */
 }
 
 html {
@@ -120,7 +121,7 @@ a:hover {
 }
 
 .site-name {
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 3rem;
   font-weight: 700;
   margin: 0 0 0.4rem 0;
