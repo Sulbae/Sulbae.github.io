@@ -29,20 +29,20 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
   | reverse
 %}
 
-{% for project in featured_projects limit: 6%}
+{% for project in featured_projects limit: 6 %}
   {% assign title = project.title | default: "Untitled Project" %}
   {% assign url = project.url | default: "#" %}
   {% assign summary = project.summary | default: "No description available." | truncate: 160 %}
 
-{% if project.image %}
+- {% if project.image %}
   <img src="{{ project.image | relative_url }}" 
        alt="{{ project.title | escape }}" 
        width="100%" 
-       style="border-radius: 8px; margin: 8px 0;"
+       style="border-radius: 8px; margin: 8px 0; aspect-ratio: 16/9; object-fit: cover;"
        loading="lazy">
 {% endif %}
 
-- **[{% if project.external_url %}{{ title }}{% else %}{{ title }}{% endif %}]({% if project.external_url %}{{ project.external_url }}{% else %}{{ url }}{% endif %})**{% if project.tags %} `{{ project.tags | join: "`, `" }}`{% endif %})
+- **[{% if project.external_url %}{{ title }}{% else %}{{ title }}{% endif %}]({% if project.external_url %}{{ project.external_url }}{% else %}{{ url }}{% endif %})**{% if project.tags %} <small>`{{ project.tags | join: "`, `" }}`</small>{% endif %}){% if project.demo_url %} [Live Demo]({{ project.demo_url }}){% endif %}
 
   {{ summary }}{% if project.date %} <small>• {{ project.date | date: "%b %Y" }}</small>{% endif %}
 {% endfor %}
