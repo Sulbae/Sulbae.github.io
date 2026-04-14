@@ -81,14 +81,17 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
             </a>
             {% endif %}
           </div>
-          <a class="close-wrapper">
-            <span class="action-close">Tutup</span>
-          </a>
+          <!--Tutup details saat tombol "Tutup" diklik-->
+          <div class="close-wrapper">
+            <span class="action-close" onclicl="this.closest('details').removeAttribute('open')">
+              Tutup
+            </span>
+          </div>
         </div>
       </details>
     </div>
   </article>
-{% endfor %}      
+{% endfor %}
 </div>  
 
 {% if fetured_projects.size > 10 %}
