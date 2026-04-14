@@ -81,9 +81,9 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
             </a>
             {% endif %}
           </div>
-          <div class="close-wrapper">
+          <a class="close-wrapper">
             <span class="action-close">Tutup</span>
-          </div>
+          </a>
         </div>
       </details>
     </div>
