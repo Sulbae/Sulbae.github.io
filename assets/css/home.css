@@ -173,7 +173,8 @@ a:hover {
 .opening p {
    font-family: var(--font-body);
    font-size: 1.05rem;
-   max-width: 800px;
+   max-width: none;
+   text-align: justify;
    margin-bottom: 1.2rem;
    line-height: 1.8;
    color: #2A2420;
@@ -194,8 +195,8 @@ a:hover {
    font-size: 1.05rem;
    line-height: 1.8;
    margin-bottom: 1.6rem;
-   text-align: justify;
-   max-width: 100%;
+   text-align: left;
+   max-width: 60%;
    color: #2A2420;
 }
 
