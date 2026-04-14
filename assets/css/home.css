@@ -281,34 +281,36 @@ a:hover {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   padding: 0.3rem 0.7rem;
   border-radius: 20px;
-  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
   white-space: nowrap;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .tag-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.35);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.18);
 }
 
-/* Warna alternatif untuk tag (untuk variasi) */
-.tag-badge:nth-child(2n) {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  box-shadow: 0 2px 4px rgba(245, 87, 108, 0.25);
+/* Warna Tag 1 */
+.tag-badge:nth-child(1) {
+  background: linear-gradient(135deg, #FF9A00 0%, #FF5E00 100%);
+  box-shadow: 0 2px 8px rgba(255, 94, 0, 0.25);
+}
+.tag-badge:nth-child(1):hover {
+  box-shadow: 0 5px 14px rgba(255, 94, 0, 0.35)
 }
 
-.tag-badge:nth-child(3n) {
-  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-  box-shadow: 0 2px 4px rgba(79, 172, 254, 0.25);
+/* Warna Tag 2 */
+.tag-badge:nth-child(2) {
+  background: linear-gradient(135deg, #00D2C0 0%, #008B8B 100%);
+  box-shadow: 0 2px 8px rgba(0, 139, 139, 0.25);
+}
+.tag-badge:nth-child(2):hover {
+  box-shadow: 0 5px 14px rgba(0, 139, 139, 0.25)
 }
 
-.tag-badge:nth-child(4n) {
-  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-  box-shadow: 0 2px 4px rgba(67, 233, 123, 0.25);
-}
 
 /* Responsive - Stack pada mobile */
 @media (max-width: 640px) {
