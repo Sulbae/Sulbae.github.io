@@ -63,11 +63,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
         <summary class="summary-toggle">
           <!--Teks Preview-->
           <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
-          <!--Toggle Button-->
-          <span class="action-btn"> 
-            <span class="action-read">Baca Selengkapnya</span>
-            <span class="action-close">Tutup</span>
-          </span>
+          <span class="action-read">Baca Selengkapnya</span>
         </summary>
         <!--Full Summary-->
         <div class="summary-content">
@@ -85,6 +81,9 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
             {% endif %}
           </div>
           <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
+          <div class="close-wrapper">
+            <span class="action-close">Tutup</span>
+          </div>
         </div>
       </details>
     </div>
