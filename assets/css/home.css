@@ -461,7 +461,9 @@ details[open] .close-wrapper {
 }
 
 .summary-content p {
-  width: 100%;
+  width: 100% !important;
+  max-width: none !important;
+  margin-bottom: 1rem;
 }
 
 @keyframes fadeIn {
