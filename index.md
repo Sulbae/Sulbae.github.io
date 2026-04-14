@@ -5,7 +5,7 @@ title: Home
 
 <!-- Opening Section -->
 <section class="opening">
-  <h1>Selamat Datang 🥳</h1>
+  <h2>Selamat Datang 🥳</h2>
   <p>Hi, People!</p>
 
   <p>
