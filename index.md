@@ -24,29 +24,65 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
 ## Ruang Ide-ide Aja
 ### Koleksi 1
 {% assign featured_projects = site.projects
-  | where_exp: "project", "project.draft != true"
+  | where_exp: "project", "project.published != false"
   | sort: "date"
   | reverse
 %}
 
-{% for project in featured_projects limit: 6 %}
-  {% assign title = project.title | default: "Untitled Project" %}
-  {% assign url = project.url | default: "#" %}
-  {% assign summary = project.summary | default: "No description available." | truncate: 160 %}
+<div class="projects-grid">
+{% for project in featured_projects limit: 10 %}
+  <article class="project-card">
+    {% if project.image %}
+    <div class="project-tumbhnail">
+      <img src="{{ project.image | relative_url }}" 
+           alt="{{ project.image_alt | default: project.title | escape }}" 
+           loading="lazy">
+    </div>
+    {% endif %}
+    <div class="project-content">
+      <h3 class="project-title">
+        <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
+          target="_blank" rel="noopener">
+          {{ project.title }}
+          {% if project.external_url %}{% endif %}
+        </a>
+      </h3>
+      {% if project.tags %}
+      <div class="project-tags">
+        {% for tag in project.tags limit 3 %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+      <details class="project-summary">
+        <summary class="summary-toggle">
+          <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
+          <span class="toggle-icon" aria-hidden="true">▼ Baca Selengkapnya</span>
+        </summary>
+        <div class="summary-content">
+          <p>{{ project.summary }}</p>
+          <div class="project-links">
+            {% if project.repo_url %}
+            <a href="{{ project.repo_url }}" class="btn btn-secondary" target="_blank">
+              Source Code
+            </a>
+            {% endif %}
+            {% if project.demo_url %}
+            <a href="{{ project.demo_url }}" class="btn btn-primary" target="_blank">
+              Demo
+            </a>
+            {% endif %}
+          </div>
+          <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
+        </div>
+      </details>
+    </div>
+  </article>
+{% endfor %}      
+</div>  
 
-- {% if project.image %}
-  <img src="{{ project.image | relative_url }}" 
-       alt="{{ project.title | escape }}" 
-       width="100%" 
-       style="border-radius: 8px; margin: 8px 0; aspect-ratio: 16/9; object-fit: cover;"
-       loading="lazy">
-{% endif %}
-
-- **[{% if project.external_url %}{{ title }}{% else %}{{ title }}{% endif %}]({% if project.external_url %}{{ project.external_url }}{% else %}{{ url }}{% endif %})**{% if project.tags %} <small>`{{ project.tags | join: "`, `" }}`</small>{% endif %}){% if project.demo_url %} [Live Demo]({{ project.demo_url }}){% endif %}
-
-  {{ summary }}{% if project.date %} <small>• {{ project.date | date: "%b %Y" }}</small>{% endif %}
-{% endfor %}
-
-{% if fetured_projects.size > 6 %}
-[→ Lihat semua](/projects)
+{% if fetured_projects.size > 10 %}
+<div class="view-all">
+  <a href="/projects" class="btn btn-outline">→ Lihat Semua</a>
+</div>
 {% endif %}
