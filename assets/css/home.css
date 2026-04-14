@@ -8,6 +8,10 @@ body.layout-home {
   background-image: url('/assets/images/homepage/homepage-top.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  overflow-x: hidden;
+  text-alignment: left;
 }
 
 * {
