@@ -80,7 +80,7 @@ title: Home
           <details class="project-summary">
             <summary class="summary-toggle">
               <!--Teks Preview-->
-              <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
+              <span class="summary-text">{{ project.summary | truncate: 200 }}</span>
               <span class="action-read">Baca Selengkapnya</span>
             </summary>
             <!--Full Summary-->
