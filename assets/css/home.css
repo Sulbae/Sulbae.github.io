@@ -26,7 +26,7 @@ html {
 
 body.layout-home {
   background-color: var(--color-bg);
-  background-image: url('/assets/images/homepage/homepage-beige.png');
+  background-image: url('/assets/images/homepage/homepage-silver.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -81,7 +81,7 @@ a:hover {
    position: sticky;
    top: 0;
    z-index: 1000;
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
    padding: 1rem 0;
    border-bottom: 1px solid #333;
 }
@@ -146,7 +146,7 @@ a:hover {
    5. OPENING & PROFILE
    ========================================= */
 .opening {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(4px);
   padding: 2rem;
   border-radius: 8px;
