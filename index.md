@@ -64,7 +64,7 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
           <!--Teks Preview-->
           <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
           <!--Toggle Button-->
-          <span class="action-btn"></span>  
+          <span class="action-btn"> 
             <span class="action-read">Baca Selengkapnya</span>
             <span class="action-close">Tutup</span>
           </span>
