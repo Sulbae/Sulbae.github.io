@@ -8,6 +8,7 @@ pdf: /asssets/pdfs/sample-deck.pdf
 article: /articles/sample-article/
 repo: https://github.com/Sulbae/Water-Potability-Assessment
 tags: [Monitoring System, Machine Learning]
+image: /assets/images/projects/water-potability-assessment.jpg
 published: true 
 ---
 
