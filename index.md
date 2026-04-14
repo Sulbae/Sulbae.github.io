@@ -5,14 +5,12 @@ title: Home
 
 <!-- Opening Section -->
 <section class="opening">
-  <h2>Selamat Datang 🥳</h2>
-  <p>Hi, People!</p>
-
-  <p>
-    Yang teman-teman lihat saat ini adalah ruang pameran pribadi tanpa batas yang menampung berbagai ekspresi seniman dalam menyalurkan ide-ide kreatif. Perjuangan melawan overthinking dalam kehidupan sehari-hari telah menginspirasi seniman untuk menciptakan ruang ini. Lebih dari itu, melalui platform ini, seniman juga berharap dapat memberikan inspirasi tanpa batas kepada siapapun yang mengunjunginya.
-  </p>
-  
-  <p>Ayo scroll ke bawah dan eksplorasi berbagai koleksi karya di ruang ini! 👇</p>
+  <h1>Selamat Datang 🥳</h1>
+    <p>Hi, People!</p>
+    <p>
+      Yang teman-teman lihat saat ini adalah ruang pameran pribadi tanpa batas yang menampung berbagai ekspresi seniman dalam menyalurkan ide-ide kreatif. Perjuangan melawan overthinking dalam kehidupan sehari-hari telah menginspirasi seniman untuk menciptakan ruang ini. Lebih dari itu, melalui platform ini, seniman juga berharap dapat memberikan inspirasi tanpa batas kepada siapapun yang mengunjunginya.
+    </p>
+    <p>Ayo scroll ke bawah dan eksplorasi berbagai koleksi karya di ruang ini! 👇</p>
 
 </section>
 
