@@ -39,20 +39,21 @@ Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya mer
     </div>
     {% endif %}
     <div class="project-content">
-      <h3 class="project-title">
-        <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
-          target="_blank" rel="noopener">
-          {{ project.title }}
-          {% if project.external_url %}{% endif %}
-        </a>
-      </h3>
-      {% if project.tags %}
-      <div class="project-tags">
-        {% for tag in project.tags limit 3 %}
-        <span class="tag">{{ tag }}</span>
-        {% endfor %}
+      <div class="project-header">
+        <h3 class="project-title">
+          <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
+            target="_blank" rel="noopener">
+            {{ project.title }} 
+          </a>
+        </h3>
+        {% if project.tags %}
+        <div class="project-tags-inline">
+          {% for tag in project.tags limit 3 %}
+          <span class="tag-badge">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        {% endif %}
       </div>
-      {% endif %}
       <details class="project-summary">
         <summary class="summary-toggle">
           <span class="summary-text">{{ project.summary | truncate: 100 }}</span>
