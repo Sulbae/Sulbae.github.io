@@ -482,9 +482,9 @@ summary.summary-toggle {
    align-items: center;
    justify-content: space-between;
    gap: 0.5rem;
-   font-family: var(--font-ui);
-   font-size: 1.05rem;
-   line-height: 1.8;
+   font-family: var(--font-ui) !important;
+   font-size: 1.05rem !important;
+   line-height: 1.8 !important;
    color: var(--color-text-secondary);
    padding: 0.5rem 0;
    transition: color 0.2s;
@@ -554,11 +554,12 @@ details[open] .close-wrapper {
 }
 
 .summary-content {
-  padding-top: 1rem;
-  font-size: 0.95rem;
-  color: #1A1614;
-  line-height: 1.6;
-  animation: fadeIn 0.3s ease-out;
+   padding-top: 0;
+   font-family: var(--font-ui) !important;
+   font-size: 1.05rem !important;
+   color: #1A1614;
+   line-height: 1.8 !important;;
+   animation: fadeIn 0.3s ease-out;
 }
 
 .summary-content p {
