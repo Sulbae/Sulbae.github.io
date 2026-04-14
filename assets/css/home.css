@@ -236,28 +236,90 @@ a:hover {
   padding: 2rem;
 }
 
+/* Project Header - Title + Tags inline */
+.project-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
 .project-title {
-  margin: 0 0 0.8rem 0;
+  margin: 0;
   font-size: 1.25rem;
   font-weight: 600;
+  flex: 1;
+  min-width: 0; /* Mencegah flex overflow */
 }
 
-/* Tags */
-.project-tags {
+.project-title a {
+  color: #111;
+  border-bottom: 1px solid #bbb;
+  transition: border-color 0.2s;
+}
+
+.project-title a:hover {
+  border-bottom-color: #111;
+}
+
+/* Tags Inline */
+.project-tags-inline {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  flex-shrink: 0;
   gap: 0.5rem;
-  margin-bottom: 1.2rem;
 }
 
-.tag {
+.tag-badge {
+  display: inline-block;
   font-family: system-ui, -apple-system, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.05rem;
-  color: #555;
-  background: #f5f5f5;
-  padding: 0.25rem 0.6rem;
-  border-radius: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #fff;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(102, 126, 234, 0.25);
+  white-space: nowrap;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tag-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.35);
+}
+
+/* Warna alternatif untuk tag (untuk variasi) */
+.tag-badge:nth-child(2n) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  box-shadow: 0 2px 4px rgba(245, 87, 108, 0.25);
+}
+
+.tag-badge:nth-child(3n) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  box-shadow: 0 2px 4px rgba(79, 172, 254, 0.25);
+}
+
+.tag-badge:nth-child(4n) {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  box-shadow: 0 2px 4px rgba(67, 233, 123, 0.25);
+}
+
+/* Responsive - Stack pada mobile */
+@media (max-width: 640px) {
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .project-tags-inline {
+    margin-top: 0.5rem;
+  }
 }
 
 /* Native <details> Toggle */
