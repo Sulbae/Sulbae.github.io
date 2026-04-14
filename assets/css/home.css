@@ -148,7 +148,6 @@ a:hover {
    ========================================= */
 .opening {
    background: #F5F0E8;
-   opacity: 0.5;
    backdrop-filter: blur(4px);
    padding: 2rem;
    border-radius: 8px;
@@ -171,16 +170,16 @@ a:hover {
 }
 
 .opening p {
-  font-family: var(--font-body);
-  font-size: 1.05rem;
-  max-width: 800px;
-  margin-bottom: 1.2rem;
-  color: #2A2420;
+   font-family: var(--font-body);
+   font-size: 1.05rem;
+   max-width: 800px;
+   margin-bottom: 1.2rem;
+   line-height: 1.8;
+   color: #2A2420;
 }
 
 .profile {
    background: #F5F0E8;
-   opacity: 0.5;
    backdrop-filter: blur(4px);
    padding: 2rem;
    margin: 0 0 4rem 0;
@@ -401,8 +400,8 @@ a:hover {
 .project-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 2rem;
+  font-weight: 800;
   flex: 1 1 auto;
   min-width: 0;
   overflow-wrap: break-word;
@@ -477,16 +476,17 @@ details.project-summary {
 }
 
 summary.summary-toggle {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
-  font-family: var(--font-ui);
-  font-size: 0.85rem;
-  color: var(--color-text-secondary);
-  padding: 0.5rem 0;
-  transition: color 0.2s;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 0.5rem;
+   font-family: var(--font-ui);
+   font-size: 1.05rem;
+   line-height: 1.8;
+   color: var(--color-text-secondary);
+   padding: 0.5rem 0;
+   transition: color 0.2s;
 }
 
 summary.summary-toggle::-webkit-details-marker {
