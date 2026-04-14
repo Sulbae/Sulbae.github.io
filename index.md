@@ -60,7 +60,7 @@ title: Home
             {{ project.title }} 
           </a>
         </h3>
-        <small class="project-date">{{ project.date | date: "%B %Y" }}</small>
+        <span class="project-date">{{ project.date | date: "%B %Y" }}</span>
         <!--Tags-->
         {% if project.tags %}
         <div class="project-tags-inline">
