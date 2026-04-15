@@ -413,7 +413,7 @@ section.profile .hashtags code:hover {
 .project-title {
   margin: 0;
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 600;
   flex: 1 1 auto;
   min-width: 0;
