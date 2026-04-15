@@ -390,7 +390,7 @@ section.profile .hashtags code:hover {
    scroll-snap-type: x mandatory;
    scroll-behavior: smooth;
    -webkit-overflow-scrolling: touch;
-   padding: 1rem 0 2rem 0;
+   padding: 1rem 0 1rem 0;
 
    /* Hide scroll bar */
    scrollbar-width: none; /* Firefox */
@@ -424,8 +424,8 @@ section.profile .hashtags code:hover {
    justify-content: center;
    align-items: center;
    gap: 1.5rem;
-   margin-top: 1rem;
-   padding: 1rem 0;
+   margin-top: 0.5rem;
+   padding: 0.5rem 0;
 }
 
 .scroll-btn {
