@@ -69,9 +69,6 @@ defaults:
       path: ""
     values:
       image: "/assets/images/homepage/profile-picture.png"
-      linkedin:
-        card:
-        creator: "Anggun Sulis Setyawan"
 
 # AUTHOR INFO
 author:
