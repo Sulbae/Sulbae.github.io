@@ -1,11 +1,34 @@
+# SITE INFO
 title: "UNLIMITED BANGSUWAN"
 description: "~ Ruang Pribadi Tanpa Batas ~"
-url: "https://Sulbae.github.io"
+keywords: "Machine Learning, Data Science, AI Engineering, Portfolio, Anggun Sulis Setyawan"
+url: "https://sulbae.github.io"
+baseurl: ""
+language: "id-ID"
+timezone: Asia/Jakarta
+encoding: utf-8
 
+# BUILD SETTINGS
 markdown: kramdown
 permalink: pretty
-timezone: Asia/Jakarta
+future: false
+show_drafts: false
+limit_posts: 0
 
+# PLUGINS
+plugins:
+  - jekyll-seo-tag  # auto meta tags, structured data
+  - jekyll-sitemap  # auto generate sitemap.xml untuk Google indexing
+  - jekyll-feed     # auto generate RSS feed untuk subscriber
+  - jekyll-minifier  # minify HTML/CSS/JS
+
+whitelist:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-minifier
+
+# COLLECTIONS
 collections:
   projects:
     output: true
@@ -15,15 +38,25 @@ collections:
   articles:
     output: true
     permalink: /articles/:slug/
+    sort_by: date
+    order: descending
 
+# DEFAULTS (Front Matter Defaults)
 defaults:
+  # projects
   - scope:
       path: ""
       type: projects
     values:
       layout: tabloid # Layout default
       published: true # Default published
-
+      image: ""
+      tags: []
+      repo_url: ""
+      demo_url: ""
+      deck_url: ""
+  
+  # Articles
   - scope:
       path: ""
       type: articles
@@ -31,11 +64,56 @@ defaults:
       layout: tabloid # Layout default
       published: true # Default published
 
+  # Global SEO defaults
+  - scope:
+      path: ""
+    values:
+      image: ""/assets/images/homepage/profile-picture.png""
+      linkedin:
+        card:
+        creator: "Anggun Sulis Setyawan"
+
+# AUTHOR INFO
 author:
   name: "Anggun Sulis Setyawan"
   alias: "Bang Suwan"
   role: "Entry-level Machine Learning Engineer"
+  bio: ""
+  location: "Indonesia"
+  email: "angsulwan@gmail.com"
+  avatar: "/assets/images/homepage/profile-picture.png"
 
+  # Social Media
+  social:
+    github: "https://github.com/Sulbae"
+    linkedin: "https://linkedin.com/in/anggun-sulis-setyawan"
+    instagram: "https://instagram.com/_bangsuwan"
+    medium: "https://medium.com/@bangsuwan"
+
+# ASSET OPTIMIZATION
+sass:
+  style: compressed    # minify CSS output
+  sourcemap: never     # disable sourcemap untuk production
+
+# EXCLUDE untuk Security + Build Speed
+exclude:
+  - .git/
+  - .github/
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - README.md
+  - LICENSE
+  - "*.log"
+  - .DS_Store
+
+# GOOGLE ANALYTICS (OPSIONAL)
+google_analytics: "" # ID Google Analytics
+
+# DISABLED FEATURES
 readme_index:
   enabled: false
 
