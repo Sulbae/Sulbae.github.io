@@ -432,40 +432,45 @@ section.profile .hashtags code:hover {
 
 /* Scroll Progress Dots */
 .scroll-progress-dots {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
-  padding: 0.5rem 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 0.6rem;
+   margin-top: 0.5rem;
+   margin-top: 0.5rem;
+   padding: 0.5rem 0;
+   min-height: 20px
 }
 
 .scroll-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: rgba(181, 165, 149, 0.4);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 0;
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: rgba(181, 165, 149, 0.4);
+   border: 1px solid rgba(181, 165, 149, 0.3);
+   cursor: pointer;
+   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   padding: 0;
+   margin: 0;
+   flex-shrink: 0;
 }
 
 .scroll-dot:hover {
-  background: rgba(42, 36, 32, 0.5);
+  background-color: rgba(42, 36, 32, 0.5);
   transform: scale(1.2);
 }
 
 .scroll-dot.active {
-   background: #2A2420;
+   background-color: #2A2420;
    width: 12px;              /* ukuran saat active */
    height: 12px;
    border-radius: 4px;        /* Rounded rectangle */
+   border-color: #2A2420;
    transform: scale(1);
 }
 
 .scroll-dot.active:hover {
-  background: #2A2420;
+  background-color: #1A1614;
 }
 
 .scroll-btn {
@@ -932,6 +937,17 @@ details[open] .close-wrapper {
    .projects-nav {
     display: none;
   }
+   .scroll-progress-dots {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .scroll-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .scroll-dot.active {
+    width: 14px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -988,5 +1004,15 @@ details[open] .close-wrapper {
   }
   .profile-image img {
     max-width: 160px;  
+  }
+   .scroll-progress-dots {
+    gap: 0.4rem;
+  }
+  .scroll-dot {
+    width: 6px;
+    height: 6px;
+  }
+  .scroll-dot.active {
+    width: 12px;
   }
 }
