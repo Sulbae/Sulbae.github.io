@@ -206,7 +206,6 @@ a:hover {
 /* Profile Content */
 .profile-content {
    display: flex;
-   flex-direction: row-reverse;
    gap: 2rem;
    align-items: flex-start;
    width: 100%;
