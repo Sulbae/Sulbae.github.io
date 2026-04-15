@@ -185,12 +185,15 @@ a:hover {
 /* Profile Container */
 .profile {
    background: #F5F0E8 !important;
+   background-color: #F5F0E8 !important;
    backdrop-filter: blur(4px) !important;
    padding: 2rem;
    margin: 0 0 4rem 0;
    border-left: 4px solid #B5A595;
    position: relative;
    z-index: 1;
+   border-radius: 0;
+   overflow: hidden;
 }
 
 .profile h2 {
@@ -206,6 +209,7 @@ a:hover {
    gap: 2rem;
    align-items: flex-start;
    width: 100%;
+   background: transparent !important;
 }
 
 /* Kolom Teks Profile */
@@ -242,7 +246,7 @@ a:hover {
    object-fit: cover;
    border-radius: 0;
    box-shadow: 0;
-   border: 0
+   border: 0;
    transition: transform 0.3s ease;
 }
 
@@ -251,14 +255,14 @@ a:hover {
 }
 
 /* Hashtags Container */
-.profile .hashtags {
+section.profile .hashtags {
    margin-top: 1.5rem;
    display: flex;
    flex-wrap: wrap;
    gap: 0.5rem;
 }
 
-.profile .hashtags code {
+section.profile .hashtags code {
    background: #2A2420 !important;
    color: #FFFFFF !important;
    font-family: var(--font-ui) !important;
@@ -277,13 +281,13 @@ a:hover {
    opacity: 1;
 }
 
-.profile .hashtags code:hover {
+section.profile .hashtags code:hover {
    transform: translateY(-3px) !important;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
    background: #000 !important;
 }
 
-.opening code {
+section.profile code {
    background: none;
    padding: 0;
    font-family: var(--font-ui);
@@ -291,7 +295,7 @@ a:hover {
    color: var(--color-text-muted);
 }
 
-.opening code + code {
+section.profile code + code {
    margin-left: 0.6rem;
 }
 
@@ -602,7 +606,7 @@ details[open] .close-wrapper {
    font-family: var(--font-ui) !important;
    font-size: 1.05rem !important;
    color: #1A1614;
-   line-height: 1.8 !important;;
+   line-height: 1.8 !important;
    animation: fadeIn 0.3s ease-out;
 }
 
