@@ -30,13 +30,14 @@ permalink: /
     <!-- Grid -->
     <div class="projects-grid" id="projectsGrid">
       {% for project in featured_projects limit: 10 %}
-        <article class="project-card" data-index="{{ forloop.index0 }}">
+        <article class="project-card" data-index="{{ forloop.index0 }}" itemscope itemtype="https://schema.org/CreativeWork">
           <!--Thumbnail-->
           {% if project.image %}
           <div class="project-thumbnail">
             <img src="{{ project.image | relative_url }}" 
-                 alt="{{ project.image_alt | default: project.title | escape }}" 
-                 loading="lazy">
+                 alt="{{ project.image_alt | default: 'Thumbnail proyek' | append: project.title | escape }}" 
+                 loading="lazy"
+                 itemprop="image">
           </div>
           {% endif %}
           <!--Project Content-->
@@ -45,13 +46,14 @@ permalink: /
             <div class="project-header">
               <h3 class="project-title">
                 <a href="{% if project.deck_url %}{{ project.deck_url }}{% else %}{{ project.url }}{% endif %}"
-                  target="_blank" rel="noopener">
+                  target="_blank" rel="noopener noreferrer"
+                  itemprop="url">
                   {{ project.title }} 
                 </a>
               </h3>
               <!--Tags-->
               {% if project.tags %}
-              <div class="project-tags-inline">
+              <div class="project-tags-inline" itemprop="keywords">
                 {% for tag in project.tags limit: 2 %}
                 <span class="tag-badge">{{ tag }}</span>
                 {% endfor %}
@@ -62,7 +64,7 @@ permalink: /
             <details class="project-summary">
               <summary class="summary-toggle">
                 <!--Teks Preview-->
-                <span class="summary-text">{{ project.summary | truncate: 200 }}</span>
+                <span class="summary-text" itemprop="description">{{ project.summary | truncate: 200 }}</span>
                 <span class="action-read">Baca Ringkasan</span>
               </summary>
               <!--Full Summary-->
