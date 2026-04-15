@@ -180,6 +180,7 @@ a:hover {
    color: #2A2420;
 }
 
+/* Profile Container */
 .profile {
    background: #F5F0E8;
    backdrop-filter: blur(4px);
@@ -190,21 +191,57 @@ a:hover {
    z-index: 1;
 }
 
-.profile p {
-   font-family: var(--font-body);
-   font-size: 1.05rem;
-   line-height: 1.8;
-   margin-bottom: 1.6rem;
-   text-align: left;
-   max-width: 60%;
-   color: #2A2420;
-}
-
 .profile h2 {
    font-family: var(--font-heading);
    font-size: 1.5rem;
    font-weight: 600;
    margin: 0 0 1.5rem 0;
+}
+
+/* Profile Content */
+.profile-content {
+   display: flex;
+   gap: 2rem;
+   align-items: flex-start;
+}
+
+/* Kolom Teks Profile */
+.profile-text {
+   flex: 1;
+   min-width: 0;
+}
+
+.profile-text p {
+   font-family: var(--font-body);
+   font-size: 1.05rem;
+   line-height: 1.8;
+   margin-bottom: 1.6rem;
+   text-align: left;
+   color: #2A2420;
+}
+
+/* Kolom Foto Profile */
+.profile-image {
+   flex: 0 0 280px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.profile-image img {
+   width: 100%;
+   max-width: 280px;
+   height: auto;
+   aspect-ratio: 1 / 1;
+   object-fit: cover;
+   border-radius: 0;
+   box-shadow: 0;
+   border: 0
+   transition: transform 0.3s ease;
+}
+
+.profile-image img:hover {
+   transform: translateY(-4px);
 }
 
 /* Hashtags Container */
@@ -691,6 +728,19 @@ details[open] .close-wrapper {
     margin-top: 0.5rem;
     margin-left: 0;
   }
+   .profile-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .profile-image {
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;  /* Pusatkan foto */
+  }
+  .profile-image img {
+    max-width: 200px;  /* Foto lebih kecil di mobile */
+  }
 }
 
 @media (max-width: 640px) {
@@ -728,5 +778,11 @@ details[open] .close-wrapper {
   }
   .opening {
      padding: 1.2rem;
+  }
+   .profile {
+    padding: 1.5rem;
+  }
+  .profile-image img {
+    max-width: 160px;  /* Lebih kecil lagi di layar sangat kecil */
   }
 }
