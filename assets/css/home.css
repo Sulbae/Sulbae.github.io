@@ -284,7 +284,7 @@ section.profile .hashtags,
 .profile .hashtags code,
 section.profile .hashtags code,
 .profile-text .hashtags code {
-   background: #D3AF37 !important;
+   background: #2A2420 !important;
    color: #FFFFFF !important;
    font-family: var(--font-ui) !important;
    font-size: 0.85rem !important;
@@ -307,7 +307,7 @@ section.profile .hashtags code:hover {
    transform: translateY(-4px) !important;
    color: #2A2420 !important;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
-   background: #000 !important;
+   background: #D3AF37 !important;
 }
 
 
