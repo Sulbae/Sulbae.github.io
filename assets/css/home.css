@@ -43,7 +43,7 @@ html {
 
 body.layout-home {
   background-color: var(--color-bg);
-  background-image: url('/assets/images/homepage/homepage-texture.png');
+  background-image: url('/assets/images/homepage/homepage-texture-2.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
