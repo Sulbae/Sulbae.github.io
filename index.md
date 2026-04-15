@@ -16,7 +16,7 @@ title: Home
 
 <!-- Profile Section -->
 <section id="profile" class="profile">
-  <h2>Profil Seniman</h2>
+  <div><h2>Profil Seniman</h2></div>
   <div class="profile-content">
     <!-- Kolom Teks -->
     <div class="profile-text">
