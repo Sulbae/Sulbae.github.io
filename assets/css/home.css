@@ -199,13 +199,14 @@ a:hover {
 .profile h2 {
    font-family: var(--font-heading);
    font-size: 2rem;
-   font-weight: 800;
+   font-weight: 600;
    margin: 0 0 1.5rem 0;
 }
 
 /* Profile Content */
 .profile-content {
    display: flex;
+   flex-direction: row-reverse;
    gap: 2rem;
    align-items: flex-start;
    width: 100%;
@@ -353,7 +354,7 @@ section.profile .hashtags code:hover {
 .projects h2 {
    font-family: var(--font-heading);
    font-size: 2rem;
-   font-weight: 800;
+   font-weight: 600;
    letter-spacing: 0.12em;
    color: var(--color-text);
    margin-bottom: 2rem;
