@@ -9,9 +9,9 @@ summary: |
   
   Sebagai respon terhadap tantangan tersebut, seniman memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Risk Assessment System. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam menganalisis data hasil uji multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan rekomendasi lanjutan terhadap hasil analisis.
   
-pdf: /asssets/pdfs/sample-deck.pdf
-article: /articles/sample-article/
-repo: https://github.com/Sulbae/Water-Potability-Assessment
+deck_url: https://drive.google.com/file/d/1AOq84JuWzFGs0UXLcNzftEVyw3lWclHC/view?usp=sharing
+repo_url: https://github.com/Sulbae/Water-Potability-Assessment
+demo_url: https://water-potability-assessment.streamlit.app/
 tags: [Monitoring System, Machine Learning]
 image: /assets/images/projects/water-potability-assessment.jpg
 published: true 
