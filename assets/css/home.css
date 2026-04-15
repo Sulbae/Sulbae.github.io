@@ -365,6 +365,7 @@ section.profile .hashtags code:hover {
    ========================================= */
 .projects {
    margin-top: 4rem;
+   overflow: hidden;
 }
 
 .projects h2 {
@@ -377,23 +378,80 @@ section.profile .hashtags code:hover {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2.5rem;
-  margin-top: 2rem;
+   display: flex;
+   gap: 2rem;
+   overflow-x: auto;
+   overflow-y: hidden;
+   scroll-snap-type: x mandatory;
+   scroll-behavior: smooth;
+   -webkit-overflow-scrolling: touch;
+   padding: 1rem 0 2rem 0;
+   margin-top: 2rem;
+
+   /* Hide scroll bar */
+   scrollbar-width: none; /* Firefox */
+   -ms-overflow-style: none; /* IE/Edge */
+}
+
+/* Hide scroll bar Chrome/Safari */
+.project-grid::-webkit-scrollbar {
+   display: none;
 }
 
 .project-card {
-  background: #F5F0E8;
-  border: 1px solid #C9B9A8;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  overflow: hidden;
+   flex: 0 0 100%; /* default: 1 card visible */
+   max-width: 100%;
+   background: #F5F0E8;
+   border: 1px solid #C9B9A8;
+   transition: transform 0.25s ease, box-shadow 0.25s ease;
+   overflow: hidden;
+   scroll-snap-align: start;
+   scroll-snap-stop: always;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.06);
 }
+
+/* Scroll Navigation Buttons */
+.projects-nav {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.scroll-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1.5px solid #C9B9A8;
+  border-radius: 50%;
+  background: #F5F0E8;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.scroll-btn:hover {
+  background: var(--color-black);
+  border-color: var(--color-black);
+  color: var(--color-white);
+  transform: scale(1.1);
+}
+
+.scroll-btn:active {
+  transform: scale(0.95);
+}
+
+.scroll-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
 
 .project-thumbnail {
   width: 100%;
@@ -740,14 +798,18 @@ details[open] .close-wrapper {
    10. RESPONSIVE (Desktop-First Cascade)
    ========================================= */
 @media (min-width: 1200px) {
-  .home-tabloid {
+   .home-tabloid {
     padding: 2rem 3rem 2.5rem;
   }
-  .projects-grid {
+   .projects-grid {
     gap: 3rem;
   }
-  .project-content {
+   .project-content {
     padding: 2.2rem;
+  }
+   .projects-card {
+     flex: 0 0 calc(33.33% - 1.33rem); /* tampilkan 3 card dengan gap */
+     max-width: calc(33.33% - 1.33rem);
   }
 }
 
@@ -755,9 +817,9 @@ details[open] .close-wrapper {
   .home-tabloid {
     padding: 2rem 2rem;
   }
-  .collection-grid,
-  .projects-grid {
-    grid-template-columns: 1fr;
+  .projects-card {
+     flex: 0 0 calc(50% - 1rem); /* tampilkan 2 card dengan gap */
+     max-width: calc(50% - 1rem);
   }
 }
 
@@ -803,6 +865,9 @@ details[open] .close-wrapper {
   }
   .profile-image img {
      max-width: 200px;  /* Foto lebih kecil di mobile */
+  }
+   .projects-nav {
+    display: none;
   }
 }
 
