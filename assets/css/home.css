@@ -198,8 +198,9 @@ a:hover {
 
 .profile h2 {
    font-family: var(--font-heading);
-   font-size: 1.5rem;
-   font-weight: 600;
+   font-size: 1.35rem;
+   font-weight: 800;
+   letter-spacing: 0.12em;
    margin: 0 0 1.5rem 0;
 }
 
@@ -296,48 +297,6 @@ section.profile .hashtags code:hover {
 /* =========================================
    6. COLLECTIONS & FOOTER
    ========================================= */
-.collections {
-   margin-top: 4rem;
-}
-
-.collections h2 {
-   font-family: var(--font-ui);
-   font-size: 0.85rem;
-   font-weight: 600;
-   letter-spacing: 0.12em;
-   text-transform: uppercase;
-   color: var(--color-text-muted);
-   margin-bottom: 2rem;
-}
-
-.collection-grid {
-   display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   gap: 2.5rem;
-}
-
-.collection-card {
-   background: var(--color-white);
-   padding: 2.2rem;
-   border: 1px solid #eee;
-   transition: transform 0.25s ease;
-}
-
-.collection-card:hover {
-   transform: translateY(-4px);
-}
-
-.collection-card h3 {
-   margin-top: 0;
-   font-size: 1.2rem;
-   font-family: var(--font-body);
-}
-
-.collection-card p {
-   color: var(--color-text-secondary);
-   margin-bottom: 1.4rem;
-   font-family: var(--font-ui);
-}
 
 /* FOOTER */
 .footer {
@@ -388,6 +347,19 @@ section.profile .hashtags code:hover {
 /* =========================================
    7. PROJECTS GRID & CARDS
    ========================================= */
+.projects {
+   margin-top: 4rem;
+}
+
+.projects h2 {
+   font-family: var(--font-ui);
+   font-size: 1.35rem;
+   font-weight: 600;
+   letter-spacing: 0.12em;
+   color: var(--color-text);
+   margin-bottom: 2rem;
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
