@@ -1,4 +1,13 @@
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Block admin/internal paths
+Disallow: /admin/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /admin/css/*.map
+Disallow: /assets/js/*.map
+
+# Sitemap location
 Sitemap: https://sulbae.github.io/sitemap.xml
