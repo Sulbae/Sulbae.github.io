@@ -98,12 +98,12 @@ title: Home
             <div class="project-links">
               {% if project.repo_url %}
               <a href="{{ project.repo_url }}" class="btn btn-secondary" target="_blank">
-                Source Code
+                Repository
               </a>
               {% endif %}
               {% if project.demo_url %}
               <a href="{{ project.demo_url }}" class="btn btn-primary" target="_blank">
-                Demo
+                Demo App
               </a>
               {% endif %}
             </div>
