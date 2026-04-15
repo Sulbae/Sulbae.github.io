@@ -15,11 +15,11 @@ title: Home
 </section>
 
 <!-- Profile Section -->
-<section id="profile">
+<section id="profile" class="profile">
   <h2>Profil Seniman</h2>
   <div class="profile-content">
     <!-- Kolom Teks -->
-    <div class="profil-text">
+    <div class="profile-text">
       <p>
         Anggun Sulis Setyawan a.k.a Bang Suwan merupakan entry-level Machine Learning Engineer dengan latar belakang keilmuan Environmental Engineering. Ketertarikannya berada pada persimpangan antara data, sistem, dan cara manusia memahami serta memanfaatkan informasi dalam konteks nyata.
       </p>
@@ -43,82 +43,83 @@ title: Home
         loading="lazy">
     </div>
   </div>
+</section>
   
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Ruang Ide-ide Aja</h2>
-    <!-- Project Grid -->
-    {% assign featured_projects = site.projects
-      | where_exp: "project", "project.published != false"
-      | sort: "date"
-      | reverse
-    %}
-    <!-- Kontainer Projects -->
-    <div class="projects-grid">
-    {% for project in featured_projects limit: 10 %}
-      <article class="project-card">
-        <!--Thumbnail-->
-        {% if project.image %}
-        <div class="project-thumbnail">
-          <img src="{{ project.image | relative_url }}" 
-               alt="{{ project.image_alt | default: project.title | escape }}" 
-               loading="lazy">
-        </div>
-        {% endif %}
-        <!--Project Content-->
-        <div class="project-content">
-          <!--Project Header-->
-          <div class="project-header">
-            <h3 class="project-title">
-              <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
-                target="_blank" rel="noopener">
-                {{ project.title }} 
-              </a>
-            </h3>
-            <!--Tags-->
-            {% if project.tags %}
-            <div class="project-tags-inline">
-              {% for tag in project.tags limit: 2 %}
-              <span class="tag-badge">{{ tag }}</span>
-              {% endfor %}
-            </div>
-            {% endif %}
+<!-- Projects Section -->
+<section id="projects">
+  <h2>Ruang Ide-ide Aja</h2>
+  <!-- Project Grid -->
+  {% assign featured_projects = site.projects
+    | where_exp: "project", "project.published != false"
+    | sort: "date"
+    | reverse
+  %}
+  <!-- Kontainer Projects -->
+  <div class="projects-grid">
+  {% for project in featured_projects limit: 10 %}
+    <article class="project-card">
+      <!--Thumbnail-->
+      {% if project.image %}
+      <div class="project-thumbnail">
+        <img src="{{ project.image | relative_url }}" 
+             alt="{{ project.image_alt | default: project.title | escape }}" 
+             loading="lazy">
+      </div>
+      {% endif %}
+      <!--Project Content-->
+      <div class="project-content">
+        <!--Project Header-->
+        <div class="project-header">
+          <h3 class="project-title">
+            <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
+              target="_blank" rel="noopener">
+              {{ project.title }} 
+            </a>
+          </h3>
+          <!--Tags-->
+          {% if project.tags %}
+          <div class="project-tags-inline">
+            {% for tag in project.tags limit: 2 %}
+            <span class="tag-badge">{{ tag }}</span>
+            {% endfor %}
           </div>
-          <!--Project Summary-->
-          <details class="project-summary">
-            <summary class="summary-toggle">
-              <!--Teks Preview-->
-              <span class="summary-text">{{ project.summary | truncate: 200 }}</span>
-              <span class="action-read">Baca Selengkapnya</span>
-            </summary>
-            <!--Full Summary-->
-            <div class="summary-content">
-              <p>{{ project.summary }}</p>
-              <div class="project-links">
-                {% if project.repo_url %}
-                <a href="{{ project.repo_url }}" class="btn btn-secondary" target="_blank">
-                  Source Code
-                </a>
-                {% endif %}
-                {% if project.demo_url %}
-                <a href="{{ project.demo_url }}" class="btn btn-primary" target="_blank">
-                  Demo
-                </a>
-                {% endif %}
-              </div>
-              <!--Tutup details saat tombol "Tutup" diklik-->
-              <div class="close-wrapper">
-                <span class="action-close" onclick="this.closest('details').removeAttribute('open')">
-                  Tutup
-                </span>
-              </div>
-            </div>
-          </details>
+          {% endif %}
         </div>
-      </article>
-    {% endfor %}
-    </div>
-  
+        <!--Project Summary-->
+        <details class="project-summary">
+          <summary class="summary-toggle">
+            <!--Teks Preview-->
+            <span class="summary-text">{{ project.summary | truncate: 200 }}</span>
+            <span class="action-read">Baca Selengkapnya</span>
+          </summary>
+          <!--Full Summary-->
+          <div class="summary-content">
+            <p>{{ project.summary }}</p>
+            <div class="project-links">
+              {% if project.repo_url %}
+              <a href="{{ project.repo_url }}" class="btn btn-secondary" target="_blank">
+                Source Code
+              </a>
+              {% endif %}
+              {% if project.demo_url %}
+              <a href="{{ project.demo_url }}" class="btn btn-primary" target="_blank">
+                Demo
+              </a>
+              {% endif %}
+            </div>
+            <!--Tutup details saat tombol "Tutup" diklik-->
+            <div class="close-wrapper">
+              <span class="action-close" onclick="this.closest('details').removeAttribute('open')">
+                Tutup
+              </span>
+            </div>
+          </div>
+        </details>
+      </div>
+    </article>
+  {% endfor %}
+  </div>
+
   {% if featured_projects.size > 10 %}
   <div class="view-all">
     <a href="/projects" class="btn">→ Lihat Semua</a>
