@@ -16,26 +16,43 @@
 <script>
   // Horizontal Scroll Navigation
   const projectsGrid = document.getElementById('projectsGrid');
-  const scrollPrev = document.querySelector('scroll-prev');
-  const scrollNext = document.querySelector('scroll-next');
-
+  const scrollPrev = document.querySelector('.scroll-prev');
+  const scrollNext = document.querySelector('.scroll-next');
+  
   if (projectsGrid && scrollPrev && scrollNext) {
-    const scrollAmount = 400; // Pixel per scroll
-
+    const scrollAmount = 400;
+    
     scrollPrev.addEventListener('click', () => {
-      projectsGrid.scrollBy({ left: -scrollAmount, behaviour: 'smooth' })
+      projectsGrid.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     });
-
+    
     scrollNext.addEventListener('click', () => {
-      projectsGrid.scrollBy({ left: scrollAmount, behaviour: 'smooth' })
+      projectsGrid.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     });
-
-    // Hide buttons pada mobile
+    
+    // Update button state on scroll
     projectsGrid.addEventListener('scroll', () => {
       const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
-      scrollPrev.style.opacity = projectsGrid.scrollLeft > 0 ? '1' : '0.5';
-      scrollNext.style.opacity = projectsGrid.scrollLeft >= maxScroll - 1 ? '0.5' : '1';
-    })  
+      
+      if (projectsGrid.scrollLeft <= 0) {
+        scrollPrev.classList.add('disabled');
+        scrollPrev.setAttribute('disabled', 'true');
+      } else {
+        scrollPrev.classList.remove('disabled');
+        scrollPrev.removeAttribute('disabled');
+      }
+      
+      if (projectsGrid.scrollLeft >= maxScroll - 1) {
+        scrollNext.classList.add('disabled');
+        scrollNext.setAttribute('disabled', 'true');
+      } else {
+        scrollNext.classList.remove('disabled');
+        scrollNext.removeAttribute('disabled');
+      }
+    });
+    
+    // Initial state check
+    projectsGrid.dispatchEvent(new Event('scroll'));
   }
 </script>
   
