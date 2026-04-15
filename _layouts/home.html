@@ -9,22 +9,22 @@
   <meta name="description" content="{{ page.description | default: site.description }}">
   <meta name="keywords" content="Machine Learning, Data Science, AI Engineer, Portfolio, Anggun Sulis Setyawan">
   <meta name="author" content="Anggun Sulis Setyawan">
-  <link rel="canonical" href="https://sulbae.github.io/">
 
   <!-- Structured Data (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Anggun Sulis Setyawan",
-    "alternateName": "Bang Suwan",
-    "jobTitle": ["Machine Learning Engineer", "Data Scientist", "AI Engineer"],
+    "name": "{{ site.author.name }}",
+    "alternateName": "{{ site.author.alias }}",
+    "jobTitle": "{{ site.author.role }}",
     "url": "{{ site.url }}{{ site.baseurl }}",
-    "image": "{{ '/assets/images/homepage/profile-picture.png' | absolute_url }}"
+    "image": "{{ 'site.author.avatar' | absolute_url }}"
     "sameAs": [
-      "https://github.com/Sulbae",
-      "https://linkedin.com/in/anggun-sulis-setyawan",
-      "https://instagram.com/_bangsuwan"
+      "{{ site.author.github }}",
+      "{{ site.author.linkedin }}",
+      "{{ site.author.instagram }}",
+      "{{ site.author.medium }}"
     ],
     "worksFor": {
       "@type": "Organization",
