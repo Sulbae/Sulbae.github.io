@@ -65,7 +65,7 @@ permalink: /
               <summary class="summary-toggle">
                 <!--Teks Preview-->
                 <span class="summary-text" itemprop="description">{{ project.summary | truncate: 200 }}</span>
-                <span class="action-read">Baca Ringkasan</span>
+                <span class="action-read">Lihat</span>
               </summary>
               <!--Full Summary-->
               <div class="summary-content">
