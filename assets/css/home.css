@@ -523,7 +523,7 @@ section.profile .hashtags code:hover {
 /* Pojects Thumbnail */
 .project-thumbnail {
   width: 100%;
-  height: 500px;
+  height: 400px;
   background: #f9f9f9;
   overflow: hidden;
 }
