@@ -90,7 +90,7 @@ title: Home
           <summary class="summary-toggle">
             <!--Teks Preview-->
             <span class="summary-text">{{ project.summary | truncate: 200 }}</span>
-            <span class="action-read">Baca Selengkapnya</span>
+            <span class="action-read">Baca Ringkasan</span>
           </summary>
           <!--Full Summary-->
           <div class="summary-content">
