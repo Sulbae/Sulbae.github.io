@@ -9,7 +9,7 @@ deck_url: https://drive.google.com/
 repo_url: https://github.com/Sulbae/Student-s-Performance-Dashboard
 demo_url: https://dropout-risk-assessment.streamlit.app/
 tags: [Education, Machine Learning]
-image: /assets/images/projects/student.jpg
+image: /assets/images/projects/student.png
 published: true 
 ---
 
