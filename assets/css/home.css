@@ -127,7 +127,7 @@ a:hover {
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
+  color: #D3AF37;
   transform: translateY(-1px);
 }
 
@@ -305,6 +305,7 @@ section.profile .hashtags code,
 .profile .hashtags code,
 section.profile .hashtags code:hover {
    transform: translateY(-4px) !important;
+   color: #D3AF37 !important;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
    background: #000 !important;
 }
