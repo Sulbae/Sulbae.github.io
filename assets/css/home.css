@@ -239,8 +239,8 @@ a:hover {
 }
 
 .profile-image img {
-   width: 100%;
-   max-width: 100%;
+   width: 200%;
+   max-width: 200%;
    height: auto;
    aspect-ratio: 1 / 1;
    object-fit: cover;
