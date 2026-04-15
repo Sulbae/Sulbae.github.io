@@ -4,35 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Meta Tags untuk SEO -->
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}">
-  <meta name="keywords" content="Machine Learning, Data Science, AI Engineer, Portfolio, Anggun Sulis Setyawan">
-  <meta name="author" content="Anggun Sulis Setyawan">
-
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "{{ site.author.name }}",
-    "alternateName": "{{ site.author.alias }}",
-    "jobTitle": "{{ site.author.role }}",
-    "url": "{{ site.url }}{{ site.baseurl }}",
-    "image": "{{ 'site.author.avatar' | absolute_url }}"
-    "sameAs": [
-      "{{ site.author.github }}",
-      "{{ site.author.linkedin }}",
-      "{{ site.author.instagram }}",
-      "{{ site.author.medium }}"
-    ],
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Freelance / Independent"
-    },
-    "knowsAbout": ["Machine Learning", "Data Science", "AI Engineering", "Climate Tech", "Professional", "GitHub Pages"]
-  }
-  </script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 
   <!-- Project Structured Data -->
   {% if page.layout == "home" %}
@@ -59,12 +36,6 @@
   </script>
   {% endif %}
 
-  <!-- Install font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 </head>
   
 <body class="layout-home">
