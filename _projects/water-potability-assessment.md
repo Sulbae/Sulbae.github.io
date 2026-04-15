@@ -12,7 +12,7 @@ summary: |
 deck_url: https://drive.google.com/file/d/1AOq84JuWzFGs0UXLcNzftEVyw3lWclHC/view?usp=sharing
 repo_url: https://github.com/Sulbae/Water-Potability-Assessment
 demo_url: https://water-potability-assessment.streamlit.app/
-tags: [Monitoring System, Machine Learning]
+tags: [Environmental, Machine Learning]
 image: /assets/images/projects/water-potability-assessment.jpg
 published: true 
 ---
