@@ -148,7 +148,7 @@ a:hover {
    5. OPENING & PROFILE
    ========================================= */
 .opening {
-   background: rgba(245, 240, 232, 0.6) !important;
+   background: rgba(245, 240, 232, 0.8) !important;
    backdrop-filter: blur(4px) !important;
    -webkit-backdrop-filter: blur(4px) !important; /* support untuk Safari */
    border: 1px solid rgba(255, 255, 255, 0.3);
