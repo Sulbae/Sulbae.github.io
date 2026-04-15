@@ -255,14 +255,18 @@ a:hover {
 }
 
 /* Hashtags Container */
-section.profile .hashtags {
+.profile .hashtags,
+section.profile .hashtags,
+.profile-text .hashtags {
    margin-top: 1.5rem;
    display: flex;
    flex-wrap: wrap;
    gap: 0.5rem;
 }
 
-section.profile .hashtags code {
+.profile .hashtags code,
+section.profile .hashtags code,
+.profile-text .hashtags code {
    background: #2A2420 !important;
    color: #FFFFFF !important;
    font-family: var(--font-ui) !important;
@@ -281,22 +285,11 @@ section.profile .hashtags code {
    opacity: 1;
 }
 
+.profile .hashtags code,
 section.profile .hashtags code:hover {
    transform: translateY(-3px) !important;
    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35) !important;
    background: #000 !important;
-}
-
-section.profile code {
-   background: none;
-   padding: 0;
-   font-family: var(--font-ui);
-   font-size: 0.85rem;
-   color: var(--color-text-muted);
-}
-
-section.profile code + code {
-   margin-left: 0.6rem;
 }
 
 
