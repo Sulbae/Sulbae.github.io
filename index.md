@@ -48,20 +48,6 @@ title: Home
 <section id="projects" class="projects">
   <h2>Ruang Ide-ide Aja</h2>
   
-  <!-- Scroll Navigation Buttons -->
-  <div class="projects-nav">
-    <button class="scroll-btn scroll-prev" aria-label="Geser kiri">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M15 18l-6-6 6-6"/>
-      </svg>
-    </button>
-    <button class="scroll-btn scroll-next" aria-label="Geser kanan">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M9 18l-6-6 6-6"/>
-      </svg>
-    </button>
-  </div>
-  
   <!-- Project Grid -->
   {% assign featured_projects = site.projects
     | where_exp: "project", "project.published != false"
@@ -133,6 +119,20 @@ title: Home
         </div>
       </article>
     {% endfor %}
+  </div>
+
+  <!-- Scroll Navigation Buttons -->
+  <div class="projects-nav">
+    <button class="scroll-btn scroll-prev" aria-label="Geser kiri">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <button class="scroll-btn scroll-next" aria-label="Geser kanan">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
   </div>
 
   {% if featured_projects.size > 10 %}
