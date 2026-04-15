@@ -38,7 +38,7 @@ title: Home
     </div>
     <!-- Kolom Foto -->
     <div class="profile-image">
-      <img src="/assets/images/homepage/profile-image.png"
+      <img src="/assets/images/homepage/foto-formal-removebg.png"
         alt="Foto Profil"
         loading="lazy">
     </div>
