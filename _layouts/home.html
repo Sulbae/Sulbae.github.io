@@ -12,6 +12,33 @@
   
   <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 </head>
+
+<script>
+  // Horizontal Scroll Navigation
+  const projectsGrid = document.getElementById('projectsGrid');
+  const scrollPrev = document.querySelector('scroll-prev');
+  const scrollNext = document.querySelector('scroll-next');
+
+  if (projectsGrid && scrollPrev && scrollNext) {
+    const scrollAmount = 400; // Pixel per scroll
+
+    scrollPrev.addEventListener('click', () => {
+      projectsGrid.scrollBy({ left: -scrollAmount, behaviour: 'smooth' })
+    });
+
+    scrollNext.addEventListener('click', () => {
+      projectsGrid.scrollBy({ left: scrollAmount, behaviour: 'smooth' })
+    });
+
+    // Hide buttons pada mobile
+    projectsGrid.addEventListener('scroll', () => {
+      const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
+      scrollPrev.style.opacity = projectsGrid.scrollLeft > 0 ? '1' : '0.5';
+      scrollNext.style.opacity = projectsGrid.scrollLeft >= maxScroll - 1 ? '0.5' : '1';
+    })  
+  }
+</script>
+  
 <body class="layout-home">
   <!-- Kontainer Induk -->
   <div class="site-wrapper">
