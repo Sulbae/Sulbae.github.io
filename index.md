@@ -98,7 +98,7 @@ title: Home
             <div class="project-links">
               {% if project.repo_url %}
               <a href="{{ project.repo_url }}" class="btn btn-secondary" target="_blank">
-                Repository
+                Detail Karya
               </a>
               {% endif %}
               {% if project.demo_url %}
