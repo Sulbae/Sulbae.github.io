@@ -46,7 +46,7 @@ title: Home
 </section>
   
 <!-- Projects Section -->
-<section id="projects">
+<section id="projects" class="projects">
   <h2>Ruang Ide-ide Aja</h2>
   <!-- Project Grid -->
   {% assign featured_projects = site.projects
