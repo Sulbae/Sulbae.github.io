@@ -446,13 +446,15 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-btn:hover {
-  background: rgba(42, 36, 32, 0.9);
-  transform: scale(1.1);
-  box-shadow: 0 4px 16px rgba(42, 36, 32, 0.3);
+   color: #FFFFFF;
+   background: rgba(42, 36, 32, 0.9);
+   transform: scale(1.1);
+   box-shadow: 0 4px 16px rgba(42, 36, 32, 0.3);
 }
 
 .scroll-btn:active {
-  transform: scale(0.95);
+   color: #FFFFFF;
+   transform: scale(0.95);
 }
 
 .scroll-btn:focus-visible {
@@ -461,8 +463,9 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-btn svg {
-  width: 28px;
-  height: 28px;
+   width: 28px;
+   height: 28px;
+   stroke: currentColor;
 }
 
 .scroll-btn:disabled,
