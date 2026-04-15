@@ -198,9 +198,8 @@ a:hover {
 
 .profile h2 {
    font-family: var(--font-heading);
-   font-size: 1.35rem;
+   font-size: 2rem;
    font-weight: 800;
-   letter-spacing: 0.12em;
    margin: 0 0 1.5rem 0;
 }
 
@@ -352,9 +351,9 @@ section.profile .hashtags code:hover {
 }
 
 .projects h2 {
-   font-family: var(--font-ui);
-   font-size: 1.35rem;
-   font-weight: 600;
+   font-family: var(--font-heading);
+   font-size: 2rem;
+   font-weight: 800;
    letter-spacing: 0.12em;
    color: var(--color-text);
    margin-bottom: 2rem;
