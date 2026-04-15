@@ -42,10 +42,30 @@
     const projectsGrid = document.getElementById('projectsGrid');
     const scrollPrev = document.querySelector('.scroll-prev');
     const scrollNext = document.querySelector('.scroll-next');
+    const scrollDotsContainer = document.getElementById('scrollDots');
     
-    if (projectsGrid && scrollPrev && scrollNext) {
+    if (projectsGrid && scrollPrev && scrollNext && scrollDotsContainer) {
+      const card = projectsGrid.querySelectorAll('.project-card');
       const scrollAmount = 400;
       let scrollTimeout;
+
+      // Generate dots
+      card.forEach((card, index)) => {
+        const dot = document.createElement('button');
+        dot.className = 'scroll-dot';
+        dot.setAttribute('aria-label', 'Go to project ${index + 1}');
+        dot.addEventListener('click', function() {
+          closeAllDetails();
+          const cardOffset = card.offsetLeft;
+          projectsGrid.scrollTo({
+            left: cardOffset,
+            behavior: 'smooth'
+          });
+        });
+        scrollDotsContainer.appendChild(dot);
+      });
+
+      const dots = scrollDotsContainer.querySelectorAll('.scroll-dot');
       
       // Scroll Prev
       scrollPrev.addEventListener('click', function(e) {
@@ -67,11 +87,32 @@
         });
       });
 
-      // Auto-close saat scroll (keyboard/touch)
+      // Update dots & auto-close saat scroll (keyboard/touch)
       projectsGrid.addEventListener('scroll', function() {
         closeAllDetails();
+        updateDots();
         updateButtonState();
       });
+
+      // Fungsi update active dots
+      function updateDots() {
+        const gridScrollLeft = projectsGrid.scrollLeft;
+        const gridWidth = projectsGrid.offsetWidth;
+        
+        cards.forEach((card, index) => {
+          const cardLeft = card.offsetLeft;
+          const cardWidth = card.offsetWidth;
+          const cardCenter = cardLeft + (cardWidth / 2);
+          
+          // Check if card is in view (center of viewport)
+          const isVisible = Math.abs(gridScrollLeft + (gridWidth / 2) - cardCenter) < (cardWidth / 2);
+          
+          if (isVisible) {
+            dots.forEach(d => d.classList.remove('active'));
+            dots[index].classList.add('active');
+          }
+        });
+      }
 
       // Fungsi tutup semua details
       function closeAllDetails() {
@@ -106,6 +147,7 @@
       
       // Initial state check
       setTimeout(function() {
+        updateDots();
         updateButtonState();
       }, 100);
     }
