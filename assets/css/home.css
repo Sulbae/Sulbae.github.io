@@ -205,11 +205,13 @@ a:hover {
    display: flex;
    gap: 2rem;
    align-items: flex-start;
+   width: 100%;
 }
 
 /* Kolom Teks Profile */
 .profile-text {
-   flex: 1;
+   flex: 0 0 50%;
+   max-width: 50%;
    min-width: 0;
 }
 
@@ -224,15 +226,17 @@ a:hover {
 
 /* Kolom Foto Profile */
 .profile-image {
-   flex: 0 0 1rem;
+   flex: 0 0 50%;
+   max-width: 50%;
    display: flex;
    flex-direction: column;
    align-items: center;
+   justify-content: flex-start;
 }
 
 .profile-image img {
    width: 100%;
-   max-width: none;
+   max-width: 100%;
    height: auto;
    aspect-ratio: 1 / 1;
    object-fit: cover;
@@ -734,14 +738,17 @@ details[open] .close-wrapper {
     flex-direction: column;
     gap: 1.5rem;
   }
+  .profile-text,
   .profile-image {
-    flex: 0 0 auto;
-    width: 100%;
-    max-width: 280px;
-    margin: 0 auto;  /* Pusatkan foto */
+     flex: 0 0 100%;
+      max-width: 100%;
+  } 
+  .profile-image {
+     order: -1;
+     margin: 0 auto;  /* Pusatkan foto */
   }
   .profile-image img {
-    max-width: 200px;  /* Foto lebih kecil di mobile */
+     max-width: 200px;  /* Foto lebih kecil di mobile */
   }
 }
 
