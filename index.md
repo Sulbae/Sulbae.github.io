@@ -2,6 +2,7 @@
 layout: home
 title: Home
 description: Portfolio Machine Learning dan Data Science Anggun Sulis Setyawan - Kumpulan proyek/karya.
+canonical_url: https://sulbae.github.io/
 ---
 
 <!-- Opening Section -->
