@@ -45,10 +45,12 @@
     
     if (projectsGrid && scrollPrev && scrollNext) {
       const scrollAmount = 400;
+      let scrollTimeout;
       
       // Scroll Prev
       scrollPrev.addEventListener('click', function(e) {
         e.preventDefault();
+        closeAllDetails();
         projectsGrid.scrollBy({ 
           left: -scrollAmount, 
           behavior: 'smooth' 
@@ -58,11 +60,26 @@
       // Scroll Next
       scrollNext.addEventListener('click', function(e) {
         e.preventDefault();
+        closeAllDetails();
         projectsGrid.scrollBy({ 
           left: scrollAmount, 
           behavior: 'smooth' 
         });
       });
+
+      // Auto-close saat scroll (keyboard/touch)
+      projectsGrid.addEventListener('scroll', function() {
+        closeAllDetails();
+        updateButtonState();
+      });
+
+      // Fungsi tutup semua details
+      function closeAllDetails() {
+        const allDetails = projectsGrid.querySelectorAll('details[open]');
+        allDetails.forEach(function(detail) {
+          detail.removeAttribute('open');
+        });
+      }
       
       // Update button state on scroll
       projectsGrid.addEventListener('scroll', function() {
@@ -89,14 +106,8 @@
       
       // Initial state check
       setTimeout(function() {
-        projectsGrid.dispatchEvent(new Event('scroll'));
+        updateButtonState();
       }, 100);
-    } else {
-      console.log('Scroll elements not found:', {
-        grid: !!projectsGrid,
-        prev: !!scrollPrev,
-        next: !!scrollNext
-      });
     }
   });
   </script>
