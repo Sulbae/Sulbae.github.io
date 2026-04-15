@@ -1,9 +1,9 @@
 ---
 layout: project
 title: "Dropout Risk Assessment"
-date: 2026-03-01
+date: 2026-04-01
 summary: |
-  Sebagai respon terhadap tantangan tersebut, seniman memutuskan untuk mengembangkan sistem monitoring kelayakan air terintegrasi. Salah satu komponen yang perlu dikembangkan adalah Water Potability Risk Assessment System. Komponen ini dirancang untuk membantu meningkatkan kinerja perusahaan dalam menganalisis data hasil uji multi-parameter kualitas air (fisik, kimia, dan biologis) secara simultan dan menghasilkan rekomendasi lanjutan terhadap hasil analisis.
+  Angka dropout yang tidak terkontrol tentunya dapat menyebabkan permasalahan yang cukup serius bagi institusi pendidikan tinggi seperti Jaya-Jaya Institut. Reputasi yang sudah baik akan tergerus apabila akreditasi kampus turun kasta akibat jumlah dropout mahasiswa yang terus meningkat. Oleh karena itu, diperlukan langkah antisipasi sejak dini untuk dapat memperkecil risiko dropout. Sebagai tindak lanjut akan hal itu, maka proyek ini dilaksanakan untuk mengembangkan sebuah tool (alat bantu) yang mampu membantu proses screening awal para mahasiswa yang memiliki risiko dropout berdasarkan kriteria yang telah ditentukan. Kriteria tersebut ditentukan berdasarkan hasil analisis variabel-variabel yang paling berpengaruh terhadap dropout mahasiswa di masa lalu (yang telah terjadi). Dengan mengetahui tingkat risiko dropout mahasiswa sejak awal, kampus dapat lebih fokus dalam memilih solusi yang terbaik untuk para mahasiswanya.
   
 deck_url: https://drive.google.com/
 repo_url: https://github.com/Sulbae/Student-s-Performance-Dashboard
