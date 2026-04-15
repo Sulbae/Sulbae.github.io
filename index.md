@@ -28,7 +28,7 @@ title: Home
     <!-- Grid -->
     <div class="projects-grid" id="projectsGrid">
       {% for project in featured_projects limit: 10 %}
-        <article class="project-card">
+        <article class="project-card" data-index="{{ forloop.index0 }}">
           <!--Thumbnail-->
           {% if project.image %}
           <div class="project-thumbnail">
@@ -91,6 +91,9 @@ title: Home
       {% endfor %}
     </div>
   </div>
+
+  <!-- Scroll Progress Dots -->
+  <div class="scroll-progress-dots" id="scrollDots"></div>
 
   <!-- Scroll Navigation Buttons -->
   <div class="projects-nav">
