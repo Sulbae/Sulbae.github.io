@@ -205,7 +205,7 @@ a:hover {
    background-color: #F5F0E8 !important;
    backdrop-filter: blur(4px) !important;
    padding: 2rem;
-   margin: 0;
+   margin-top: 1rem;
    border-left: 4px solid #B5A595;
    position: relative;
    z-index: 1;
@@ -391,7 +391,7 @@ section.profile .hashtags code:hover {
    scroll-snap-type: x mandatory;
    scroll-behavior: smooth;
    -webkit-overflow-scrolling: touch;
-   padding: 1rem 0 1rem 0;
+   padding: 0.5rem 0 0 0;
 
    /* Hide scroll bar */
    scrollbar-width: none; /* Firefox */
