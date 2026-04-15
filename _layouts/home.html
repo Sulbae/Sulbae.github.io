@@ -12,71 +12,6 @@
   
   <link rel="stylesheet" href="{{ '/assets/css/home.css' | relative_url }}">
 </head>
-
-<!-- Scroll Navigation Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const projectsGrid = document.getElementById('projectsGrid');
-  const scrollPrev = document.querySelector('.scroll-prev');
-  const scrollNext = document.querySelector('.scroll-next');
-  
-  if (projectsGrid && scrollPrev && scrollNext) {
-    const scrollAmount = 400;
-    
-    // Scroll Prev
-    scrollPrev.addEventListener('click', function(e) {
-      e.preventDefault();
-      projectsGrid.scrollBy({ 
-        left: -scrollAmount, 
-        behavior: 'smooth' 
-      });
-    });
-    
-    // Scroll Next
-    scrollNext.addEventListener('click', function(e) {
-      e.preventDefault();
-      projectsGrid.scrollBy({ 
-        left: scrollAmount, 
-        behavior: 'smooth' 
-      });
-    });
-    
-    // Update button state on scroll
-    projectsGrid.addEventListener('scroll', function() {
-      const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
-      
-      // Prev button
-      if (projectsGrid.scrollLeft <= 10) {
-        scrollPrev.style.opacity = '0.3';
-        scrollPrev.style.pointerEvents = 'none';
-      } else {
-        scrollPrev.style.opacity = '1';
-        scrollPrev.style.pointerEvents = 'auto';
-      }
-      
-      // Next button
-      if (projectsGrid.scrollLeft >= maxScroll - 10) {
-        scrollNext.style.opacity = '0.3';
-        scrollNext.style.pointerEvents = 'none';
-      } else {
-        scrollNext.style.opacity = '1';
-        scrollNext.style.pointerEvents = 'auto';
-      }
-    });
-    
-    // Initial state check
-    setTimeout(function() {
-      projectsGrid.dispatchEvent(new Event('scroll'));
-    }, 100);
-  } else {
-    console.log('Scroll elements not found:', {
-      grid: !!projectsGrid,
-      prev: !!scrollPrev,
-      next: !!scrollNext
-    });
-  }
-});
-</script>
   
 <body class="layout-home">
   <!-- Kontainer Induk -->
@@ -100,6 +35,71 @@ document.addEventListener('DOMContentLoaded', function() {
     {% include footer.html %}
     
   </div>
+
+  <!-- Scroll Navigation Script -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const projectsGrid = document.getElementById('projectsGrid');
+    const scrollPrev = document.querySelector('.scroll-prev');
+    const scrollNext = document.querySelector('.scroll-next');
+    
+    if (projectsGrid && scrollPrev && scrollNext) {
+      const scrollAmount = 400;
+      
+      // Scroll Prev
+      scrollPrev.addEventListener('click', function(e) {
+        e.preventDefault();
+        projectsGrid.scrollBy({ 
+          left: -scrollAmount, 
+          behavior: 'smooth' 
+        });
+      });
+      
+      // Scroll Next
+      scrollNext.addEventListener('click', function(e) {
+        e.preventDefault();
+        projectsGrid.scrollBy({ 
+          left: scrollAmount, 
+          behavior: 'smooth' 
+        });
+      });
+      
+      // Update button state on scroll
+      projectsGrid.addEventListener('scroll', function() {
+        const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
+        
+        // Prev button
+        if (projectsGrid.scrollLeft <= 10) {
+          scrollPrev.style.opacity = '0.3';
+          scrollPrev.style.pointerEvents = 'none';
+        } else {
+          scrollPrev.style.opacity = '1';
+          scrollPrev.style.pointerEvents = 'auto';
+        }
+        
+        // Next button
+        if (projectsGrid.scrollLeft >= maxScroll - 10) {
+          scrollNext.style.opacity = '0.3';
+          scrollNext.style.pointerEvents = 'none';
+        } else {
+          scrollNext.style.opacity = '1';
+          scrollNext.style.pointerEvents = 'auto';
+        }
+      });
+      
+      // Initial state check
+      setTimeout(function() {
+        projectsGrid.dispatchEvent(new Event('scroll'));
+      }, 100);
+    } else {
+      console.log('Scroll elements not found:', {
+        grid: !!projectsGrid,
+        prev: !!scrollPrev,
+        next: !!scrollNext
+      });
+    }
+  });
+  </script>
   
 </body>
 </html>
