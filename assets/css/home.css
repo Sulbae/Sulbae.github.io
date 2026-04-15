@@ -430,6 +430,43 @@ section.profile .hashtags code:hover {
    padding: 0.5rem 0;
 }
 
+/* Scroll Progress Dots */
+.scroll-progress-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+}
+
+.scroll-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(42, 36, 32, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0;
+}
+
+.scroll-dot:hover {
+  background: rgba(42, 36, 32, 0.5);
+  transform: scale(1.2);
+}
+
+.scroll-dot.active {
+  background: rgba(42, 36, 32, 0.9);
+  width: 12px;              /* panjang saat active */
+  border-radius: 4px;        /* Rounded rectangle */
+  transform: scale(1);
+}
+
+.scroll-dot.active:hover {
+  background: rgba(42, 36, 32, 1);
+}
+
 .scroll-btn {
    display: flex;
    align-items: center;
@@ -924,6 +961,9 @@ details[open] .close-wrapper {
     flex-direction: column;
     width: 100%;
     gap: 0.8rem;
+  }
+   .scroll-progress-dots {
+    display: none;
   }
   .btn {
     width: 100%;
