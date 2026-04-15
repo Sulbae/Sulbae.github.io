@@ -444,7 +444,7 @@ section.profile .hashtags code:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(42, 36, 32, 0.2);
+  background: rgba(181, 165, 149, 0.4);
   border: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -457,14 +457,15 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-dot.active {
-  background: rgba(42, 36, 32, 0.9);
-  width: 12px;              /* panjang saat active */
-  border-radius: 4px;        /* Rounded rectangle */
-  transform: scale(1);
+   background: #2A2420;
+   width: 12px;              /* ukuran saat active */
+   height: 12px;
+   border-radius: 4px;        /* Rounded rectangle */
+   transform: scale(1);
 }
 
 .scroll-dot.active:hover {
-  background: rgba(42, 36, 32, 1);
+  background: #2A2420;
 }
 
 .scroll-btn {
