@@ -22,12 +22,6 @@ plugins:
   - jekyll-feed     # auto generate RSS feed untuk subscriber
   - jekyll-minifier  # minify HTML/CSS/JS
 
-whitelist:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-feed
-  - jekyll-minifier
-
 # COLLECTIONS
 collections:
   projects:
