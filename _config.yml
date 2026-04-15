@@ -68,7 +68,7 @@ defaults:
   - scope:
       path: ""
     values:
-      image: ""/assets/images/homepage/profile-picture.png""
+      image: "/assets/images/homepage/profile-picture.png"
       linkedin:
         card:
         creator: "Anggun Sulis Setyawan"
