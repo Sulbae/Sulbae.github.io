@@ -17,12 +17,3 @@ image: /assets/images/projects/water-potability-assessment.jpg
 published: true 
 ---
 
-## Overview
-
-## Problem
-
-## Approach
-
-## Result
-
-## Reflection
