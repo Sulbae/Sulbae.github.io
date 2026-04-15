@@ -71,7 +71,7 @@ title: Home
         <!--Project Header-->
         <div class="project-header">
           <h3 class="project-title">
-            <a href="{% if project.external_url %}{{ project.external_url }}{% else %}{{ project.url }}{% endif %}"
+            <a href="{% if project.deck_url %}{{ project.deck_url }}{% else %}{{ project.url }}{% endif %}"
               target="_blank" rel="noopener">
               {{ project.title }} 
             </a>
