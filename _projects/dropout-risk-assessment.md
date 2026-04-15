@@ -10,6 +10,7 @@ repo_url: https://github.com/Sulbae/Student-s-Performance-Dashboard
 demo_url: https://dropout-risk-assessment.streamlit.app/
 tags: [Education, Machine Learning]
 image: /assets/images/projects/student.png
-published: true 
+draft: false
+published: true
 ---
 
