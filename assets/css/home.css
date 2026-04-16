@@ -772,7 +772,7 @@ details[open] .close-wrapper {
 
 /* Button Active/Click */
 .btn:active {
-  transform: translateY(0);
+   transform: translateY(0);
    box-shadow: 0 2px 6px rgba(42, 36, 32, 0.1);
 }
 
@@ -791,7 +791,7 @@ details[open] .close-wrapper {
 
 .btn-secondary:hover {
   background: var(--btn-secondary-hover);
-  border-color: var(--btn-primary-bg);
+  border-color: #D3AF37;
   color: var(--btn-primary-bg);
 }
 
