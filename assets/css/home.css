@@ -368,40 +368,40 @@ section.profile .hashtags code:hover {
 }
 
 .footer-link:hover {
-  color: #c99700 !important;
+  color: #8a5e00 !important;
   transform: translateY(-1px);
   text-shadow:
-    0 0 1px rgba(255, 223, 0, 0.9),
-    0 0 4px rgba(218, 165, 32, 0.7),
-    0 0 7px rgba(184, 134, 11, 0.45);
+    0 0 1px rgba(212, 160, 23, 0.8),
+    0 0 3px rgba(153, 107, 0, 0.55),
+    0 0 6px rgba(110, 74, 0, 0.35);
   animation: emberFlicker 1.4s infinite alternate ease-in-out;
 }
 
 .footer-link:hover svg {
-  filter: drop-shadow(0 0 1.5px rgba(255, 215, 0, 0.85)) drop-shadow(0 0 4px rgba(184, 134, 11, 0.5));
+  filter: drop-shadow(0 0 1px rgba(212, 160, 23, 0.75)) drop-shadow(0 0 3px rgba(122, 85, 0, 0.45));
 }
 
 @keyframes emberFlicker {
   0% {
-    color: #c59200;
+    color: #855a00;
     text-shadow:
-      0 0 1px rgba(255, 223, 0, 0.85),
-      0 0 3px rgba(218, 165, 32, 0.6),
-      0 0 6px rgba(184, 134, 11, 0.4);
+      0 0 1px rgba(212, 160, 23, 0.75),
+      0 0 3px rgba(153, 107, 0, 0.5),
+      0 0 5px rgba(110, 74, 0, 0.3);
   }
   50% {
-    color: #dfb000;
+    color: #9e6e00;
     text-shadow:
-      0 0 1.5px rgba(255, 236, 139, 0.95),
-      0 0 5px rgba(255, 193, 7, 0.75),
-      0 0 8px rgba(204, 142, 0, 0.5);
+      0 0 1.5px rgba(230, 179, 37, 0.9),
+      0 0 4px rgba(179, 125, 0, 0.65),
+      0 0 7px rgba(128, 86, 0, 0.4);
   }
   100% {
-    color: #b8860b;
+    color: #754e00;
     text-shadow:
-      0 0 1px rgba(255, 215, 0, 0.8),
-      0 0 4px rgba(212, 175, 55, 0.65),
-      0 0 7px rgba(166, 116, 0, 0.45);
+      0 0 1px rgba(196, 145, 16, 0.7),
+      0 0 3px rgba(138, 94, 0, 0.5),
+      0 0 6px rgba(97, 64, 0, 0.35);
   }
 }
 
