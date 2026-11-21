@@ -992,6 +992,29 @@ details[open] .close-wrapper {
   .scroll-dot.active {
     width: 14px;
   }
+  .footer {
+    margin-top: 2.5rem;
+    padding: 1.5rem 0 1.25rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    padding: 0 16px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+
+  .footer-nav {
+    justify-self: center !important;
+    justify-content: center !important;
+    gap: 0.9rem 1.25rem;
+  }
+  .footer-link {
+    font-size: 1rem !important;
+  }
+  .footer-copyright {
+    font-size: 0.85rem;
+  }
 }
 
 @media (max-width: 640px) {
