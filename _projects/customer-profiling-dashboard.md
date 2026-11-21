@@ -9,7 +9,7 @@ deck_url: "https://drive.google.com/file/d/1VNBRflTci6HQjtIOu-pSJdHUdr0djKsH/vie
 repo_url: ""
 demo_url: ""
 tags: [CRM, Data Analysis]
-image: /assets/images/projects/""
-draft: true
-published: false
+image: /assets/images/projects/crm_dashboard.png
+draft: false
+published: true
 ---
