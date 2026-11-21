@@ -615,7 +615,8 @@ section.profile .hashtags code:hover {
 }
 
 .project-title a:hover {
-  border-bottom-color: var(--color-black);
+  color: #D3AF37; 
+  border-bottom-color: #D3AF37;
 }
 
 /* Tags Inline */
@@ -703,6 +704,7 @@ summary.summary-toggle:hover {
 }
 
 .action-read:hover {
+  color: #D3AF37;
   border-bottom-color: #D3AF37;
 }
 
