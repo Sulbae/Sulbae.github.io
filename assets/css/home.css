@@ -909,7 +909,7 @@ details[open] .close-wrapper {
 /* =========================================
    10. RESPONSIVE (Desktop-First Cascade)
    ========================================= */
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
    .home-tabloid {
     padding: 2rem 3rem 2.5rem;
   }
@@ -922,6 +922,28 @@ details[open] .close-wrapper {
    .projects-card {
      flex: 0 0 calc(33.33% - 1.33rem); /* tampilkan 3 card dengan gap */
      max-width: calc(33.33% - 1.33rem);
+  }
+  .footer {
+    margin-top: 2.5rem;
+    padding: 1.5rem 0 1.25rem;
+  }
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+    padding: 0 16px !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+  .footer-nav {
+    justify-self: center !important;
+    justify-content: center !important;
+    gap: 0.9rem 1.25rem;
+  }
+  .footer-link {
+    font-size: 1rem !important;
+  }
+  .footer-copyright {
+    font-size: 0.85rem;
   }
 }
 
@@ -991,29 +1013,6 @@ details[open] .close-wrapper {
   }
   .scroll-dot.active {
     width: 14px;
-  }
-  .footer {
-    margin-top: 2.5rem;
-    padding: 1.5rem 0 1.25rem;
-  }
-  .footer-content {
-    grid-template-columns: 1fr !important;
-    gap: 1.25rem !important;
-    padding: 0 16px !important;
-    justify-items: center !important;
-    text-align: center !important;
-  }
-
-  .footer-nav {
-    justify-self: center !important;
-    justify-content: center !important;
-    gap: 0.9rem 1.25rem;
-  }
-  .footer-link {
-    font-size: 1rem !important;
-  }
-  .footer-copyright {
-    font-size: 0.85rem;
   }
 }
 
