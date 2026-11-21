@@ -17,7 +17,7 @@ permalink: /
   
 <!-- Projects Section -->
 <section id="projects" class="projects">
-  <h2>Koleksi Karya</h2>  
+  <h2>Karya</h2>  
   <!-- Project Grid -->
   {% assign featured_projects = site.projects
     | where_exp: "project", "project.published != false"
