@@ -703,7 +703,7 @@ summary.summary-toggle:hover {
 }
 
 .action-read:hover {
-  border-bottom-color: var(--color-black);
+  border-bottom-color: #D3AF37;
 }
 
 .close-wrapper {
