@@ -74,10 +74,11 @@ permalink: /
                     Detail Karya
                   </a>
                   {% endif %}
-                  {% if project.demo_url %}
-                  <a href="{{ project.demo_url }}" class="btn btn-primary" target="_blank">
-                    Demo App
-                  </a>
+                  {% assign clean_demo_url = project.demo_url | strip %}
+                  {% if clean_demo_url != "" %}
+                    <a href="{{ clean_demo_url }}" class="btn btn-primary" target="_blank">
+                      Demo App
+                    </a>
                   {% endif %}
                 </div>
                 <!--Tutup details saat tombol "Tutup" diklik-->
