@@ -710,7 +710,7 @@ details[open] .close-wrapper {
 
 .summary-content {
    padding-top: 0;
-   font-family: var(--font-ui) !important;
+   font-family: var(--font-body) !important;
    font-size: 1.05rem !important;
    color: #1A1614;
    line-height: 1.8 !important;
@@ -721,7 +721,7 @@ details[open] .close-wrapper {
    width: 100% !important;
    max-width: none !important;
    margin-bottom: 1rem;
-   font-family: var(--font-ui);
+   font-family: var(--font-body);
    color: #2A2420;
 }
 
