@@ -1,1 +1,6 @@
 # Layout detail proyek
+{% if project.deck_url and project.deck_url != "" %}
+  <a href="{{ project.deck_url }}" target="_blank" rel="noopener">{{ project.title }}</a>
+{% else %}
+  <a href="javascript:void(0)" onclick="alert('Maaf, slide deck belum tersedia.');">{{ project.title }}</a>
+{% endif %}
