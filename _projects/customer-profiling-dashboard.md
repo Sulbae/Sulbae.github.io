@@ -7,6 +7,7 @@ summary: |
   
 deck_url: "https://drive.google.com/file/d/1VNBRflTci6HQjtIOu-pSJdHUdr0djKsH/view?usp=sharing"
 repo_url: "https://github.com/Sulbae/crm-dashboard"
+demo_url: ""
 tags: [CRM, Data Analysis]
 image: /assets/images/projects/crm_dashboard.png
 draft: false
