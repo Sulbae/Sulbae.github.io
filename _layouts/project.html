@@ -1,13 +1,2 @@
 <!-- Layout detail proyek -->
-{% if project.deck_url and project.deck_url != "" %}
-  <a href="{{ project.deck_url }}" target="_blank" rel="noopener">{{ project.title }}</a>
-{% else %}
-  <button type="button" onclick="showDeckNotice()">{{ project.title }}</button>
-  <p id="deck-notice" style="display: none;">Maaf, slide deck belum tersedia.</p>
 
-  <script>
-    function showDeckNotice() {
-      document.getElementById("deck-notice").style.display = "block";
-    }
-  </script>
-{% endif %}
