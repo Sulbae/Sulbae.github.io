@@ -45,15 +45,10 @@ permalink: /
             <!--Project Header-->
             <div class="project-header">
               <h3 class="project-title">
-                {% if project.deck_url and project.deck_url != "" %}
-                  <a href="{{ project.deck_url }}" target="_blank" rel="noopener noreferrer" itemprop="url">{{ project.title }}</a>
-                {% else %}
-                  <button type="button" onclick="toggleDeckNotice('deck-notice-{{ forloop.index }}')">{{ project.title }}</button>
-                {% endif %}
+                <a href="{% if project.deck_url and project.deck_url != '' %}{{ project.deck_url }}{% else %}{{ project.url }}{% endif %}" target="_blank" rel="noopener noreferrer" itemprop="url">
+                  {{ project.title }}
+                </a>
               </h3>
-              {% unless project.deck_url and project.deck_url != "" %}
-                <p id="deck-notice-{{ forloop.index }}" style="display: none;">Maaf, slide deck belum tersedia.</p>
-              {% endunless %}
               <!--Tags-->
               {% if project.tags %}
               <div class="project-tags-inline" itemprop="keywords">
@@ -153,12 +148,3 @@ permalink: /
     </div>
   </div>
 </section>
-
-<script>
-  function toggleDeckNotice(id) {
-    const el = document.getElementById(id);
-    if (el) {
-      el.style.display = el.style.display === "none" ? "block" : "none";
-    }
-  }
-</script>
