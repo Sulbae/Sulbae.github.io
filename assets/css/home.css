@@ -1121,6 +1121,64 @@ details[open]::details-content {
   margin-bottom: 0;
 }
 
+/* Mekanisme buka-tutup timeline Kisah */
+#kisah .timeline-collapse {
+  position: relative;
+}
+
+/* Sembunyikan item setelah batas awal (misal mulai item ke-4 saat data-limit="3") */
+#kisah .timeline-collapse:not(.is-expanded) .timeline-item:nth-child(n + 3) {
+  display: none;
+}
+
+/* Hapus margin-bottom pada item terakhir yang sedang terlihat saat tertutup */
+#kisah .timeline-collapse:not(.is-expanded) .timeline-item:nth-child(3) {
+  margin-bottom: 0;
+}
+
+/* Animasi halus saat dibuka */
+#kisah .timeline-collapse.is-expanded .timeline-item:nth-child(n + 4) {
+  animation: kisahItemReveal 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes kisahItemReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#kisah .kisah-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--garis-sekat);
+}
+
+#kisah .kisah-toggle-btn {
+  gap: 0.45rem;
+}
+
+#kisah .kisah-toggle-btn:hover {
+  border-color: var(--aksen-utama);
+}
+
+#kisah .kisah-toggle-icon {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: transform 0.25s ease;
+}
+
+#kisah .kisah-toggle-btn[aria-expanded="true"] .kisah-toggle-icon {
+  transform: rotate(180deg);
+}
+
 /* =========================================
    11. RESPONSIVE (Desktop-First Cascade)
    ========================================= */
@@ -1289,6 +1347,9 @@ details[open]::details-content {
     width: 100%;
     justify-content: center;
     padding: 0.7rem 1rem;
+  }
+   #kisah .kisah-toggle-btn {
+    width: 100%;
   }
 }
 
