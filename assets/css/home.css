@@ -1126,12 +1126,12 @@ details[open]::details-content {
   position: relative;
 }
 
-/* Sembunyikan item setelah batas awal (misal mulai item ke-4 saat data-limit="3") */
-#kisah .timeline-collapse:not(.is-expanded) .timeline-item:nth-child(n + 3) {
+/* Sembunyikan item mulai ke-4 saat kondisi tertutup (tampil 3 item awal) */
+#kisah .timeline-collapse:not(.is-expanded) .timeline-item:nth-child(n + 4) {
   display: none;
 }
 
-/* Hapus margin-bottom pada item terakhir yang sedang terlihat saat tertutup */
+/* Hapus margin-bottom pada item ke-3 saat kondisi tertutup */
 #kisah .timeline-collapse:not(.is-expanded) .timeline-item:nth-child(3) {
   margin-bottom: 0;
 }
