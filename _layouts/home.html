@@ -66,120 +66,147 @@
 
   <!-- Scroll Navigation Script -->
   <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const projectsGrid = document.getElementById('projectsGrid');
-    const scrollPrev = document.querySelector('.scroll-prev');
-    const scrollNext = document.querySelector('.scroll-next');
-    const scrollDotsContainer = document.getElementById('scrollDots');
-    
-    if (projectsGrid && scrollPrev && scrollNext && scrollDotsContainer) {
-      const cards = projectsGrid.querySelectorAll('.project-card');
-      const scrollAmount = 400;
-      let scrollTimeout;
-
-      // Generate dots
-      cards.forEach((card, index) => {
-        const dot = document.createElement('button');
-        dot.className = 'scroll-dot';
-        dot.setAttribute('aria-label', `Go to project ${index + 1}`);
-        dot.addEventListener('click', function() {
+    document.addEventListener('DOMContentLoaded', function() {
+      const projectsGrid = document.getElementById('projectsGrid');
+      const scrollPrev = document.querySelector('.scroll-prev');
+      const scrollNext = document.querySelector('.scroll-next');
+      const scrollDotsContainer = document.getElementById('scrollDots');
+  
+      if (projectsGrid && scrollPrev && scrollNext && scrollDotsContainer) {
+        const cards = projectsGrid.querySelectorAll('.project-card');
+        const scrollAmount = 400;
+  
+        // Generate dots
+        cards.forEach((card, index) => {
+          const dot = document.createElement('button');
+          dot.className = 'scroll-dot';
+          dot.setAttribute('aria-label', `Go to project ${index + 1}`);
+          dot.addEventListener('click', function() {
+            closeAllDetails();
+            const cardOffset = card.offsetLeft;
+            projectsGrid.scrollTo({
+              left: cardOffset,
+              behavior: 'smooth'
+            });
+          });
+          scrollDotsContainer.appendChild(dot);
+        });
+  
+        const dots = scrollDotsContainer.querySelectorAll('.scroll-dot');
+  
+        // Scroll Prev
+        scrollPrev.addEventListener('click', function(e) {
+          e.preventDefault();
           closeAllDetails();
-          const cardOffset = card.offsetLeft;
-          projectsGrid.scrollTo({
-            left: cardOffset,
+          projectsGrid.scrollBy({
+            left: -scrollAmount,
             behavior: 'smooth'
           });
         });
-        scrollDotsContainer.appendChild(dot);
-      });
-
-      const dots = scrollDotsContainer.querySelectorAll('.scroll-dot');
-      
-      // Scroll Prev
-      scrollPrev.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeAllDetails();
-        projectsGrid.scrollBy({ 
-          left: -scrollAmount, 
-          behavior: 'smooth' 
+  
+        // Scroll Next
+        scrollNext.addEventListener('click', function(e) {
+          e.preventDefault();
+          closeAllDetails();
+          projectsGrid.scrollBy({
+            left: scrollAmount,
+            behavior: 'smooth'
+          });
         });
-      });
-      
-      // Scroll Next
-      scrollNext.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeAllDetails();
-        projectsGrid.scrollBy({ 
-          left: scrollAmount, 
-          behavior: 'smooth' 
+  
+        // Fungsi update active dots
+        function updateDots() {
+          const gridScrollLeft = projectsGrid.scrollLeft;
+          const gridWidth = projectsGrid.offsetWidth;
+  
+          cards.forEach((card, index) => {
+            const cardLeft = card.offsetLeft;
+            const cardWidth = card.offsetWidth;
+            const cardCenter = cardLeft + (cardWidth / 2);
+  
+            const isVisible = Math.abs(gridScrollLeft + (gridWidth / 2) - cardCenter) < (cardWidth / 2);
+  
+            if (isVisible) {
+              dots.forEach(d => d.classList.remove('active'));
+              if (dots[index]) {
+                dots[index].classList.add('active');
+              }
+            }
+          });
+        }
+  
+        // Fungsi tutup semua details
+        function closeAllDetails() {
+          const allDetails = projectsGrid.querySelectorAll('details[open]');
+          allDetails.forEach(function(detail) {
+            detail.removeAttribute('open');
+          });
+        }
+  
+        // Fungsi update status tombol prev/next
+        function updateButtonState() {
+          const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
+  
+          if (projectsGrid.scrollLeft <= 10) {
+            scrollPrev.style.opacity = '0.3';
+            scrollPrev.style.pointerEvents = 'none';
+          } else {
+            scrollPrev.style.opacity = '1';
+            scrollPrev.style.pointerEvents = 'auto';
+          }
+  
+          if (projectsGrid.scrollLeft >= maxScroll - 10) {
+            scrollNext.style.opacity = '0.3';
+            scrollNext.style.pointerEvents = 'none';
+          } else {
+            scrollNext.style.opacity = '1';
+            scrollNext.style.pointerEvents = 'auto';
+          }
+        }
+  
+        // Update dots, button state & auto-close saat scroll
+        projectsGrid.addEventListener('scroll', function() {
+          closeAllDetails();
+          updateDots();
+          updateButtonState();
         });
-      });
-
-      // Update dots & auto-close saat scroll (keyboard/touch)
-      projectsGrid.addEventListener('scroll', function() {
-        closeAllDetails();
-        updateDots();
-        updateButtonState();
-      });
-
-      // Fungsi update active dots
-      function updateDots() {
-        const gridScrollLeft = projectsGrid.scrollLeft;
-        const gridWidth = projectsGrid.offsetWidth;
-        
-        cards.forEach((card, index) => {
-          const cardLeft = card.offsetLeft;
-          const cardWidth = card.offsetWidth;
-          const cardCenter = cardLeft + (cardWidth / 2);
-          
-          // Check if card is in view (center of viewport)
-          const isVisible = Math.abs(gridScrollLeft + (gridWidth / 2) - cardCenter) < (cardWidth / 2);
-          
-          if (isVisible) {
-            dots.forEach(d => d.classList.remove('active'));
-            dots[index].classList.add('active');
+  
+        // Initial state check
+        setTimeout(function() {
+          updateDots();
+          updateButtonState();
+        }, 100);
+      }
+  
+      // Mekanisme buka-tutup section Kisah
+      const kisahToggleBtn = document.getElementById('kisahToggleBtn');
+      const kisahTimelineWrap = document.getElementById('kisahTimelineWrap');
+  
+      if (kisahToggleBtn && kisahTimelineWrap) {
+        const kisahLabel = kisahToggleBtn.querySelector('.kisah-toggle-label');
+        const totalKisah = parseInt(kisahToggleBtn.getAttribute('data-total'), 10) || 0;
+        const limitKisah = parseInt(kisahToggleBtn.getAttribute('data-limit'), 10) || 2;
+        const sisaKisah = Math.max(totalKisah - limitKisah, 0);
+  
+        kisahToggleBtn.addEventListener('click', function() {
+          const isExpanded = kisahTimelineWrap.classList.toggle('is-expanded');
+          kisahToggleBtn.setAttribute('aria-expanded', String(isExpanded));
+  
+          if (kisahLabel) {
+            kisahLabel.textContent = isExpanded
+              ? 'Tampilkan Lebih Sedikit'
+              : `Lihat Lebih Banyak (${sisaKisah} kisah lainnya)`;
+          }
+  
+          if (!isExpanded) {
+            const kisahSection = document.getElementById('kisah');
+            if (kisahSection) {
+              kisahSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
           }
         });
       }
-
-      // Fungsi tutup semua details
-      function closeAllDetails() {
-        const allDetails = projectsGrid.querySelectorAll('details[open]');
-        allDetails.forEach(function(detail) {
-          detail.removeAttribute('open');
-        });
-      }
-      
-      // Update button state on scroll
-      projectsGrid.addEventListener('scroll', function() {
-        const maxScroll = projectsGrid.scrollWidth - projectsGrid.clientWidth;
-        
-        // Prev button
-        if (projectsGrid.scrollLeft <= 10) {
-          scrollPrev.style.opacity = '0.3';
-          scrollPrev.style.pointerEvents = 'none';
-        } else {
-          scrollPrev.style.opacity = '1';
-          scrollPrev.style.pointerEvents = 'auto';
-        }
-        
-        // Next button
-        if (projectsGrid.scrollLeft >= maxScroll - 10) {
-          scrollNext.style.opacity = '0.3';
-          scrollNext.style.pointerEvents = 'none';
-        } else {
-          scrollNext.style.opacity = '1';
-          scrollNext.style.pointerEvents = 'auto';
-        }
-      });
-      
-      // Initial state check
-      setTimeout(function() {
-        updateDots();
-        updateButtonState();
-      }, 100);
-    }
-  });
+    });
   </script>
   
 </body>
