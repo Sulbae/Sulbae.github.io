@@ -14,21 +14,27 @@
           <feTurbulence type="fractalNoise" baseFrequency="0.01 0.015" numOctaves="2" seed="5" result="noise">
             <animate
               attributeName="baseFrequency"
-              dur="6s"
-              values="0.008 0.012; 0.025 0.035; 0.008 0.012"
+              dur="32s"
+              values="0.009 0.013; 0.012 0.017; 0.009 0.013"
               repeatCount="indefinite"
             />
           </feTurbulence>
 
           <!-- Skala distorsi besar (65) agar gelombang tinta nyata -->
-          <feDisplacementMap
-            id="inkDisplace"
-            in="SourceGraphic"
-            in2="noise"
-            scale="65"
-            xChannelSelector="R"
-            yChannelSelector="G"
-          />
+          <feDisplacementMap id="inkDisplace" in="SourceGraphic" in2="noise" scale="75" xChannelSelector="R" yChannelSelector="G">
+            <animate
+              id="inkSpreadAnim"
+              attributeName="scale"
+              from="75"
+              to="22"
+              dur="3.2s"
+              begin="indefinite"
+              fill="freeze"
+              calcMode="spline"
+              keyTimes="0; 1"
+              keySplines="0.22 1 0.36 1"
+            />
+          </feDisplacementMap>
         </filter>
       </defs>
 
@@ -70,13 +76,13 @@
     function updateInkOnScroll() {
       if (prefersReduced.matches || !scrollLayer) { isTicking = false; return; }
       const scrollY = window.scrollY;
-      const progress = Math.min(Math.max(scrollY / (window.innerHeight * 1.1), 0), 1);
-
+      const progress = Math.min(Math.max(scrollY / (window.innerHeight * 1.4), 0), 1);
+    
       scrollLayer.style.opacity = (1 - progress * 0.85).toFixed(3);
-      scrollLayer.style.transform = `translate3d(0, ${-(scrollY * 0.16).toFixed(1)}px, 0) scale(${(1 + progress * 0.07).toFixed(3)})`;
-
-      if (inkDisplace && !shouldDisable()) {
-        inkDisplace.setAttribute('scale', (65 + progress * 35).toFixed(1));
+      scrollLayer.style.transform = `translate3d(0, ${-(scrollY * 0.09).toFixed(1)}px, 0) scale(${(1 + progress * 0.04).toFixed(3)})`;
+    
+      if (inkDisplace && isSpreadDone && !isLowPowerOrMobile()) {
+        inkDisplace.setAttribute('scale', (22 + progress * 14).toFixed(1));
       }
       isTicking = false;
     }
