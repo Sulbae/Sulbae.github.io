@@ -1145,8 +1145,8 @@ details[open]::details-content {
     padding: 2rem 2rem;
   }
   .project-card {
-     flex: 0 0 calc(50% - 1rem); /* tampilkan 2 card dengan gap */
-     max-width: calc(50% - 1rem);
+     flex: 0 0 100%;
+     max-width: 100%;
   }
    .footer {
     margin-top: 2.5rem;
