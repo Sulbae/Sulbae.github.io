@@ -126,13 +126,13 @@ permalink: /
     <!-- Kolom Teks -->
     <div class="profile-text">
       <p>
-        <strong>Anggun Sulis Setyawan</strong> a.k.a <strong>Mas Sul</strong> merupakan <i>entry-level Data Scientist</i> dengan latar belakang keilmuan <i>Environmental Engineering</i>. Ketertarikannya berada pada persimpangan antara <strong>data</strong>, <strong>sistem</strong>, dan cara manusia memahami serta memanfaatkan <strong>informasi</strong> dalam konteks nyata.
+        <strong>Anggun Sulis Setyawan</strong> a.k.a <strong>Bang Suwan</strong> atau lebih dikenal sebagai Mas Sul merupakan <i>Data Scientist</i> dengan latar belakang keilmuan <i>Environmental Engineering</i>. Ketertarikannya berada pada persimpangan antara <strong>data</strong>, <strong>sistem</strong>, dan cara manusia memahami serta memanfaatkan <strong>informasi</strong> dalam konteks nyata.
       </p>
       <p>
-        Dalam proses berkarya, seniman tidak sekadar memandang setiap proyek sebagai implementasi teknis, melainkan juga ruang eksplorasi intelektual. Diawali dengan perumusan masalah, dilanjutkan dengan pemahaman data, pengambilan keputusan desain solusi, hingga evaluasi dan refleksi pasca-implementasi. Pendekatan ini membentuk pola belajar yang iteratif, kritis, dan berorientasi pada pemahaman mendalam terhadap setiap permasalahan yang diangkat.
+        Seniman terbiasa bekerja menggunakan beberapa alat seperti Excel/GSheet, Python, SQL, Looker Studio, dan Power BI serta didukung oleh AI tools sebagai asistennya. Dalam proses berkarya, seniman tidak sekadar memandang setiap proyek sebagai implementasi teknis, melainkan juga ruang eksplorasi intelektual. Diawali dari perumusan masalah, dilanjutkan dengan pemahaman data dan pola, perancangan solusi, hingga evaluasi dan refleksi pasca-implementasi. Pendekatan ini membentuk pola belajar yang iteratif, kritis, dan berorientasi pada pemahaman mendalam terhadap setiap permasalahan yang dihadapi.
       </p>
       <p>
-        Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya merepresentasikan hasil akhir, tetapi juga menampilkan proses berpikir di baliknya. Melalui ruang ini, seniman ingin berbagi wawasan, membuka ruang diskusi, serta mendorong pembelajaran yang berkelanjutan.
+        Karya-karya yang didokumentasikan dan ditampilkan pada ruang ini tidak hanya merepresentasikan hasil akhir, tetapi juga menampilkan proses berpikir di baliknya. Melalui ruang ini, seniman ingin berbagi wawasan, membuka ruang diskusi, serta mendorong pembelajaran yang berkelanjutan. Seniman selalu terbuka untuk menyambut peluang kolaborasi pengembangan solusi berbasis data dengan berbagai pihak.
       </p>
       <!-- Hashtag -->
       <div class="hashtags">
