@@ -52,7 +52,9 @@ body.layout-home {
   text-align: left;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
