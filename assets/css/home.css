@@ -446,7 +446,7 @@ section.profile .hashtags code:hover {
    display: none;
 }
 
-.projects-card {
+.project-card {
    flex: 0 0 100%; /* default: 1 card visible */
    max-width: 100%;
    background: #F5F0E8;
@@ -1135,8 +1135,8 @@ details[open]::details-content {
     padding: 2.2rem;
   }
    .project-card {
-     flex: 0 0 calc(33.33% - 1.33rem); /* tampilkan 3 card dengan gap */
-     max-width: calc(33.33% - 1.33rem);
+     flex: 0 0 100%;
+     max-width: 100%;
   }
 }
 
