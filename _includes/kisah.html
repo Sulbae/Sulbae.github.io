@@ -1,0 +1,34 @@
+<section id="kisah" class="kisah-section" aria-labelledby="kisah-heading">
+  <div class="kisah-container">
+    <header class="kisah-header">
+      <span class="kisah-kicker">Kronologi Perjalanan</span>
+      <h2 id="kisah-heading" class="kisah-title">Kisah ~</h2>
+      <p class="kisah-intro">
+        Catatan kronologis dari pengalaman kerja dan proyek, pendidikan serta pelatihan, hingga
+        pencapaian yang membentuk perjalanan di bidang pengelolaan lingkungan, analisis data,
+        visualisasi data, dan machine learning.
+      </p>
+    </header>
+
+    <ol class="timeline-vertikal">
+      {% for item in site.data.kisah %}
+        <!-- [{{ forloop.index }}] {{ item.periode }}: {{ item.judul }} -->
+        <li class="timeline-item">
+          <span class="timeline-marker" aria-hidden="true"></span>
+          <article class="timeline-card">
+            <div class="timeline-meta">
+              <span class="timeline-period">{{ item.periode }}</span>
+              <span class="timeline-tag">{{ item.kategori }}</span>
+            </div>
+            <h3 class="timeline-heading">{{ item.judul }}</h3>
+            <ul class="timeline-desc-list">
+              {% for poin in item.deskripsi %}
+                <li>{{ poin }}</li>
+              {% endfor %}
+            </ul>
+          </article>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
