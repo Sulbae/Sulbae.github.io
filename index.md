@@ -149,5 +149,6 @@ permalink: /
     </div>
   </div>
 </section>
+
 <!-- Kisah Section -->
 {% include kisah.html %}
