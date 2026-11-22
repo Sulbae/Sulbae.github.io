@@ -422,11 +422,19 @@ section.profile .hashtags code:hover {
 }
 
 .projects-grid-wrapper {
-   position: relative;
+  position: relative;
    /* width: 100%; */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 0;
+  padding-right: 0;
+  box-sizing: border-box;
 }
 
 .projects-grid {
+   flex: 1;
+   min-width: 0;
    display: flex;
    gap: 2rem;
    overflow-x: auto;
@@ -534,9 +542,10 @@ section.profile .hashtags code:hover {
 } */
 
 .scroll-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  position: static;
+  /* top: 50%; */
+  /* transform: translateY(-50%); */
+  transform: none;
   z-index: 10;
   display: inline-flex;
   align-items: center;
@@ -554,11 +563,15 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-prev {
-  left: -24px;
+  order: 1;
+}
+
+#projectsGrid.projects-grid {
+  order: 2;
 }
 
 .scroll-next {
-  right: -24px;
+  order: 3;
 }
 
 .scroll-btn:hover {
@@ -1301,7 +1314,7 @@ details[open]::details-content {
   .profile-image img {
      max-width: 200px;  /* Foto lebih kecil di mobile */
   }
-   .projects-nav {
+   .scroll-btn {
     display: none;
   }
    .scroll-progress-dots {
