@@ -963,15 +963,12 @@ details[open]::details-content {
 }
 
 #kisah .kisah-title {
-  margin: 0;
   font-family: var(--font-display);
-  font-variant: normal;
-  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: normal;
-  color: var(--tinta-pekat);
-  text-shadow: none;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+  margin-bottom: 1rem;
 }
 
 /* Card krem */
