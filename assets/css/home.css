@@ -566,7 +566,7 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-prev {
-  left: -14px;
+  left: -28px;
 }
 
 /* #projectsGrid.projects-grid {
@@ -574,7 +574,7 @@ section.profile .hashtags code:hover {
 } */
 
 .scroll-next {
-  right: -14px;
+  right: -28px;
 }
 
 .scroll-btn:hover {
@@ -987,7 +987,7 @@ details[open]::details-content {
   --kertas-lencana: #ebe3d3;
   --tinta-pekat: #191816;
   --tinta-lembut: #4a463f;
-  --garis-bingkai: #191816;
+  --garis-bingkai: #4a463f;
   --garis-sekat: rgba(25, 24, 22, 0.18);
   --aksen-utama: #D3AF37;
 
