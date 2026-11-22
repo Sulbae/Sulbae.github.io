@@ -207,7 +207,6 @@ a:hover {
    padding: 2rem;
    margin-top: 4rem;
    margin-bottom: 3rem;
-   border: 1.5px solid #2A2420;
    border-left: 4px solid #B5A595;
    position: relative;
    z-index: 1;
@@ -939,7 +938,6 @@ details[open]::details-content {
 
 /* Section Kisah — dibuat menjadi card terpisah */
 #kisah.kisah-section {
-  --kertas-latar: #f5f0e6;
   --kertas-kartu: #fcfaf5;
   --kertas-lencana: #ebe3d3;
   --tinta-pekat: #191816;
@@ -947,15 +945,16 @@ details[open]::details-content {
   --garis-bingkai: #191816;
   --garis-sekat: rgba(25, 24, 22, 0.18);
   --aksen-utama: #a64b2a;
-  --bayangan-tegas: 4px 4px 0px #191816;
 
-  background-color: var(--kertas-latar);
+  background: rgba(245, 240, 232, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   color: var(--tinta-pekat);
   padding: 2rem;
   margin-top: 3rem;
-  border: 1.5px solid var(--garis-bingkai);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 8px;
-  box-shadow: var(--bayangan-tegas);
+  box-shadow: none;
   font-family: inherit;
   box-sizing: border-box;
 }
@@ -994,7 +993,8 @@ details[open]::details-content {
 
 #kisah .kisah-intro {
   margin: 0;
-  max-width: 64ch;
+  width: 100%;
+  max-width: none;
   font-size: 0.96rem;
   line-height: 1.68;
   color: var(--tinta-lembut);
@@ -1004,7 +1004,7 @@ details[open]::details-content {
 #kisah .timeline-vertikal {
   list-style: none;
   margin: 0;
-  padding: 4px 0 4px 0;
+  padding: 4px 0;
   position: relative;
 }
 
@@ -1013,7 +1013,7 @@ details[open]::details-content {
   position: absolute;
   top: 14px;
   bottom: 14px;
-  left: 6px;
+  left: 12px;
   width: 2px;
   background-color: var(--garis-bingkai);
 }
@@ -1021,7 +1021,7 @@ details[open]::details-content {
 #kisah .timeline-item {
   position: relative;
   margin-bottom: 22px;
-  padding-left: 26px; /* Ruang marker di sisi kiri */
+  padding-left: 34px;
 }
 
 #kisah .timeline-item:last-child {
@@ -1030,14 +1030,14 @@ details[open]::details-content {
 
 #kisah .timeline-marker {
   position: absolute;
-  left: 0;
+  left: 5px;
   top: 22px;
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background-color: var(--kertas-kartu);
   border: 2px solid var(--garis-bingkai);
-  box-shadow: 2px 2px 0px var(--garis-bingkai);
+  box-shadow: none;
 }
 
 /* Penanda item paling atas (terkini) */
@@ -1049,14 +1049,15 @@ details[open]::details-content {
   background-color: var(--kertas-kartu);
   border: 1.5px solid var(--garis-bingkai);
   border-radius: 6px;
+  margin-left: 8px;
+  margin-right: 24px;
   padding: 18px 20px;
-  box-shadow: var(--bayangan-tegas);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: none;
+  transition: transform 0.15s ease;
 }
 
 #kisah .timeline-card:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 5px 5px 0px var(--garis-bingkai);
+  transform: translateY(-2px);
 }
 
 #kisah .timeline-meta {
@@ -1109,7 +1110,6 @@ details[open]::details-content {
 #kisah .timeline-desc-list li:last-child {
   margin-bottom: 0;
 }
-
 
 /* =========================================
    11. RESPONSIVE (Desktop-First Cascade)
@@ -1284,23 +1284,25 @@ details[open]::details-content {
 
 @media (max-width: 540px) {
   #kisah.kisah-section {
-    padding: 48px 16px;
+    padding: 1.25rem;
   }
-
-  #kisah .timeline-vertikal {
-    padding-left: 24px;
+  #kisah .timeline-vertikal::before {
+    left: 9px;
   }
-
+  #kisah .timeline-item {
+    padding-left: 26px;
+  }
   #kisah .timeline-marker {
-    left: -24px;
+    left: 3px;
     top: 20px;
     width: 14px;
     height: 14px;
   }
-
   #kisah .timeline-card {
+    margin-left: 4px;
+    margin-right: 8px;
     padding: 15px 16px;
-    box-shadow: 3px 3px 0px var(--garis-bingkai);
+    box-shadow: none;
   }
 
   #kisah .timeline-desc-list {
