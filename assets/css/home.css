@@ -930,9 +930,182 @@ details[open]::details-content {
   border-bottom-color: var(--color-black);
 }
 
+/* =========================================================
+   10. SECTION KISAH — TIMELINE VERTIKAL 1 KOLOM
+   Letakkan di bagian paling bawah assets/home.css
+   ========================================================= */
+
+#kisah.kisah-section {
+  --kertas-latar: #f5f0e6;
+  --kertas-kartu: #fcfaf5;
+  --kertas-lencana: #ebe3d3;
+  --tinta-pekat: #191816;
+  --tinta-lembut: #4a463f;
+  --garis-bingkai: #191816;
+  --garis-sekat: rgba(25, 24, 22, 0.18);
+  --aksen-utama: #a64b2a;
+  --bayangan-tegas: 4px 4px 0px #191816;
+
+  background-color: var(--kertas-latar);
+  color: var(--tinta-pekat);
+  padding: 64px 20px;
+  border-top: 1.5px solid var(--garis-bingkai);
+  border-bottom: 1.5px solid var(--garis-bingkai);
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+#kisah .kisah-container {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+#kisah .kisah-header {
+  margin-bottom: 34px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--garis-sekat);
+}
+
+#kisah .kisah-kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--aksen-utama);
+  margin-bottom: 6px;
+}
+
+#kisah .kisah-title {
+  margin: 0 0 10px;
+  font-family: inherit;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--tinta-pekat);
+}
+
+#kisah .kisah-intro {
+  margin: 0;
+  max-width: 64ch;
+  font-size: 0.96rem;
+  line-height: 1.68;
+  color: var(--tinta-lembut);
+}
+
+/* Jalur timeline vertikal 1 kolom di sisi kiri */
+#kisah .timeline-vertikal {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0 4px 30px;
+  position: relative;
+}
+
+#kisah .timeline-vertikal::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 8px;
+  width: 2px;
+  background-color: var(--garis-bingkai);
+}
+
+#kisah .timeline-item {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+#kisah .timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+#kisah .timeline-marker {
+  position: absolute;
+  left: -30px;
+  top: 22px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--kertas-kartu);
+  border: 2px solid var(--garis-bingkai);
+  box-shadow: 2px 2px 0px var(--garis-bingkai);
+}
+
+/* Penanda item paling atas (terkini) */
+#kisah .timeline-item:first-child .timeline-marker {
+  background-color: var(--aksen-utama);
+}
+
+#kisah .timeline-card {
+  background-color: var(--kertas-kartu);
+  border: 1.5px solid var(--garis-bingkai);
+  border-radius: 6px;
+  padding: 18px 20px;
+  box-shadow: var(--bayangan-tegas);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#kisah .timeline-card:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px var(--garis-bingkai);
+}
+
+#kisah .timeline-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+#kisah .timeline-period {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--tinta-pekat);
+  background-color: var(--kertas-lencana);
+  border: 1px solid var(--garis-bingkai);
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+
+#kisah .timeline-tag {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--tinta-lembut);
+}
+
+#kisah .timeline-heading {
+  margin: 0 0 8px;
+  font-family: inherit;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--tinta-pekat);
+}
+
+/* Daftar poin deskripsi dari _data/kisah.yml */
+#kisah .timeline-desc-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.94rem;
+  line-height: 1.65;
+  color: var(--tinta-lembut);
+}
+
+#kisah .timeline-desc-list li {
+  margin-bottom: 5px;
+}
+
+#kisah .timeline-desc-list li:last-child {
+  margin-bottom: 0;
+}
+
 
 /* =========================================
-   10. RESPONSIVE (Desktop-First Cascade)
+   11. RESPONSIVE (Desktop-First Cascade)
    ========================================= */
 @media (min-width: 1200px) {
    .home-tabloid {
@@ -1099,6 +1272,33 @@ details[open]::details-content {
     width: 100%;
     justify-content: center;
     padding: 0.7rem 1rem;
+  }
+}
+
+@media (max-width: 540px) {
+  #kisah.kisah-section {
+    padding: 48px 16px;
+  }
+
+  #kisah .timeline-vertikal {
+    padding-left: 24px;
+  }
+
+  #kisah .timeline-marker {
+    left: -24px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+  }
+
+  #kisah .timeline-card {
+    padding: 15px 16px;
+    box-shadow: 3px 3px 0px var(--garis-bingkai);
+  }
+
+  #kisah .timeline-desc-list {
+    padding-left: 16px;
+    font-size: 0.9rem;
   }
 }
 
