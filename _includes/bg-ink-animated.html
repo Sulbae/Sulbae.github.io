@@ -1,4 +1,4 @@
-<div class="ink-bg-wrapper" id="inkWrapper" aria-hidden="true">
+<div class="ink-bg-wrapper is-loaded" id="inkWrapper" aria-hidden="true">
   <div class="ink-scroll-layer" id="inkScrollLayer">
     <img
       src="{{ '/assets/images/homepage/homepage-texture-2.png' | relative_url }}"
@@ -9,20 +9,33 @@
 
     <svg id="inkSvg" viewBox="0 0 720 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <filter id="ink-master-filter" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+        <filter id="ink-master-filter" x="-25%" y="-25%" width="150%" height="150%" color-interpolation-filters="sRGB">
+          <!-- Kecepatan riak diperjelas (6 detik bolak-balik) agar langsung terlihat -->
           <feTurbulence type="fractalNoise" baseFrequency="0.01 0.015" numOctaves="2" seed="5" result="noise">
-            <animate attributeName="baseFrequency" dur="10s" values="0.012 0.018; 0.020 0.028; 0.012 0.018" repeatCount="indefinite" />
+            <animate
+              attributeName="baseFrequency"
+              dur="6s"
+              values="0.008 0.012; 0.025 0.035; 0.008 0.012"
+              repeatCount="indefinite"
+            />
           </feTurbulence>
-          <feDisplacementMap id="inkDisplace" in="SourceGraphic" in2="noise" scale="105" xChannelSelector="R" yChannelSelector="G">
-            <animate id="inkSpreadAnim" attributeName="scale" from="105" to="28" dur="2.6s" begin="indefinite" fill="freeze" calcMode="spline" keyTimes="0; 1" keySplines="0.22 1 0.36 1" />
-          </feDisplacementMap>
+
+          <!-- Skala distorsi besar (65) agar gelombang tinta nyata -->
+          <feDisplacementMap
+            id="inkDisplace"
+            in="SourceGraphic"
+            in2="noise"
+            scale="65"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
         </filter>
       </defs>
 
       <image
         id="inkImage"
         href="{{ '/assets/images/homepage/homepage-texture-2.png' | relative_url }}"
-        x="-120" y="-120" width="960" height="690"
+        x="-130" y="-130" width="980" height="710"
         preserveAspectRatio="xMidYMid slice"
         filter="url(#ink-master-filter)"
       />
@@ -32,61 +45,44 @@
 
 <script>
   (function() {
-    const inkWrapper = document.getElementById('inkWrapper');
     const scrollLayer = document.getElementById('inkScrollLayer');
     const svgEl = document.getElementById('inkSvg');
     const inkImage = document.getElementById('inkImage');
     const inkDisplace = document.getElementById('inkDisplace');
-    const inkSpreadAnim = document.getElementById('inkSpreadAnim');
 
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const isMobileScreen = window.matchMedia('(pointer: coarse)');
+    const isTouchDevice = window.matchMedia('(pointer: coarse)');
     let isTicking = false;
-    let isSpreadDone = false;
 
-    const isLowPowerOrMobile = () => prefersReduced.matches || isMobileScreen.matches;
+    const shouldDisable = () => prefersReduced.matches || isTouchDevice.matches;
 
-    function disableSvgFilter() {
-      if (!svgEl) return;
-      svgEl.pauseAnimations();
-      if (inkImage) inkImage.removeAttribute('filter');
-    }
-
-    function enableSvgFilter() {
-      if (!svgEl || isLowPowerOrMobile()) return;
-      if (inkImage && !inkImage.hasAttribute('filter')) {
+    function syncFilterState() {
+      if (!svgEl || !inkImage) return;
+      if (shouldDisable()) {
+        svgEl.pauseAnimations();
+        inkImage.removeAttribute('filter');
+      } else {
         inkImage.setAttribute('filter', 'url(#ink-master-filter)');
+        svgEl.unpauseAnimations();
       }
-      svgEl.unpauseAnimations();
     }
 
     function updateInkOnScroll() {
-      if (prefersReduced.matches) { isTicking = false; return; }
+      if (prefersReduced.matches || !scrollLayer) { isTicking = false; return; }
       const scrollY = window.scrollY;
       const progress = Math.min(Math.max(scrollY / (window.innerHeight * 1.1), 0), 1);
 
-      scrollLayer.style.opacity = (1 - progress * 0.88).toFixed(3);
+      scrollLayer.style.opacity = (1 - progress * 0.85).toFixed(3);
       scrollLayer.style.transform = `translate3d(0, ${-(scrollY * 0.16).toFixed(1)}px, 0) scale(${(1 + progress * 0.07).toFixed(3)})`;
 
-      if (inkDisplace && isSpreadDone && !isLowPowerOrMobile()) {
-        inkDisplace.setAttribute('scale', (28 + progress * 24).toFixed(1));
+      if (inkDisplace && !shouldDisable()) {
+        inkDisplace.setAttribute('scale', (65 + progress * 35).toFixed(1));
       }
       isTicking = false;
     }
 
-    window.addEventListener('load', () => {
-      if (isLowPowerOrMobile()) disableSvgFilter();
-      requestAnimationFrame(() => {
-        inkWrapper.classList.add('is-loaded');
-        if (!isLowPowerOrMobile() && inkSpreadAnim) {
-          inkSpreadAnim.beginElement();
-          setTimeout(() => { isSpreadDone = true; }, 2600);
-        } else {
-          isSpreadDone = true;
-        }
-        updateInkOnScroll();
-      });
-    });
+    syncFilterState();
+    updateInkOnScroll();
 
     window.addEventListener('scroll', () => {
       if (!isTicking) {
@@ -95,8 +91,8 @@
       }
     }, { passive: true });
 
-    prefersReduced.addEventListener('change', (e) => e.matches ? disableSvgFilter() : enableSvgFilter());
-    isMobileScreen.addEventListener('change', (e) => e.matches ? disableSvgFilter() : enableSvgFilter());
-    document.addEventListener('visibilitychange', () => document.hidden ? svgEl?.pauseAnimations() : enableSvgFilter());
+    prefersReduced.addEventListener('change', syncFilterState);
+    isTouchDevice.addEventListener('change', syncFilterState);
+    document.addEventListener('visibilitychange', () => document.hidden ? svgEl?.pauseAnimations() : syncFilterState());
   })();
 </script>
