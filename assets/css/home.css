@@ -962,14 +962,14 @@ details[open]::details-content {
 
 #kisah .kisah-title {
   margin: 0;
-  font-family: var(--font-serif, Georgia, serif);
-  font-variant: small-caps;
+  font-family: var(--font-display);
+  font-variant: normal;
   font-size: clamp(1.9rem, 3.5vw, 2.5rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.15;
-  letter-spacing: 0.08em;
+  letter-spacing: normal;
   color: var(--tinta-pekat);
-  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.14);
+  text-shadow: none;
 }
 
 /* Card krem yang sebelumnya membungkus semuanya, kini dimulai di bawah judul */
