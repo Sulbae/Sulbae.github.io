@@ -13,25 +13,42 @@
       </p>
     </header>
 
-    <ol class="timeline-vertikal">
-      {% for item in site.data.kisah %}
-        <!-- [{{ forloop.index }}] {{ item.periode }}: {{ item.judul }} -->
-        <li class="timeline-item">
-          <span class="timeline-marker" aria-hidden="true"></span>
-          <article class="timeline-card">
-            <div class="timeline-meta">
-              <span class="timeline-period">{{ item.periode }}</span>
-              <span class="timeline-tag">{{ item.kategori }}</span>
-            </div>
-            <h3 class="timeline-heading">{{ item.judul }}</h3>
-            <ul class="timeline-desc-list">
-              {% for poin in item.deskripsi %}
-                <li>{{ poin }}</li>
-              {% endfor %}
-            </ul>
-          </article>
-        </li>
-      {% endfor %}
-    </ol>
+    <div class="timeline-collapse" id="kisahTimelineWrap" data-limit="2">
+      <ol class="timeline-vertikal">
+        {% for item in site.data.kisah %}
+          <!-- [{{ forloop.index }}] {{ item.periode }}: {{ item.judul }} -->
+          <li class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <article class="timeline-card">
+              <div class="timeline-meta">
+                <span class="timeline-period">{{ item.periode }}</span>
+                <span class="timeline-tag">{{ item.kategori }}</span>
+              </div>
+              <h3 class="timeline-heading">{{ item.judul }}</h3>
+              <ul class="timeline-desc-list">
+                {% for poin in item.deskripsi %}
+                  <li>{{ poin }}</li>
+                {% endfor %}
+              </ul>
+            </article>
+          </li>
+        {% endfor %}
+      </ol>
+    </div>
+
+    {% if site.data.kisah.size > 3 %}
+    <div class="kisah-toggle-wrap">
+      <button type="button"
+              class="btn btn-secondary kisah-toggle-btn"
+              id="kisahToggleBtn"
+              aria-expanded="false"
+              aria-controls="kisahTimelineWrap"
+              data-total="{{ site.data.kisah.size }}"
+              data-limit="2">
+        <span class="kisah-toggle-label">Selengkapnya ({{ site.data.kisah.size | minus: 3 }})</span>
+        <span class="kisah-toggle-icon" aria-hidden="true">⌄</span>
+      </button>
+    </div>
+    {% endif %}
   </div>
 </section>
