@@ -38,16 +38,9 @@
   }    
   </script>
   {% endif %}
-
-  {% if site.background_style == "ink-animated" %}
-    <link rel="stylesheet" href="{{ '/assets/css/ink-animated.css' | relative_url }}">
-  {% endif %}
 </head>
   
-<body class="layout-home{% if site.background_style == 'ink-animated' %} has-animated-ink{% endif %}">
-  {% if site.background_style == "ink-animated" %}
-    {% include bg-ink-animated.html %}
-  {% endif %}
+<body class="layout-home">
   <!-- Kontainer Induk -->
   <div class="site-wrapper">
     <!-- Navigation -->
