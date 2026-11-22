@@ -13,7 +13,8 @@
       </p>
     </header>
 
-    <div class="timeline-collapse" id="kisahTimelineWrap" data-limit="2">
+    {% assign limit_kisah = 3 %}
+    <div class="timeline-collapse" id="kisahTimelineWrap" data-limit="{{ limit_kisah }}">
       <ol class="timeline-vertikal">
         {% for item in site.data.kisah %}
           <!-- [{{ forloop.index }}] {{ item.periode }}: {{ item.judul }} -->
@@ -35,8 +36,8 @@
         {% endfor %}
       </ol>
     </div>
-
-    {% if site.data.kisah.size > 3 %}
+    
+    {% if site.data.kisah.size > limit_kisah %}
     <div class="kisah-toggle-wrap">
       <button type="button"
               class="btn btn-secondary kisah-toggle-btn"
@@ -44,8 +45,8 @@
               aria-expanded="false"
               aria-controls="kisahTimelineWrap"
               data-total="{{ site.data.kisah.size }}"
-              data-limit="2">
-        <span class="kisah-toggle-label">Selengkapnya ({{ site.data.kisah.size | minus: 3 }})</span>
+              data-limit="{{ limit_kisah }}">
+        <span class="kisah-toggle-label">Tampilkan ({{ site.data.kisah.size | minus: limit_kisah }} kisah lainnya)</span>
         <span class="kisah-toggle-icon" aria-hidden="true">⌄</span>
       </button>
     </div>
