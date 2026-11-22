@@ -1226,7 +1226,7 @@ details[open]::details-content {
 /* =========================================
    11. RESPONSIVE (Desktop-First Cascade)
    ========================================= */
-@media (min-width: 1200px) {
+@media (min-width: 1381px) {
    .home-tabloid {
     padding: 2rem 3rem 2.5rem;
   }
@@ -1242,7 +1242,7 @@ details[open]::details-content {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1380px) {
   .home-tabloid {
     padding: 2rem 2rem;
   }
