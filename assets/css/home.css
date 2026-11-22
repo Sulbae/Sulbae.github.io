@@ -442,7 +442,7 @@ section.profile .hashtags code:hover {
 }
 
 /* Hide scroll bar Chrome/Safari */
-.project-grid::-webkit-scrollbar {
+.projects-grid::-webkit-scrollbar {
    display: none;
 }
 
@@ -953,11 +953,13 @@ details[open]::details-content {
   box-sizing: border-box;
 }
 
-/* Judul di LUAR card (samakan lebar & padding dengan container bagian Karya) */
+/* Judul di LUAR card — samakan alurnya dengan section di atasnya */
 #kisah .kisah-title-wrap {
-  max-width: 1140px; /* sesuaikan dengan lebar kontainer Karya */
-  margin: 0 auto 0.85rem;
-  padding: 0 1.5rem; /* sesuaikan dengan padding kontainer Karya */
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 0.85rem;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #kisah .kisah-title {
@@ -972,11 +974,11 @@ details[open]::details-content {
   text-shadow: none;
 }
 
-/* Card krem yang sebelumnya membungkus semuanya, kini dimulai di bawah judul */
+/* Card krem */
 #kisah .kisah-container {
   width: 100%;
-  max-width: 1140px; /* samakan agar sejajar kiri-kanan dengan judul & Karya */
-  margin: 0 auto;
+  max-width: 100%;
+  margin: 0;
   padding: 2rem;
   background: rgba(245, 240, 232, 0.8);
   backdrop-filter: blur(4px);
@@ -1135,7 +1137,7 @@ details[open]::details-content {
    .project-content {
     padding: 2.2rem;
   }
-   .projects-card {
+   .project-card {
      flex: 0 0 calc(33.33% - 1.33rem); /* tampilkan 3 card dengan gap */
      max-width: calc(33.33% - 1.33rem);
   }
@@ -1145,7 +1147,7 @@ details[open]::details-content {
   .home-tabloid {
     padding: 2rem 2rem;
   }
-  .projects-card {
+  .project-card {
      flex: 0 0 calc(50% - 1rem); /* tampilkan 2 card dengan gap */
      max-width: calc(50% - 1rem);
   }
@@ -1297,6 +1299,10 @@ details[open]::details-content {
   #kisah.kisah-section {
     padding: 1.25rem;
   }
+   #kisah .kisah-container {
+    padding: 1.25rem;
+  }
+   
   #kisah .timeline-vertikal::before {
     left: 9px;
   }
