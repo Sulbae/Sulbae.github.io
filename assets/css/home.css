@@ -983,11 +983,11 @@ details[open]::details-content {
 /* Section Kisah — dibuat menjadi card terpisah */
 /* Wrapper section di atas background utama */
 #kisah.kisah-section {
-  --kertas-kartu: #E6D7C3;
+  --kertas-kartu: #dbd1c3;
   --kertas-lencana: #ebe3d3;
   --tinta-pekat: #191816;
   --tinta-lembut: #4a463f;
-  --garis-bingkai: #4a463f;
+  --garis-bingkai: #8C7D68;
   --garis-sekat: rgba(25, 24, 22, 0.18);
   --aksen-utama: #D3AF37;
 
