@@ -411,7 +411,7 @@ section.profile .hashtags code:hover {
    ========================================= */
 .projects {
    margin-top: 2rem;
-   overflow: hidden;
+   /* overflow: hidden; */
 }
 
 .projects h2 {
@@ -426,15 +426,16 @@ section.profile .hashtags code:hover {
 .projects-grid-wrapper {
   position: relative;
    /* width: 100%; */
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  display: block;
+  /* align-items: center; */
+  /* gap: 12px; */
   padding-left: 0;
   padding-right: 0;
   box-sizing: border-box;
 }
 
 .projects-grid {
+   width: 100%;
    flex: 1;
    min-width: 0;
    display: flex;
@@ -544,8 +545,8 @@ section.profile .hashtags code:hover {
 } */
 
 .scroll-btn {
-  position: static;
-  /* top: 50%; */
+  position: absolute;
+  top: 50%;
   /* transform: translateY(-50%); */
   transform: none;
   z-index: 10;
@@ -565,15 +566,15 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-prev {
-  order: 1;
+  left: 14px;
 }
 
-#projectsGrid.projects-grid {
+/* #projectsGrid.projects-grid {
   order: 2;
-}
+} */
 
 .scroll-next {
-  order: 3;
+  right: 14px;
 }
 
 .scroll-btn:hover {
