@@ -672,20 +672,21 @@ details.project-summary {
   margin-top: 1rem;
   border-top: 1px solid #eee;
   padding-top: 1rem;
+  interpolate-size: allow-keywords;
 }
 
 summary.summary-toggle {
-   cursor: pointer;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 0.5rem;
-   font-family: var(--font-body) !important;
-   font-size: 1.05rem !important;
-   line-height: 1.5 !important;
-   color: var(--color-text-secondary);
-   padding: 0.5rem 0;
-   transition: color 0.2s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
+  line-height: 1.5 !important;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0;
+  transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 summary.summary-toggle::-webkit-details-marker {
@@ -701,6 +702,8 @@ summary.summary-toggle:hover {
   color: var(--color-text);
   border-bottom: 1px solid #bbb;
   white-space: nowrap;
+  transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .action-read:hover {
@@ -726,7 +729,10 @@ summary.summary-toggle:hover {
   border: 1px solid #ccc;
   border-radius: 3px;
   background: #f9f9f9;
-  transition: all 0.2s;
+  transition: background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .action-close:hover {
@@ -735,15 +741,13 @@ summary.summary-toggle:hover {
   border-color: var(--color-black);
 }
 
+.action-close:active {
+  transform: scale(0.97);
+}
+
 /* Expanded States */
-details[open] .summary-toggle .summary-text {
-  display: none;
-}
-
-details[open] .action-read {
-  display: none;
-}
-
+details[open] .summary-toggle .summary-text,
+details[open] .action-read,
 details[open] .summary-toggle {
   display: none;
 }
@@ -752,26 +756,47 @@ details[open] .close-wrapper {
   display: flex;
 }
 
+/* Animasi konten di dalam <details> */
+details::details-content {
+  block-size: 0;
+  overflow: clip;
+  opacity: 0;
+  transition: block-size 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              content-visibility 0.45s allow-discrete;
+}
+
+details[open]::details-content {
+  block-size: auto;
+  opacity: 1;
+}
+
 .summary-content {
-   padding-top: 0;
-   font-family: var(--font-body) !important;
-   font-size: 1.05rem !important;
-   color: #1A1614;
-   line-height: 1.8 !important;
-   animation: fadeIn 0.3s ease-out;
+  padding-top: 0;
+  font-family: var(--font-body) !important;
+  font-size: 1.05rem !important;
+  color: #1A1614;
+  line-height: 1.8 !important;
+  animation: contentReveal 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .summary-content p {
-   width: 100% !important;
-   max-width: none !important;
-   margin-bottom: 1rem;
-   font-family: var(--font-body);
-   color: #2A2420;
+  width: 100% !important;
+  max-width: none !important;
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+  color: #2A2420;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-8px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes contentReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 
