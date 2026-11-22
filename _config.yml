@@ -110,6 +110,3 @@ readme_index:
 
 titles_from_headings:
   enabled: false
-
-# Opsi: "ink-animated" atau "static"
-background_style: "ink-animated"
