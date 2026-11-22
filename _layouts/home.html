@@ -185,7 +185,7 @@
       if (kisahToggleBtn && kisahTimelineWrap) {
         const kisahLabel = kisahToggleBtn.querySelector('.kisah-toggle-label');
         const totalKisah = parseInt(kisahToggleBtn.getAttribute('data-total'), 10) || 0;
-        const limitKisah = parseInt(kisahToggleBtn.getAttribute('data-limit'), 10) || 2;
+        const limitKisah = parseInt(kisahToggleBtn.getAttribute('data-limit'), 10) || 3;
         const sisaKisah = Math.max(totalKisah - limitKisah, 0);
   
         kisahToggleBtn.addEventListener('click', function() {
@@ -195,7 +195,7 @@
           if (kisahLabel) {
             kisahLabel.textContent = isExpanded
               ? 'Tampilkan Lebih Sedikit'
-              : `Lihat Lebih Banyak (${sisaKisah} kisah lainnya)`;
+              : `Tampilkan (${sisaKisah} kisah lainnya)`;
           }
   
           if (!isExpanded) {
