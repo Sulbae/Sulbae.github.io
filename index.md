@@ -27,6 +27,11 @@ permalink: /
   
   <!-- Kontainer Projects -->
   <div class="projects-grid-wrapper">
+    <button class="scroll-btn scroll-prev" aria-label="Geser kiri">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
     <!-- Grid -->
     <div class="projects-grid" id="projectsGrid">
       {% for project in featured_projects limit: 10 %}
@@ -93,6 +98,11 @@ permalink: /
         </article>
       {% endfor %}
     </div>
+    <button class="scroll-btn scroll-next" aria-label="Geser kanan">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
   </div>
 
   <!-- Scroll Progress Dots -->
