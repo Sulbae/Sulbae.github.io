@@ -1,3 +1,24 @@
+html:has(body.has-animated-ink),
+body.has-animated-ink,
+body.has-animated-ink .site-wrapper {
+  background-image: none !important;
+}
+
+body.has-animated-ink {
+  background-color: #f4f3ef !important;
+}
+
+/* Naikkan z-index dari -1 ke 0 agar tidak tenggelam di belakang background html */
+.ink-bg-wrapper {
+  z-index: 0 !important;
+}
+
+/* Pastikan konten berada di atas lapisan SVG */
+.site-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
 /* Menimpa background tema asli HANYA saat mode animasi aktif */
 body.has-animated-ink {
   background-image: none !important;
