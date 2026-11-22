@@ -983,7 +983,7 @@ details[open]::details-content {
 /* Section Kisah — dibuat menjadi card terpisah */
 /* Wrapper section di atas background utama */
 #kisah.kisah-section {
-  --kertas-kartu: #dbd1c3;
+  --kertas-kartu: #EFECE6;
   --kertas-lencana: #ebe3d3;
   --tinta-pekat: #191816;
   --tinta-lembut: #4a463f;
