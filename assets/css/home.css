@@ -937,6 +937,7 @@ details[open]::details-content {
    ========================================================= */
 
 /* Section Kisah — dibuat menjadi card terpisah */
+/* Wrapper section di atas background utama */
 #kisah.kisah-section {
   --kertas-kartu: #fcfaf5;
   --kertas-lencana: #ebe3d3;
@@ -946,23 +947,43 @@ details[open]::details-content {
   --garis-sekat: rgba(25, 24, 22, 0.18);
   --aksen-utama: #a64b2a;
 
-  background: rgba(245, 240, 232, 0.8);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  color: var(--tinta-pekat);
-  padding: 2rem;
   margin-top: 3rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 8px;
-  box-shadow: none;
+  color: var(--tinta-pekat);
   font-family: inherit;
   box-sizing: border-box;
 }
 
+/* Judul di LUAR card (samakan lebar & padding dengan container bagian Karya) */
+#kisah .kisah-title-wrap {
+  max-width: 1140px; /* sesuaikan dengan lebar kontainer Karya */
+  margin: 0 auto 0.85rem;
+  padding: 0 1.5rem; /* sesuaikan dengan padding kontainer Karya */
+}
+
+#kisah .kisah-title {
+  margin: 0;
+  font-family: var(--font-serif, Georgia, serif);
+  font-variant: small-caps;
+  font-size: clamp(1.9rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: 0.08em;
+  color: var(--tinta-pekat);
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.14);
+}
+
+/* Card krem yang sebelumnya membungkus semuanya, kini dimulai di bawah judul */
 #kisah .kisah-container {
   width: 100%;
-  max-width: 100%; /* agar rata kiri penuh */
-  margin: 0;
+  max-width: 1140px; /* samakan agar sejajar kiri-kanan dengan judul & Karya */
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(245, 240, 232, 0.8);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-sizing: border-box;
 }
 
 #kisah .kisah-header {
@@ -979,16 +1000,6 @@ details[open]::details-content {
   text-transform: uppercase;
   color: var(--aksen-utama);
   margin-bottom: 6px;
-}
-
-#kisah .kisah-title {
-  margin: 0 0 10px;
-  font-family: var(--font-display);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--tinta-pekat);
 }
 
 #kisah .kisah-intro {
