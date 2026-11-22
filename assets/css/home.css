@@ -206,10 +206,12 @@ a:hover {
    backdrop-filter: blur(4px) !important;
    padding: 2rem;
    margin-top: 4rem;
+   margin-bottom: 3rem;
+   border: 1.5px solid #2A2420;
    border-left: 4px solid #B5A595;
    position: relative;
    z-index: 1;
-   border-radius: 0;
+   border-radius: 8px;
    overflow: hidden;
 }
 
@@ -935,6 +937,7 @@ details[open]::details-content {
    Letakkan di bagian paling bawah assets/home.css
    ========================================================= */
 
+/* Section Kisah — dibuat menjadi card terpisah */
 #kisah.kisah-section {
   --kertas-latar: #f5f0e6;
   --kertas-kartu: #fcfaf5;
@@ -948,16 +951,19 @@ details[open]::details-content {
 
   background-color: var(--kertas-latar);
   color: var(--tinta-pekat);
-  padding: 64px 20px;
-  border-top: 1.5px solid var(--garis-bingkai);
-  border-bottom: 1.5px solid var(--garis-bingkai);
+  padding: 2rem;
+  margin-top: 3rem;
+  border: 1.5px solid var(--garis-bingkai);
+  border-radius: 8px;
+  box-shadow: var(--bayangan-tegas);
   font-family: inherit;
   box-sizing: border-box;
 }
 
 #kisah .kisah-container {
-  max-width: 780px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 100%; /* agar rata kiri penuh */
+  margin: 0;
 }
 
 #kisah .kisah-header {
@@ -998,7 +1004,7 @@ details[open]::details-content {
 #kisah .timeline-vertikal {
   list-style: none;
   margin: 0;
-  padding: 4px 0 4px 30px;
+  padding: 4px 0 4px 0;
   position: relative;
 }
 
@@ -1007,7 +1013,7 @@ details[open]::details-content {
   position: absolute;
   top: 14px;
   bottom: 14px;
-  left: 8px;
+  left: 6px;
   width: 2px;
   background-color: var(--garis-bingkai);
 }
@@ -1015,6 +1021,7 @@ details[open]::details-content {
 #kisah .timeline-item {
   position: relative;
   margin-bottom: 22px;
+  padding-left: 26px; /* Ruang marker di sisi kiri */
 }
 
 #kisah .timeline-item:last-child {
@@ -1023,10 +1030,10 @@ details[open]::details-content {
 
 #kisah .timeline-marker {
   position: absolute;
-  left: -30px;
+  left: 0;
   top: 22px;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background-color: var(--kertas-kartu);
   border: 2px solid var(--garis-bingkai);
