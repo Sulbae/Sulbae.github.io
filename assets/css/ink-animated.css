@@ -1,0 +1,57 @@
+/* Menimpa background tema asli HANYA saat mode animasi aktif */
+body.has-animated-ink {
+  background-image: none !important;
+  background-color: #f4f3ef;
+}
+
+.ink-bg-wrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transform: scale(1.06);
+  transition: opacity 2.2s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 2.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ink-bg-wrapper.is-loaded {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ink-scroll-layer {
+  width: 100%;
+  height: 100%;
+  will-change: transform, opacity;
+  transform-origin: center top;
+}
+
+.ink-scroll-layer svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.ink-static-fallback {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px), (pointer: coarse), (prefers-reduced-motion: reduce) {
+  .ink-scroll-layer svg { display: none; }
+  .ink-static-fallback { display: block; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ink-bg-wrapper {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
