@@ -32,7 +32,7 @@
 
 - periode: "Jul 2024 - Des 2024"
   kategori: "Pengalaman Proyek > Proyek Mandiri"
-  judul: "Machine Learning — DBSF Coding Camp 2024"
+  judul: "Machine Learning Development — DBSF Coding Camp 2024"
   deskripsi:
     - "NLP Sentiment Analysis: Mengembangkan model klasifikasi untuk menganalisis kepuasan pengguna aplikasi GoPay."
     - "CNN Image Classification: Menerapkan transfer learning untuk mengklasifikasikan gambar sampah kemasan minuman."
