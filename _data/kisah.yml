@@ -1,0 +1,96 @@
+- periode: "Agu 2026 - Sekarang"
+  kategori: "Pengalaman Kerja/Proyek · Part Time"
+  judul: "Admin & Facilitator Bootcamp — Halotech Academy"
+  deskripsi:
+    - "Mengelola administrasi dan database peserta bootcamp Data Analyst menggunakan spreadsheet."
+    - "Mengatur dan mengelola jadwal sesi kelas pelatihan online menggunakan Google Classroom, Calendar, dan Zoom."
+    - "Mengelola dokumen bahan belajar peserta menggunakan Canva, Google Classroom, Excel, DBeaver, dan Google Colab."
+    - "Membuat laporan evaluasi harian dan mingguan terkait sesi kelas live bersama mentor."
+    - "Mengawasi progres belajar dan mengidentifikasi kendala peserta selama program berjalan."
+    - "Mendampingi dan mendukung proses belajar peserta melalui WhatsApp Group."
+
+- periode: "Feb 2025 - Mei 2025"
+  kategori: "Pengalaman Kerja/Proyek · Kontrak"
+  judul: "Non-Class Mentor — DBSF Coding Camp 2025 for SMK"
+  deskripsi:
+    - "Membimbing peserta tingkat SMK terkait dasar-dasar machine learning dan soft-skill."
+    - "Berkolaborasi bersama mentor lain dalam menyusun dan menyelenggarakan sesi diskusi santai untuk mendukung perjalanan belajar peserta."
+
+- periode: "Agu 2019 - Mei 2025"
+  kategori: "Pendidikan · Sarjana"
+  judul: "Teknik Lingkungan — Universitas Diponegoro"
+  deskripsi:
+    - "Menyelesaikan studi Sarjana Teknik Lingkungan dengan IPK 3,74/4."
+    - "Tugas Akhir: Perencanaan Pengelolaan Air Hujan dengan Penerapan Low Impact Development (LID) Pada DAS Bringin Kota Semarang."
+
+- periode: "Des 2024 - Sekarang"
+  kategori: "Pengalaman Kerja/Proyek · Freelance"
+  judul: "External Academy Code Reviewer — Dicoding Indonesia"
+  deskripsi:
+    - "Memeriksa dan mengevaluasi tugas proyek siswa pelatihan Machine Learning dan Data Science sesuai kriteria dan praktik industri."
+    - "Menyediakan umpan balik yang terstruktur untuk meningkatkan keterampilan siswa dalam mengerjakan proyek."
+
+- periode: "Jul 2024 - Des 2024"
+  kategori: "Pengalaman Kerja/Proyek · Proyek Akhir"
+  judul: "Machine Learning — DBSF Coding Camp 2024"
+  deskripsi:
+    - "NLP Sentiment Analysis: Mengembangkan model klasifikasi untuk menganalisis kepuasan pengguna aplikasi GoPay."
+    - "CNN Image Classification: Menerapkan transfer learning untuk mengklasifikasikan gambar sampah kemasan minuman."
+    - "Regression Model: Membangun model regresi baseline untuk memprediksi densitas nutrisi makanan berdasarkan komposisi gizi."
+    - "Recommender System: Mengembangkan model baseline sistem rekomendasi makanan dengan pendekatan content-based dan collaborative filtering."
+
+- periode: "Feb 2024 - Jul 2024"
+  kategori: "Pendidikan dan Pelatihan · Jalur Machine Learning"
+  judul: "Bangkit Academy 2024 (Google, GoTo, Traveloka)"
+  deskripsi:
+    - "Mempelajari konsep dan penerapan AI untuk berbagai masalah machine learning melalui kelas Analisis Data dengan Python, Matematika untuk Sains Data, Machine Learning Specialization, dan TensorFlow Specialization."
+    - "Capstone Project: Berkolaborasi bersama tim mengembangkan model klasifikasi gambar sampah domestik menggunakan arsitektur CNN."
+
+- periode: "Jan 2024"
+  kategori: "Pencapaian"
+  judul: "10 Besar dari 180 Peserta — Entredibles Academy (Fiksioner Indonesia)"
+  deskripsi:
+    - "Meraih posisi 10 besar dari 180 peserta dalam program Entredibles Academy yang diselenggarakan oleh Fiksioner Indonesia."
+
+- periode: "Jun 2023 - Okt 2024"
+  kategori: "Pengalaman Kerja/Proyek · Sukarelawan"
+  judul: "Data & Research — WCD Jawa Tengah"
+  deskripsi:
+    - "Mengelola dan merapikan database volunteer, mitra (komunitas/instansi), serta arsip dokumen World Clean Up Day Jawa Tengah menggunakan spreadsheet dan Google Drive."
+    - "Menjadi koordinator pengelolaan sampah pada acara upacara penyambutan mahasiswa baru Universitas Diponegoro 2024."
+
+- periode: "Mar 2023 - Jul 2023"
+  kategori: "Pengalaman Kerja/Proyek · Proyek Dosen"
+  judul: "Asisten — DLH Kota Salatiga"
+  deskripsi:
+    - "Merekapitulasi dan mengolah data kondisi serta kegiatan pengelolaan lingkungan hidup Kota Salatiga sepanjang tahun 2022."
+    - "Berkolaborasi dalam tim menyusun laporan Informasi Kinerja Pengelolaan Lingkungan Hidup Kota Salatiga tahun 2022."
+
+- periode: "Okt 2022 - Des 2022"
+  kategori: "Pengalaman Kerja/Proyek · Magang"
+  judul: "Marketing Officer — Harisenin.com"
+  deskripsi:
+    - "Melakukan riset untuk mencari calon partner kolaborasi potensial dalam penulisan artikel."
+    - "Menganalisis 3 platform komunitas kompetitor dan menyusun rekomendasi strategi pengembangan platform komunitas."
+
+- periode: "Agu 2022 - Des 2022"
+  kategori: "Pendidikan dan Pelatihan · Kewirausahaan"
+  judul: "Wirausaha Muda Merdeka — LPIK ITB"
+  deskripsi:
+    - "Berlatih menganalisis rencana bisnis startup EduTech dan memberikan rekomendasi pengembangan lanjutan."
+    - "Merancang ide bisnis Vendoraya, platform agregator yang menghubungkan pelanggan dengan vendor konveksi lokal."
+
+- periode: "Jul 2022 - Sept 2022"
+  kategori: "Pengalaman Kerja/Proyek · Magang"
+  judul: "Market Research & Analyst — Harisenin.com"
+  deskripsi:
+    - "Menyusun laporan analisis produk dan layanan dari 2 kompetitor."
+    - "Mengevaluasi formulir pendaftaran customer agar data yang dikumpulkan berkualitas dan valid."
+    - "Membersihkan, mengolah, menganalisis, dan memvisualisasikan data menjadi dashboard karakteristik customer selama 6 bulan terakhir."
+
+- periode: "Feb 2022 - Jul 2022"
+  kategori: "Pendidikan dan Pelatihan · Studi Independen"
+  judul: "Data Analytics, Product & Marketing — RevoU Academy"
+  deskripsi:
+    - "Mempelajari dan memecahkan studi kasus bisnis terkait Product Management, Data Analytics, Digital Marketing, dan Sales Development."
+    - "Melakukan pembersihan data, visualisasi data, pelaporan, serta riset produk fitur GoFood pada aplikasi Gojek."
