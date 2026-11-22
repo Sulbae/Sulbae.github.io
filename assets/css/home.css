@@ -566,7 +566,7 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-prev {
-  left: 14px;
+  left: -14px;
 }
 
 /* #projectsGrid.projects-grid {
@@ -574,7 +574,7 @@ section.profile .hashtags code:hover {
 } */
 
 .scroll-next {
-  right: 14px;
+  right: -14px;
 }
 
 .scroll-btn:hover {
