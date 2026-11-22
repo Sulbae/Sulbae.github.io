@@ -554,11 +554,11 @@ section.profile .hashtags code:hover {
 }
 
 .scroll-prev {
-  left: 24px;
+  left: -24px;
 }
 
 .scroll-next {
-  right: 24px;
+  right: -24px;
 }
 
 .scroll-btn:hover {
