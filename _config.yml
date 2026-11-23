@@ -102,7 +102,7 @@ exclude:
   - .DS_Store
 
 # GOOGLE ANALYTICS (OPSIONAL)
-google_analytics: "" # ID Google Analytics
+google_analytics: "G-QD9KN5KVQQ" # ID Google Analytics
 
 # DISABLED FEATURES
 readme_index:
