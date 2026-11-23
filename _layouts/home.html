@@ -208,6 +208,91 @@
           }
         });
       }
+
+      // Helper aman agar tidak error jika gtag belum siap atau diblokir
+      function trackGA4Event(eventName, params) {
+        if (typeof gtag === 'function') {
+          gtag('event', eventName, params);
+        }
+      }
+      
+      // 1. Klik tautan proyek: judul/deck (.project-title a), Detail Karya (.btn-secondary), Demo App (.btn-primary)
+      document.querySelectorAll('.project-card').forEach(function(card) {
+        const titleEl = card.querySelector('.project-title');
+        const projectTitle = titleEl ? titleEl.textContent.trim() : 'unknown_project';
+      
+        card.addEventListener('click', function(e) {
+          const link = e.target.closest('a');
+          if (!link) return;
+      
+          let linkType = 'other';
+          if (link.closest('.project-title')) {
+            linkType = 'title_or_deck';
+          } else if (link.classList.contains('btn-secondary')) {
+            linkType = 'repo_detail';
+          } else if (link.classList.contains('btn-primary')) {
+            linkType = 'demo_app';
+          }
+      
+          trackGA4Event('project_click', {
+            project_title: projectTitle,
+            link_type: linkType,
+            link_url: link.href
+          });
+        });
+      });
+      
+      // 2. Buka ringkasan proyek (<details class="project-summary">)
+      document.querySelectorAll('details.project-summary').forEach(function(detailEl) {
+        detailEl.addEventListener('toggle', function() {
+          if (detailEl.open) {
+            const card = detailEl.closest('.project-card');
+            const titleEl = card ? card.querySelector('.project-title') : null;
+            const projectTitle = titleEl ? titleEl.textContent.trim() : 'unknown_project';
+      
+            trackGA4Event('project_summary_open', {
+              project_title: projectTitle
+            });
+          }
+        });
+      });
+      
+      // 3. Perluasan bagian Kisah (#kisahToggleBtn)
+      if (kisahToggleBtn) {
+        kisahToggleBtn.addEventListener('click', function() {
+          const isNowExpanded = kisahTimelineWrap
+            ? kisahTimelineWrap.classList.contains('is-expanded')
+            : false;
+      
+          trackGA4Event('kisah_expand', {
+            action_state: isNowExpanded ? 'expanded' : 'collapsed'
+          });
+        });
+      }
+      
+      // 4. Klik menu navigasi utama (.site-navigation .nav-link)
+      document.querySelectorAll('.site-navigation .nav-link').forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+          trackGA4Event('nav_click', {
+            nav_label: navLink.textContent.trim(),
+            nav_target: navLink.getAttribute('href') || ''
+          });
+        });
+      });
+      
+      // 5. Klik tautan kontak di footer (.footer .footer-link)
+      document.querySelectorAll('.footer .footer-link').forEach(function(footerLink) {
+        footerLink.addEventListener('click', function() {
+          const channel = (footerLink.getAttribute('aria-label') || footerLink.textContent || 'unknown')
+            .trim()
+            .toLowerCase();
+      
+          trackGA4Event('contact_click', {
+            contact_channel: channel,
+            contact_url: footerLink.getAttribute('href') || ''
+          });
+        });
+      });
     });
   </script>
   
